@@ -1,0 +1,18 @@
+;; Object 1/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "1/"
+  :tables (list 
+   (semanticdb-table "1.rkt"
+    :major-mode 'scheme-mode
+    :tags nil
+    :file "1.rkt"
+    :pointmax 17
+    :fsize 4559
+    :lastmodtime '(21197 57678 0 0)
+    :unmatched-syntax '((symbol 9 . 15) (symbol 4 . 8) (punctuation 3 . 4) (punctuation 1 . 2) (symbol 7 . 13) (symbol 2 . 6) (punctuation 1 . 2) (symbol 7 . 13) (symbol 2 . 6) (punctuation 1 . 2) (symbol 2 . 6) (punctuation 1 . 2) (symbol 2 . 6) (punctuation 1 . 2) (symbol 2 . 6) (punctuation 1 . 2))
+    )
+   )
+  :file "!Users!jim!classes!ippl!1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

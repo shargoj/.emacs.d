@@ -1,0 +1,227 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Thu May  1 13:28:57 2014
+;; Desktop file format version 206
+;; Emacs version 24.3.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name "/Users/jim/classes/systems/pint-heads/TAGS")
+(setq tags-table-list '("/Users/jim/classes/systems/pint-heads/TAGS"))
+(setq search-ring '("date" "year" "note" "req-keys" "type/in" "#No" "user -500" "investor" "clojure" "yasnippet" "reload" "yasnippet" "#not" "handlers/" "check" "string"))
+(setq regexp-search-ring '("[^:]node-t"))
+(setq register-alist '((115 . "  sema_up (&spt_sema);\n") (97 . "  sema_up (&spt_sema);\n  return true;\n}\n\n/* If there isn't already a spt entry for the given pd, add it and set\n   it to be uninitialized */\nvoid\nspt_set_page_uninitialized (uint32_t *pd, void *upage)\n{\n  upage = pg_round_down(upage);\n")))
+(setq file-name-history '("~/spark/SparkMaster/service/test/spark/service_test.clj" "~/spark/SparkMaster/service/test/spark/types_test.clj" "~/spark/SparkMaster/service/src/spark/handlers.clj" "~/.lein/profiles.clj" "~/spark/SparkMaster/service/src/spark/db.clj" "~/.emacs.d/snippets/clojure-mode/schema" "~/Desktop/Screen Shot 2014-04-29 at 7.04.22 PM.png" "~/src/project-euler/fac-zeroes.clj" "~/.emacs.d/snippets/clojure-mode/new note data" "~/spark/SparkMaster/service/src/spark/validators.clj" "~/spark/SparkMaster/service/src/spark/logic.clj" "~/spark/SparkMaster/service/test/spark/logic_test.clj" "~/spark/SparkMaster/service/logs/service-2014-04-29.0.log~" "~/spark/SparkMaster/service/src/spark/service.clj" "~/spark/SparkMaster/service/logs/service-2014-04-29.0.log" "~/spark/SparkMaster/service/src/spark/util.clj" "~/spark/SparkMaster/service/logs/service-2014-04-28.0.log" "~/spark/SparkMaster/service/resources/data/schema.edn" "~/spark/SparkMaster/service/src/spark/dev/db.clj" "~/spark/SparkMaster/service/src/spark/server.clj" "~/spark/SparkMaster/service/src/spark/db/queries.clj" "~/src/jenjin/src/jenjin/core.clj" "~/src/jenjin/src/jenjin/system.clj" "~/src/jenjin/src/jenjin/entity.clj" "~/classes/game-engines/UE4-writeup/app/scripts/main.js" "~/src/clsl/src/clsl/mutation.clj" "~/src/clsl/src/clsl/runner.clj" "~/classes/game-engines/panda-writeup/meta-analysis.tex" "~/Downloads/traffic-light-US.smv" "~/Downloads/traffic-light-US-non-fair.smv"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/Users/jim/spark/SparkMaster/service/test/spark/logic_test.clj"
+  "logic_test.clj"
+  'clojure-mode
+  '(global-auto-revert-mode helm-mode auto-complete-mode yas-minor-mode undo-tree-mode wrap-region-mode cider-mode rainbow-delimiters-mode projectile-mode paredit-mode clojure-test-mode)
+  3991
+  '(3726 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/jim/spark/SparkMaster/service/src/spark/logic.clj"
+  "logic.clj"
+  'clojure-mode
+  '(global-auto-revert-mode helm-mode auto-complete-mode yas-minor-mode undo-tree-mode wrap-region-mode cider-mode rainbow-delimiters-mode projectile-mode paredit-mode)
+  2299
+  '(2684 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/jim/spark/SparkMaster/service/test/spark/generators.clj"
+  "generators.clj"
+  'clojure-mode
+  '(global-auto-revert-mode helm-mode auto-complete-mode yas-minor-mode undo-tree-mode wrap-region-mode cider-mode rainbow-delimiters-mode projectile-mode paredit-mode)
+  1300
+  '(1300 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/jim/spark/SparkMaster/service/src/spark/service.clj"
+  "service.clj"
+  'clojure-mode
+  '(global-auto-revert-mode helm-mode auto-complete-mode yas-minor-mode undo-tree-mode wrap-region-mode cider-mode rainbow-delimiters-mode projectile-mode paredit-mode)
+  5184
+  '(5184 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/jim/spark/SparkMaster/service/src/spark/types.clj"
+  "types.clj"
+  'clojure-mode
+  '(global-auto-revert-mode helm-mode auto-complete-mode yas-minor-mode undo-tree-mode wrap-region-mode cider-mode rainbow-delimiters-mode projectile-mode paredit-mode clojure-test-mode)
+  3926
+  '(4021 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/jim/spark/SparkMaster/service/test/spark/service_test.clj"
+  "service_test.clj"
+  'clojure-mode
+  '(global-auto-revert-mode helm-mode auto-complete-mode yas-minor-mode undo-tree-mode wrap-region-mode cider-mode rainbow-delimiters-mode projectile-mode paredit-mode clojure-test-mode)
+  436
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/jim/spark/SparkMaster/service/test/spark/types_test.clj"
+  "types_test.clj"
+  'clojure-mode
+  '(global-auto-revert-mode helm-mode auto-complete-mode yas-minor-mode undo-tree-mode wrap-region-mode cider-mode rainbow-delimiters-mode projectile-mode paredit-mode clojure-test-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/jim/spark/SparkMaster/service/src/spark/translators.clj"
+  "translators.clj"
+  'clojure-mode
+  '(global-auto-revert-mode helm-mode auto-complete-mode yas-minor-mode undo-tree-mode wrap-region-mode cider-mode rainbow-delimiters-mode projectile-mode paredit-mode)
+  16488
+  '(16450 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/jim/spark/SparkMaster/service/src/spark/db.clj"
+  "db.clj"
+  'clojure-mode
+  '(global-auto-revert-mode helm-mode auto-complete-mode yas-minor-mode undo-tree-mode wrap-region-mode cider-mode rainbow-delimiters-mode projectile-mode paredit-mode)
+  4608
+  '(4799 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/jim/spark/SparkMaster/service/src/spark/handlers.clj"
+  "handlers.clj"
+  'clojure-mode
+  '(global-auto-revert-mode helm-mode auto-complete-mode yas-minor-mode undo-tree-mode wrap-region-mode cider-mode rainbow-delimiters-mode projectile-mode paredit-mode)
+  3364
+  '(3482 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/jim/spark/SparkMaster/service/test/spark/test_data.clj"
+  "test_data.clj"
+  'clojure-mode
+  '(global-auto-revert-mode helm-mode auto-complete-mode yas-minor-mode undo-tree-mode wrap-region-mode cider-mode rainbow-delimiters-mode projectile-mode paredit-mode)
+  3843
+  '(4127 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/jim/.lein/profiles.clj"
+  "profiles.clj"
+  'clojure-mode
+  '(global-auto-revert-mode helm-mode auto-complete-mode yas-minor-mode undo-tree-mode wrap-region-mode cider-mode rainbow-delimiters-mode projectile-mode paredit-mode)
+  99
+  '(99 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/jim/spark/SparkMaster/service/src/spark/dev/repl.clj"
+  "repl.clj"
+  'clojure-mode
+  '(global-auto-revert-mode helm-mode auto-complete-mode yas-minor-mode undo-tree-mode wrap-region-mode cider-mode rainbow-delimiters-mode projectile-mode paredit-mode)
+  6345
+  '(282 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/jim/spark/SparkMaster/service/src/spark/db/queries.clj"
+  "queries.clj"
+  'clojure-mode
+  '(global-auto-revert-mode helm-mode auto-complete-mode yas-minor-mode undo-tree-mode wrap-region-mode cider-mode rainbow-delimiters-mode projectile-mode paredit-mode)
+  929
+  '(1017 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/jim/spark/SparkMaster/service/test/spark/db_test.clj"
+  "db_test.clj"
+  'clojure-mode
+  '(global-auto-revert-mode helm-mode auto-complete-mode yas-minor-mode undo-tree-mode wrap-region-mode cider-mode rainbow-delimiters-mode projectile-mode paredit-mode clojure-test-mode)
+  682
+  '(671 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/jim/spark/SparkMaster/service/resources/data/schema.edn"
+  "schema.edn"
+  'clojure-mode
+  '(global-auto-revert-mode helm-mode auto-complete-mode yas-minor-mode undo-tree-mode wrap-region-mode cider-mode rainbow-delimiters-mode projectile-mode paredit-mode)
+  18042
+  '(17498 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/jim/spark/SparkMaster/service/src/spark/util.clj"
+  "util.clj"
+  'clojure-mode
+  '(global-auto-revert-mode helm-mode auto-complete-mode yas-minor-mode undo-tree-mode wrap-region-mode cider-mode rainbow-delimiters-mode projectile-mode paredit-mode)
+  549
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/jim/spark/SparkMaster/service/resources/data/test-seed.edn"
+  "test-seed.edn"
+  'clojure-mode
+  '(global-auto-revert-mode helm-mode auto-complete-mode yas-minor-mode undo-tree-mode wrap-region-mode cider-mode rainbow-delimiters-mode projectile-mode paredit-mode)
+  13418
+  '(13259 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/jim/Desktop/Screen Shot 2014-04-29 at 7.04.22 PM.png"
+  "Screen Shot 2014-04-29 at 7.04.22 PM.png"
+  'image-mode
+  '(global-auto-revert-mode helm-mode yas-minor-mode undo-tree-mode wrap-region-mode rainbow-delimiters-mode projectile-mode)
+  106157
+  '(106157 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . no-conversion) (truncate-lines . t)))
+

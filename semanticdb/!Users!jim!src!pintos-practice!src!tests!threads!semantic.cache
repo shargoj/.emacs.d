@@ -1,0 +1,233 @@
+;; Object threads/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "threads/"
+  :tables (list 
+   (semanticdb-table "alarm-simultaneous.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [150 168])
+            ("tests/threads/tests.h" include nil nil [169 201])
+            ("threads/init.h" include nil nil [202 227])
+            ("threads/malloc.h" include nil nil [228 255])
+            ("threads/synch.h" include nil nil [256 282])
+            ("threads/thread.h" include nil nil [283 310])
+            ("devices/timer.h" include nil nil [311 337])
+            ("test_sleep" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("thread_cnt" variable (:type "int") (reparse-symbol arg-sub-list) [363 378])
+                    ("iterations" variable (:type "int") (reparse-symbol arg-sub-list) [379 394]))                  
+                :type "void")
+                nil [339 395])
+            ("test_alarm_simultaneous" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [427 432]))                  
+                :type "void")
+                nil [397 458])
+            ("sleep_test" type
+               (:members 
+                  ( ("start" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [521 535])
+                    ("iterations" variable (:type "int") (reparse-symbol classsubparts) [590 605])
+                    ("output_pos" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [661 677]))                  
+                :type "struct")
+                nil [494 734])
+            ("sleeper" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [757 764]))                  
+                :type "void")
+                nil [736 765])
+            ("test_sleep" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("thread_cnt" variable (:type "int") (reparse-symbol arg-sub-list) [857 872])
+                    ("iterations" variable (:type "int") (reparse-symbol arg-sub-list) [873 888]))                  
+                :type "void")
+                nil [833 2143])
+            ("sleeper" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("test_" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2188 2200]))                  
+                :type "void")
+                nil [2167 2564]))          
+    :file "alarm-simultaneous.c"
+    :pointmax 2565
+    :fsize 2564
+    :lastmodtime '(21192 45018 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "tests.h"
+    :file "tests.h"
+    :fsize 1308
+    :lastmodtime '(21191 1620 0 0)
+    )
+   (semanticdb-table "alarm-negative.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [73 91])
+            ("tests/threads/tests.h" include nil nil [92 124])
+            ("threads/malloc.h" include nil nil [125 152])
+            ("threads/synch.h" include nil nil [153 179])
+            ("threads/thread.h" include nil nil [180 207])
+            ("devices/timer.h" include nil nil [208 234])
+            ("test_alarm_negative" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [262 267]))                  
+                :type "void")
+                nil [236 305]))          
+    :file "alarm-negative.c"
+    :pointmax 306
+    :fsize 305
+    :lastmodtime '(21191 1620 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "alarm-priority.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [101 119])
+            ("tests/threads/tests.h" include nil nil [120 152])
+            ("threads/init.h" include nil nil [153 178])
+            ("threads/malloc.h" include nil nil [179 206])
+            ("threads/synch.h" include nil nil [207 233])
+            ("threads/thread.h" include nil nil [234 261])
+            ("devices/timer.h" include nil nil [262 288])
+            ("alarm_priority_thread" variable
+               (:typemodifiers ("static")
+                :type ("thread_func" type (:type "class") nil nil))
+                nil [290 331])
+            ("wake_time" variable
+               (:typemodifiers ("static")
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [332 357])
+            ("wait_sema" variable
+               (:typemodifiers ("static")
+                :type ("semaphore" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [358 392])
+            ("test_alarm_priority" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [420 425]))                  
+                :type "void")
+                nil [394 928])
+            ("alarm_priority_thread" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("aux" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [965 981])
+                    ("" variable (:type ("UNUSED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [975 982]))                  
+                :type "void")
+                nil [930 1467]))          
+    :file "alarm-priority.c"
+    :pointmax 1468
+    :fsize 1467
+    :lastmodtime '(21191 1620 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "alarm-wait.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [150 168])
+            ("tests/threads/tests.h" include nil nil [169 201])
+            ("threads/init.h" include nil nil [202 227])
+            ("threads/malloc.h" include nil nil [228 255])
+            ("threads/synch.h" include nil nil [256 282])
+            ("threads/thread.h" include nil nil [283 310])
+            ("devices/timer.h" include nil nil [311 337])
+            ("test_sleep" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("thread_cnt" variable (:type "int") (reparse-symbol arg-sub-list) [363 378])
+                    ("iterations" variable (:type "int") (reparse-symbol arg-sub-list) [379 394]))                  
+                :type "void")
+                nil [339 395])
+            ("test_alarm_single" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [421 426]))                  
+                :type "void")
+                nil [397 452])
+            ("test_alarm_multiple" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [480 485]))                  
+                :type "void")
+                nil [454 511])
+            ("sleep_test" type
+               (:members 
+                  ( ("start" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [575 589])
+                    ("iterations" variable (:type "int") (reparse-symbol classsubparts) [644 659])
+                    ("output_lock" variable (:type ("lock" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [734 758])
+                    ("output_pos" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [803 819]))                  
+                :type "struct")
+                nil [548 876])
+            ("sleep_thread" type
+               (:members 
+                  ( ("test" variable
+                       (:pointer 1
+                        :type ("sleep_test" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [965 989])
+                    ("id" variable (:type "int") (reparse-symbol classsubparts) [1037 1044])
+                    ("duration" variable (:type "int") (reparse-symbol classsubparts) [1087 1100])
+                    ("iterations" variable (:type "int") (reparse-symbol classsubparts) [1151 1166]))                  
+                :type "struct")
+                nil [936 1216])
+            ("sleeper" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1239 1246]))                  
+                :type "void")
+                nil [1218 1247])
+            ("test_sleep" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("thread_cnt" variable (:type "int") (reparse-symbol arg-sub-list) [1339 1354])
+                    ("iterations" variable (:type "int") (reparse-symbol arg-sub-list) [1355 1370]))                  
+                :type "void")
+                nil [1315 3759])
+            ("sleeper" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t_" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3804 3813]))                  
+                :type "void")
+                nil [3783 4177]))          
+    :file "alarm-wait.c"
+    :pointmax 4178
+    :fsize 4177
+    :lastmodtime '(21195 36265 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!jim!src!pintos-practice!src!tests!threads!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

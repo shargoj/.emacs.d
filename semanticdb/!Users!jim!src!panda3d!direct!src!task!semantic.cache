@@ -1,0 +1,543 @@
+;; Object task/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "task/"
+  :tables (list 
+   (semanticdb-table "Task.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("\"\"\" This module defines a Python-level wrapper around the C++
+AsyncTaskManager interface.  It replaces the old full-Python
+implementation of the Task system. \"\"\"" code nil nil [1 162])
+            ("__all__" variable nil nil [164 291])
+            ("direct.directnotify.DirectNotifyGlobal" include nil nil [293 345])
+            ("direct.showbase" include nil nil [346 390])
+            ("direct.showbase.PythonUtil" include nil nil [391 431])
+            ("direct.showbase.MessengerGlobal" include nil nil [432 485])
+            ("signal" include nil nil [486 499])
+            ("types" include nil nil [500 512])
+            ("time" include nil nil [513 524])
+            ("random" include nil nil [525 538])
+            ("string" include nil nil [539 552])
+            ("pandac.PandaModules" include nil nil [554 587])
+            ("print_exc_plus" function (:documentation "
+    Print the usual traceback information, followed by a listing of all the
+    local variables in each frame.
+    ") nil [589 1688])
+            ("done" variable nil nil [1908 1931])
+            ("cont" variable nil nil [1932 1955])
+            ("again" variable nil nil [1956 1981])
+            ("pickup" variable nil nil [1982 2009])
+            ("exit" variable nil nil [2010 2033])
+            ("Task" variable nil nil [2087 2104])
+            ("Task" variable nil nil [2268 2302])
+            ("Task" variable nil nil [2303 2337])
+            ("Task" variable nil nil [2338 2374])
+            ("Task" variable nil nil [2375 2413])
+            ("Task" variable nil nil [2414 2448])
+            ("pause" variable nil nil [2506 2528])
+            ("Task" variable nil nil [2529 2579])
+            ("sequence" function (:arguments 
+              ( ("taskList" variable nil (reparse-symbol function_parameters) [2594 2603]))              ) nil [2581 2713])
+            ("Task" variable nil nil [2713 2769])
+            ("loop" function (:arguments 
+              ( ("taskList" variable nil (reparse-symbol function_parameters) [2780 2789]))              ) nil [2771 2922])
+            ("Task" variable nil nil [2922 2970])
+            ("TaskManager" type
+               (:members 
+                  ( ("notify" variable nil (reparse-symbol indented_block_body) [2995 3043])
+                    ("extendedExceptions" variable nil (reparse-symbol indented_block_body) [3049 3075])
+                    ("MaxEpochSpeed" code nil (reparse-symbol indented_block_body) [3080 3104])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3138 3180])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3190 3212])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3221 3259])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3268 3289])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3298 3318])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3327 3349])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3358 3389])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3398 3421])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3431 3464])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3536 3562])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3571 3597])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3606 3631])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3640 3665])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3674 3808]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3123 3127]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3110 3809])
+                    ("finalInit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3828 3832]))                          )
+                        (reparse-symbol indented_block_body) [3814 4248])
+                    ("destroy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4265 4269]))                          )
+                        (reparse-symbol indented_block_body) [4253 4473])
+                    ("setClock" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4491 4495])
+                            ("clockObject" variable nil (reparse-symbol function_parameters) [4497 4508]))                          )
+                        (reparse-symbol indented_block_body) [4478 4589])
+                    ("invokeDefaultHandler" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4619 4623])
+                            ("signalNumber" variable nil (reparse-symbol function_parameters) [4625 4637])
+                            ("stackFrame" variable nil (reparse-symbol function_parameters) [4639 4649]))                          )
+                        (reparse-symbol indented_block_body) [4594 4876])
+                    ("keyboardInterruptHandler" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4910 4914])
+                            ("signalNumber" variable nil (reparse-symbol function_parameters) [4916 4928])
+                            ("stackFrame" variable nil (reparse-symbol function_parameters) [4930 4940]))                          )
+                        (reparse-symbol indented_block_body) [4881 5395])
+                    ("getCurrentTask" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5419 5423]))                          
+                        :documentation " Returns the task currently executing on this thread, or
+        None if this is being called outside of the task manager. ")
+                        (reparse-symbol indented_block_body) [5400 5623])
+                    ("hasTaskChain" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5645 5649])
+                            ("chainName" variable nil (reparse-symbol function_parameters) [5651 5660]))                          
+                        :documentation " Returns true if a task chain with the indicated name has
+        already been defined, or false otherwise.  Note that
+        setupTaskChain() will implicitly define a task chain if it has
+        not already been defined, or modify an existing one if it has,
+        so in most cases there is no need to check this method
+        first. ")
+                        (reparse-symbol indented_block_body) [5628 6077])
+                    ("setupTaskChain" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6101 6105])
+                            ("chainName" variable nil (reparse-symbol function_parameters) [6107 6116])
+                            ("numThreads" variable nil (reparse-symbol function_parameters) [6118 6128])
+                            ("tickClock" variable nil (reparse-symbol function_parameters) [6137 6146])
+                            ("threadPriority" variable nil (reparse-symbol function_parameters) [6178 6192])
+                            ("frameBudget" variable nil (reparse-symbol function_parameters) [6201 6212])
+                            ("frameSync" variable nil (reparse-symbol function_parameters) [6244 6253])
+                            ("timeslicePriority" variable nil (reparse-symbol function_parameters) [6262 6279]))                          
+                        :documentation "Defines a new task chain.  Each task chain executes tasks
+        potentially in parallel with all of the other task chains (if
+        numThreads is more than zero).  When a new task is created, it
+        may be associated with any of the task chains, by name (or you
+        can move a task to another task chain with
+        task.setTaskChain()).  You can have any number of task chains,
+        but each must have a unique name.
+
+        numThreads is the number of threads to allocate for this task
+        chain.  If it is 1 or more, then the tasks on this task chain
+        will execute in parallel with the tasks on other task chains.
+        If it is greater than 1, then the tasks on this task chain may
+        execute in parallel with themselves (within tasks of the same
+        sort value).
+
+        If tickClock is True, then this task chain will be responsible
+        for ticking the global clock each frame (and thereby
+        incrementing the frame counter).  There should be just one
+        task chain responsible for ticking the clock, and usually it
+        is the default, unnamed task chain.
+
+        threadPriority specifies the priority level to assign to
+        threads on this task chain.  It may be one of TPLow, TPNormal,
+        TPHigh, or TPUrgent.  This is passed to the underlying
+        threading system to control the way the threads are scheduled.
+
+        frameBudget is the maximum amount of time (in seconds) to
+        allow this task chain to run per frame.  Set it to -1 to mean
+        no limit (the default).  It's not directly related to
+        threadPriority.
+
+        frameSync is true to force the task chain to sync to the
+        clock.  When this flag is false, the default, the task chain
+        will finish all of its tasks and then immediately start from
+        the first task again, regardless of the clock frame.  When it
+        is true, the task chain will finish all of its tasks and then
+        wait for the clock to tick to the next frame before resuming
+        the first task.  This only makes sense for threaded tasks
+        chains; non-threaded task chains are automatically
+        synchronous.
+
+        timeslicePriority is False in the default mode, in which each
+        task runs exactly once each frame, round-robin style,
+        regardless of the task's priority value; or True to change the
+        meaning of priority so that certain tasks are run less often,
+        in proportion to their time used and to their priority value.
+        See AsyncTaskManager.setTimeslicePriority() for more.
+        ")
+                        (reparse-symbol indented_block_body) [6082 9454])
+                    ("hasTaskNamed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9476 9480])
+                            ("taskName" variable nil (reparse-symbol function_parameters) [9482 9490]))                          
+                        :documentation "Returns true if there is at least one task, active or
+        sleeping, with the indicated name. ")
+                        (reparse-symbol indented_block_body) [9459 9663])
+                    ("getTasksNamed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9686 9690])
+                            ("taskName" variable nil (reparse-symbol function_parameters) [9692 9700]))                          
+                        :documentation "Returns a list of all tasks, active or sleeping, with the
+        indicated name. ")
+                        (reparse-symbol indented_block_body) [9668 9865])
+                    ("getTasksMatching" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9891 9895])
+                            ("taskPattern" variable nil (reparse-symbol function_parameters) [9897 9908]))                          
+                        :documentation "Returns a list of all tasks, active or sleeping, with a
+        name that matches the pattern, which can include standard
+        shell globbing characters like *, ?, and []. ")
+                        (reparse-symbol indented_block_body) [9870 10199])
+                    ("getAllTasks" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10220 10224]))                          
+                        :documentation "Returns list of all tasks, active and sleeping, in
+        arbitrary order. ")
+                        (reparse-symbol indented_block_body) [10204 10374])
+                    ("getTasks" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10392 10396]))                          
+                        :documentation "Returns list of all active tasks in arbitrary order. ")
+                        (reparse-symbol indented_block_body) [10379 10529])
+                    ("getDoLaters" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10550 10554]))                          
+                        :documentation "Returns list of all sleeping tasks in arbitrary order. ")
+                        (reparse-symbol indented_block_body) [10534 10691])
+                    ("__makeTaskList" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10715 10719])
+                            ("taskCollection" variable nil (reparse-symbol function_parameters) [10721 10735]))                          )
+                        (reparse-symbol indented_block_body) [10696 10872])
+                    ("doMethodLater" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10895 10899])
+                            ("delayTime" variable nil (reparse-symbol function_parameters) [10901 10910])
+                            ("funcOrTask" variable nil (reparse-symbol function_parameters) [10912 10922])
+                            ("name" variable nil (reparse-symbol function_parameters) [10924 10928])
+                            ("extraArgs" variable nil (reparse-symbol function_parameters) [10930 10939])
+                            ("sort" variable nil (reparse-symbol function_parameters) [10970 10974])
+                            ("priority" variable nil (reparse-symbol function_parameters) [10983 10991])
+                            ("taskChain" variable nil (reparse-symbol function_parameters) [11000 11009])
+                            ("uponDeath" variable nil (reparse-symbol function_parameters) [11040 11049])
+                            ("appendTask" variable nil (reparse-symbol function_parameters) [11058 11068])
+                            ("owner" variable nil (reparse-symbol function_parameters) [11078 11083]))                          
+                        :documentation "Adds a task to be performed at some time in the future.
+        This is identical to add(), except that the specified
+        delayTime is applied to the Task object first, which means
+        that the task will not begin executing until at least the
+        indicated delayTime (in seconds) has elapsed.
+
+        After delayTime has elapsed, the task will become active, and
+        will run in the soonest possible frame thereafter.  If you
+        wish to specify a task that will run in the next frame, use a
+        delayTime of 0.
+        ")
+                        (reparse-symbol indented_block_body) [10877 12004])
+                    ("add" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12017 12021])
+                            ("funcOrTask" variable nil (reparse-symbol function_parameters) [12023 12033])
+                            ("name" variable nil (reparse-symbol function_parameters) [12035 12039])
+                            ("sort" variable nil (reparse-symbol function_parameters) [12048 12052])
+                            ("extraArgs" variable nil (reparse-symbol function_parameters) [12061 12070])
+                            ("priority" variable nil (reparse-symbol function_parameters) [12091 12099])
+                            ("uponDeath" variable nil (reparse-symbol function_parameters) [12108 12117])
+                            ("appendTask" variable nil (reparse-symbol function_parameters) [12126 12136])
+                            ("taskChain" variable nil (reparse-symbol function_parameters) [12158 12167])
+                            ("owner" variable nil (reparse-symbol function_parameters) [12176 12181]))                          
+                        :documentation "
+        Add a new task to the taskMgr.  The task will begin executing
+        immediately, or next frame if its sort value has already
+        passed this frame.
+
+        The parameters are:
+
+        funcOrTask - either an existing Task object (not already added
+        to the task manager), or a callable function object.  If this
+        is a function, a new Task object will be created and returned.
+
+        name - the name to assign to the Task.  Required, unless you
+        are passing in a Task object that already has a name.
+
+        extraArgs - the list of arguments to pass to the task
+        function.  If this is omitted, the list is just the task
+        object itself.
+
+        appendTask - a boolean flag.  If this is true, then the task
+        object itself will be appended to the end of the extraArgs
+        list before calling the function.
+
+        sort - the sort value to assign the task.  The default sort is
+        0.  Within a particular task chain, it is guaranteed that the
+        tasks with a lower sort value will all run before tasks with a
+        higher sort value run.
+
+        priority - the priority at which to run the task.  The default
+        priority is 0.  Higher priority tasks are run sooner, and/or
+        more often.  For historical purposes, if you specify a
+        priority without also specifying a sort, the priority value is
+        understood to actually be a sort value.  (Previously, there
+        was no priority value, only a sort value, and it was called
+        \"priority\".)
+
+        uponDeath - a function to call when the task terminates,
+        either because it has run to completion, or because it has
+        been explicitly removed.
+
+        taskChain - the name of the task chain to assign the task to.
+
+        owner - an optional Python object that is declared as the
+        \"owner\" of this task for maintenance purposes.  The owner must
+        have two methods: owner._addTask(self, task), which is called
+        when the task begins, and owner._clearTask(self, task), which
+        is called when the task terminates.  This is all the owner
+        means.
+
+        The return value of add() is the new Task object that has been
+        added, or the original Task object that was passed in.
+
+        ")
+                        (reparse-symbol indented_block_body) [12009 14673])
+                    ("__setupTask" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14694 14698])
+                            ("funcOrTask" variable nil (reparse-symbol function_parameters) [14700 14710])
+                            ("name" variable nil (reparse-symbol function_parameters) [14712 14716])
+                            ("priority" variable nil (reparse-symbol function_parameters) [14718 14726])
+                            ("sort" variable nil (reparse-symbol function_parameters) [14728 14732])
+                            ("extraArgs" variable nil (reparse-symbol function_parameters) [14734 14743])
+                            ("taskChain" variable nil (reparse-symbol function_parameters) [14745 14754])
+                            ("appendTask" variable nil (reparse-symbol function_parameters) [14756 14766])
+                            ("owner" variable nil (reparse-symbol function_parameters) [14768 14773])
+                            ("uponDeath" variable nil (reparse-symbol function_parameters) [14775 14784]))                          )
+                        (reparse-symbol indented_block_body) [14678 16223])
+                    ("remove" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16247 16251])
+                            ("taskOrName" variable nil (reparse-symbol function_parameters) [16253 16263]))                          
+                        :documentation "Removes a task from the task manager.  The task is stopped,
+        almost as if it had returned task.done.  (But if the task is
+        currently executing, it will finish out its current frame
+        before being removed.)  You may specify either an explicit
+        Task object, or the name of a task.  If you specify a name,
+        all tasks with the indicated name are removed.  Returns the
+        number of tasks removed. ")
+                        (reparse-symbol indented_block_body) [16236 17165])
+                    ("removeTasksMatching" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17194 17198])
+                            ("taskPattern" variable nil (reparse-symbol function_parameters) [17200 17211]))                          
+                        :documentation "Removes all tasks whose names match the pattern, which can
+        include standard shell globbing characters like *, ?, and [].
+        See also remove().
+
+        Returns the number of tasks removed.
+        ")
+                        (reparse-symbol indented_block_body) [17170 17546])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17560 17564]))                          
+                        :documentation "Invokes the task manager for one frame, and then returns.
+        Normally, this executes each task exactly once, though task
+        chains that are in sub-threads or that have frame budgets
+        might execute their tasks differently. ")
+                        (reparse-symbol indented_block_body) [17551 18584])
+                    ("run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18597 18601]))                          
+                        :documentation "Starts the task manager running.  Does not return until an
+        exception is encountered (including KeyboardInterrupt). ")
+                        (reparse-symbol indented_block_body) [18589 21339])
+                    ("_unpackIOError" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21363 21367])
+                            ("ioError" variable nil (reparse-symbol function_parameters) [21369 21376]))                          )
+                        (reparse-symbol indented_block_body) [21344 21755])
+                    ("stop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21769 21773]))                          )
+                        (reparse-symbol indented_block_body) [21760 21870])
+                    ("__tryReplaceTaskMethod" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21902 21906])
+                            ("task" variable nil (reparse-symbol function_parameters) [21908 21912])
+                            ("oldMethod" variable nil (reparse-symbol function_parameters) [21914 21923])
+                            ("newFunction" variable nil (reparse-symbol function_parameters) [21925 21936]))                          )
+                        (reparse-symbol indented_block_body) [21875 22490])
+                    ("replaceMethod" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22513 22517])
+                            ("oldMethod" variable nil (reparse-symbol function_parameters) [22519 22528])
+                            ("newFunction" variable nil (reparse-symbol function_parameters) [22530 22541]))                          )
+                        (reparse-symbol indented_block_body) [22495 22711])
+                    ("popupControls" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22734 22738]))                          )
+                        (reparse-symbol indented_block_body) [22716 22849])
+                    ("getProfileSession" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22876 22880])
+                            ("name" variable nil (reparse-symbol function_parameters) [22882 22886]))                          )
+                        (reparse-symbol indented_block_body) [22854 23285])
+                    ("profileFrames" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23308 23312])
+                            ("num" variable nil (reparse-symbol function_parameters) [23314 23317])
+                            ("session" variable nil (reparse-symbol function_parameters) [23324 23331])
+                            ("callback" variable nil (reparse-symbol function_parameters) [23338 23346]))                          )
+                        (reparse-symbol indented_block_body) [23290 23650])
+                    ("_doProfiledFrames" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23677 23681])
+                            ("numFrames" variable nil (reparse-symbol function_parameters) [23683 23692]))                          )
+                        (reparse-symbol indented_block_body) [23655 23786])
+                    ("getProfileFrames" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23812 23816]))                          )
+                        (reparse-symbol indented_block_body) [23791 23860])
+                    ("getProfileFramesSV" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23888 23892]))                          )
+                        (reparse-symbol indented_block_body) [23865 23930])
+                    ("setProfileFrames" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23956 23960])
+                            ("profileFrames" variable nil (reparse-symbol function_parameters) [23962 23975]))                          )
+                        (reparse-symbol indented_block_body) [23935 24248])
+                    ("getProfileTasks" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24273 24277]))                          )
+                        (reparse-symbol indented_block_body) [24253 24320])
+                    ("getProfileTasksSV" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24347 24351]))                          )
+                        (reparse-symbol indented_block_body) [24325 24388])
+                    ("setProfileTasks" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24413 24417])
+                            ("profileTasks" variable nil (reparse-symbol function_parameters) [24419 24431]))                          )
+                        (reparse-symbol indented_block_body) [24393 24696])
+                    ("logTaskProfiles" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24721 24725])
+                            ("name" variable nil (reparse-symbol function_parameters) [24727 24731]))                          )
+                        (reparse-symbol indented_block_body) [24701 24819])
+                    ("flushTaskProfiles" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24846 24850])
+                            ("name" variable nil (reparse-symbol function_parameters) [24852 24856]))                          )
+                        (reparse-symbol indented_block_body) [24824 24938])
+                    ("_setProfileTask" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24963 24967])
+                            ("task" variable nil (reparse-symbol function_parameters) [24969 24973]))                          )
+                        (reparse-symbol indented_block_body) [24943 25533])
+                    ("_profileTask" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25555 25559])
+                            ("profileInfo" variable nil (reparse-symbol function_parameters) [25561 25572])
+                            ("task" variable nil (reparse-symbol function_parameters) [25574 25578]))                          )
+                        (reparse-symbol indented_block_body) [25538 26739])
+                    ("_hasProfiledDesignatedTask" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26775 26779]))                          )
+                        (reparse-symbol indented_block_body) [26744 26888])
+                    ("_getLastTaskProfileSession" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26924 26928]))                          )
+                        (reparse-symbol indented_block_body) [26893 26976])
+                    ("_getRandomTask" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27000 27004]))                          )
+                        (reparse-symbol indented_block_body) [26981 27839])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27857 27861]))                          )
+                        (reparse-symbol indented_block_body) [27844 27893])
+                    ("doYield" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28016 28020])
+                            ("frameStartTime" variable nil (reparse-symbol function_parameters) [28022 28036])
+                            ("nextScheduledTaskTime" variable nil (reparse-symbol function_parameters) [28038 28059]))                          )
+                        (reparse-symbol indented_block_body) [28004 28075])
+                    ("\"\"\"
+    def doYieldExample(self, frameStartTime, nextScheduledTaskTime):
+        minFinTime = frameStartTime + self.MaxEpochSpeed
+        if nextScheduledTaskTime > 0 and nextScheduledTaskTime < minFinTime:
+            print ' Adjusting Time'
+            minFinTime = nextScheduledTaskTime
+        delta = minFinTime - self.globalClock.getRealTime()
+        while(delta > 0.002):
+            print ' sleep %s'% (delta)
+            time.sleep(delta)           
+            delta = minFinTime - self.globalClock.getRealTime()
+    \"\"\"" code nil (reparse-symbol indented_block_body) [28080 28611])
+                    ("if" code nil (reparse-symbol indented_block_body) [28621 28880])
+                    ("_runTests" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28899 28903]))                          )
+                        (reparse-symbol indented_block_body) [28885 48290]))                  
+                :type "class")
+                nil [2972 48290])
+            ("if" code nil nil [48291 49442]))          
+    :file "Task.py"
+    :pointmax 49442
+    :fsize 49441
+    :lastmodtime '(21211 26829 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!jim!src!panda3d!direct!src!task!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

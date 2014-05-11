@@ -1,0 +1,26 @@
+;; Object ippl/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ippl/"
+  :tables (list 
+   (semanticdb-table "oo.rkt"
+    :major-mode 'scheme-mode
+    :tags 
+        '( ("p1" variable (:default-value ((1243 . 1671))) nil [1230 1672])
+            ("p2" variable (:default-value ((1687 . 1806))) nil [1674 1807])
+            ("e1-new-bad-class" variable (:default-value ((1859 . 1891))) nil [1832 1892])
+            ("e2-object-without-class" variable (:default-value ((1928 . 1988))) nil [1894 1989])
+            ("e3-class-without-method" variable (:default-value ((2025 . 2132))) nil [1991 2133])
+            ("e4-bad-*" variable (:default-value ((2154 . 2291))) nil [2135 2292])
+            ("e5-bad-+" variable (:default-value ((2313 . 2450))) nil [2294 2451])
+            ("e-=α" function (:arguments ("e1" "e2")) nil [2992 4091]))          
+    :file "oo.rkt"
+    :pointmax 13266
+    :fsize 13279
+    :lastmodtime '(21278 780 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!jim!classes!ippl!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

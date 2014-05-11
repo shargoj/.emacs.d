@@ -1,0 +1,26 @@
+;; Object gameloop/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "gameloop/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-bsdmake-mode
+    :tags 
+        '( ("CC" variable (:default-value ("clang++")) nil [1 14])
+            ("STD" variable (:default-value ("--std=c++11")) nil [14 32])
+            ("CCARGS" variable (:default-value ("-Wall" "-g")) nil [32 50])
+            ("SRCS" variable (:default-value ("src/*.cpp")) nil [50 67])
+            ("LINKS" variable (:default-value ("-lglfw3" "-framework" "Cocoa" "-framework" "OpenGL" "-framework" "IOKit" "-framework" "CoreVideo" "-lSDL2" "-lSDL2_gfx")) nil [67 174])
+            ("OUTFILE" variable (:default-value ("bin/gameloop")) nil [174 197])
+            ("all" function nil nil [198 258])
+            ("clean" function nil nil [259 280]))          
+    :file "Makefile"
+    :pointmax 280
+    :fsize 279
+    :lastmodtime '(21273 21988 0 0)
+    :unmatched-syntax '((shell-command 267 . 279) (bol 266 . 266))
+    )
+   )
+  :file "!Users!jim!classes!game-engines!gameloop!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

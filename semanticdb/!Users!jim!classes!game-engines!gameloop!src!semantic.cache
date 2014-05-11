@@ -1,0 +1,656 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "main.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("SDL2/SDL.h" include (:system-flag t) nil [1 22])
+            ("cstdlib" include (:system-flag t) nil [24 42])
+            ("iostream" include (:system-flag t) nil [43 62])
+            ("scene.hpp" include nil nil [63 83])
+            ("sdlcontainer.hpp" include nil nil [84 111])
+            ("DEBUG.hpp" include nil nil [112 132])
+            ("random" include (:system-flag t) nil [133 150])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [152 172])
+            ("fps" variable
+               (:constant-flag t
+                :type ("Uint32" type (:type "class") nil nil))
+                nil [174 196])
+            ("minframetime" variable
+               (:constant-flag t
+                :type ("Uint32" type (:type "class") nil nil))
+                nil [197 236])
+            ("KeyComponent" type
+               (:superclasses 
+                  ( ("Component" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [703 710])
+                    ("key" variable (:type ("SDL_Keysym" type (:type "class") nil nil)) (reparse-symbol classsubparts) [713 728])
+                    ("unpressed" variable (:type "bool") (reparse-symbol classsubparts) [729 744])
+                    ("KeyComponent" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("key" variable (:type ("SDL_Keysym" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [760 775]))                          
+                        :type ("KeyComponent" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [747 807]))                  
+                :type "class")
+                nil [663 810])
+            ("VectorComponent" type
+               (:superclasses 
+                  ( ("Component" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [926 933])
+                    ("y" variable (:type "double") (reparse-symbol classsubparts) [936 948])
+                    ("x" variable (:type "double") (reparse-symbol classsubparts) [936 948])
+                    ("VectorComponent" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [967 976])
+                            ("y" variable (:type "double") (reparse-symbol arg-sub-list) [977 986]))                          
+                        :type ("VectorComponent" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [951 1002]))                  
+                :type "class")
+                nil [883 1006])
+            ("TTLComponent" type
+               (:superclasses 
+                  ( ("Component" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1116 1123])
+                    ("elapsed" variable (:type "double") (reparse-symbol classsubparts) [1126 1146])
+                    ("ttl" variable (:type "double") (reparse-symbol classsubparts) [1126 1146])
+                    ("TTLComponent" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("ttl" variable (:type "double") (reparse-symbol arg-sub-list) [1162 1173]))                          
+                        :type ("TTLComponent" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1149 1199])
+                    ("is_dead" function (:type "bool") (reparse-symbol classsubparts) [1203 1258])
+                    ("get_percent_done" function (:type "double") (reparse-symbol classsubparts) [1262 1323]))                  
+                :type "class")
+                nil [1076 1326])
+            ("KeyAdderSystem" type
+               (:superclasses 
+                  ( ("System" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("vels" variable (:type ("std::uniform_real_distribution" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1688 1742])
+                    ("re" variable (:type ("std::default_random_engine" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1745 1775])
+                    ("public" label nil (reparse-symbol classsubparts) [1777 1784])
+                    ("update" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("events" variable
+                               (:constant-flag t
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("SDL_Event" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1807 1841])
+                            ("entities" variable
+                               (:pointer 1
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("Entity" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1851 1879])
+                            ("dt" variable (:type "double") (reparse-symbol arg-sub-list) [1888 1898]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1787 2608]))                  
+                :type "class")
+                nil [1647 2613])
+            ("VelocitySystem" type
+               (:superclasses 
+                  ( ("System" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2739 2746])
+                    ("VelocitySystem" function
+                       (:constructor-flag t
+                        :type ("VelocitySystem" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2749 2768])
+                    ("update" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("events" variable
+                               (:constant-flag t
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("SDL_Event" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2792 2826])
+                            ("entities" variable
+                               (:pointer 1
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("Entity" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2836 2864])
+                            ("dt" variable (:type "double") (reparse-symbol arg-sub-list) [2873 2883]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2772 3278]))                  
+                :type "class")
+                nil [2700 3281])
+            ("TTLSystem" type
+               (:superclasses 
+                  ( ("System" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3408 3415])
+                    ("TTLSystem" function
+                       (:constructor-flag t
+                        :type ("TTLSystem" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3418 3432])
+                    ("update" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("events" variable
+                               (:constant-flag t
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("SDL_Event" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3456 3490])
+                            ("entities" variable
+                               (:pointer 1
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("Entity" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3500 3528])
+                            ("dt" variable (:type "double") (reparse-symbol arg-sub-list) [3537 3547]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3436 3997]))                  
+                :type "class")
+                nil [3374 4002])
+            ("SDL2/SDL2_gfxPrimitives.h" include (:system-flag t) nil [4004 4040])
+            ("SDLRenderSystem" type
+               (:superclasses 
+                  ( ("System" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("debug_write_keys" function
+                       (:arguments 
+                          ( ("entities" variable
+                               (:pointer 1
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("Entity" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4141 4169]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4118 4443])
+                    ("draw_keys" function
+                       (:arguments 
+                          ( ("entities" variable
+                               (:pointer 1
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("Entity" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4463 4491]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4447 5332])
+                    ("public" label nil (reparse-symbol classsubparts) [5334 5341])
+                    ("SDLRenderSystem" function
+                       (:constructor-flag t
+                        :type ("SDLRenderSystem" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5344 5364])
+                    ("update" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("events" variable
+                               (:constant-flag t
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("SDL_Event" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [5388 5422])
+                            ("entities" variable
+                               (:pointer 1
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("Entity" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [5432 5460])
+                            ("dt" variable (:type "double") (reparse-symbol arg-sub-list) [5469 5479]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5368 5729]))                  
+                :type "class")
+                nil [4076 5732])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [5746 5755])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5756 5769]))                  
+                :type "int")
+                nil [5736 6643]))          
+    :file "main.cpp"
+    :pointmax 6644
+    :fsize 6643
+    :lastmodtime '(21291 22383 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "scene.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("scene.hpp" include nil nil [1 21])
+            ("DEBUG.hpp" include nil nil [22 42])
+            ("SDLContainer.hpp" include nil nil [43 70])
+            ("is_quitting_event" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("e" variable (:type ("SDL_Event" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [102 114]))                  
+                :type "bool")
+                nil [72 115])
+            ("Scene" function
+               (:constructor-flag t
+                :parent "Scene"
+                :type ("Scene" type (:type "class") nil nil))
+                nil [117 135])
+            ("update" function
+               (:parent "Scene"
+                :arguments 
+                  ( ("dt" variable (:type "double") (reparse-symbol arg-sub-list) [156 166]))                  
+                :type "void")
+                nil [137 548])
+            ("add_system" function
+               (:parent "Scene"
+                :arguments 
+                  ( ("system" variable
+                       (:pointer 1
+                        :type ("System" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [573 588]))                  
+                :type "void")
+                nil [550 621])
+            ("is_scene_over" function
+               (:parent "Scene"
+                :type "bool")
+                nil [623 673])
+            ("is_quitting_event" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("e" variable (:type ("SDL_Event" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [705 717]))                  
+                :type "bool")
+                nil [675 847]))          
+    :file "scene.cpp"
+    :pointmax 848
+    :fsize 847
+    :lastmodtime '(21291 22432 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "scene.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("list" include (:system-flag t) nil [15 30])
+            ("entity.hpp" include nil nil [31 52])
+            ("system.hpp" include nil nil [53 74])
+            ("Scene" type
+               (:members 
+                  ( ("systems" variable (:type ("std::list" type
+                         (:template-specifier 
+                            ( ("System" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [92 119])
+                    ("running" variable (:type "bool") (reparse-symbol classsubparts) [122 142])
+                    ("public" label nil (reparse-symbol classsubparts) [144 151])
+                    ("Scene" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("Scene" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [154 162])
+                    ("entities" variable (:type ("std::list" type
+                         (:template-specifier 
+                            ( ("Entity" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [166 193])
+                    ("add_system" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("system" variable
+                               (:pointer 1
+                                :type ("System" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [213 228]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [197 229])
+                    ("update" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("dt" variable (:type "double") (reparse-symbol arg-sub-list) [245 255]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [233 256])
+                    ("is_scene_over" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [260 281]))                  
+                :type "class")
+                nil [76 284]))          
+    :file "scene.hpp"
+    :pointmax 285
+    :fsize 284
+    :lastmodtime '(21273 6005 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "entity.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("component.hpp" include nil nil [15 39])
+            ("map" include (:system-flag t) nil [40 54])
+            ("string" include (:system-flag t) nil [55 72])
+            ("Entity" type
+               (:members 
+                  ( ("components" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil)
+                              ("Component" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [91 136])
+                    ("public" label nil (reparse-symbol classsubparts) [137 144])
+                    ("Entity" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("Entity" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [147 156])
+                    ("has_component" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [179 196]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [160 203])
+                    ("get_component" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [231 248]))                          
+                        :type ("Component" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [206 249])
+                    ("get_component" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [283 300]))                          
+                        :type ("Component" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [252 307])
+                    ("set_component" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [329 346])
+                            ("component" variable
+                               (:pointer 1
+                                :type ("Component" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [347 368]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [310 369]))                  
+                :type "class")
+                nil [74 372]))          
+    :file "entity.hpp"
+    :pointmax 373
+    :fsize 372
+    :lastmodtime '(21273 28630 0 0)
+    :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (punctuation 202 . 203) (CONST 197 . 202) (semantic-list 178 . 196) (symbol 165 . 178) (BOOL 160 . 164) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (punctuation 309 . 310) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (punctuation 309 . 310) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (punctuation 318 . 319) (punctuation 317 . 318) (punctuation 316 . 317) (symbol 309 . 316))
+    )
+   (semanticdb-table "system.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("SDL2/SDL.h" include (:system-flag t) nil [15 36])
+            ("entity.hpp" include nil nil [37 58])
+            ("list" include (:system-flag t) nil [59 74])
+            ("System" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [91 98])
+                    ("init" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [101 123])
+                    ("cleanup" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [126 151])
+                    ("update" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("events" variable
+                               (:constant-flag t
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("SDL_Event" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [175 209])
+                            ("entities" variable
+                               (:pointer 1
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("Entity" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [218 246])
+                            ("dt" variable (:type "double") (reparse-symbol arg-sub-list) [254 264]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [155 269]))                  
+                :type "class")
+                nil [76 272]))          
+    :file "system.hpp"
+    :pointmax 273
+    :fsize 272
+    :lastmodtime '(21273 14179 0 0)
+    :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2))
+    )
+   (semanticdb-table "DEBUG.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [15 34])
+            ("DEBUG" variable (:constant-flag t) nil [44 49]))          
+    :file "DEBUG.hpp"
+    :pointmax 142
+    :fsize 141
+    :lastmodtime '(21273 1532 0 0)
+    :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2))
+    :lexical-table 
+        '(("DEBUG" (spp-arg-list ("msg") 49 . 54) . ((semantic-list "{						\\
+    using namespace std;			\\
+    cout << (msg) << endl;			\\
+  }" 62 . 134)))
+          )
+
+    )
+   (semanticdb-table "sdlcontainer.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("SDL2/SDL.h" include (:system-flag t) nil [15 36])
+            ("list" include (:system-flag t) nil [37 52])
+            ("WIDTH" variable (:constant-flag t) nil [62 67])
+            ("HEIGHT" variable (:constant-flag t) nil [82 88])
+            ("HEIGHT" variable (:constant-flag t) nil [82 88])
+            ("HEIGHT" variable (:constant-flag t) nil [82 88])
+            ("SDLContainer" type
+               (:members 
+                  ( ("SDLContainer" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("SDLContainer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [119 134])
+                    ("public" label nil (reparse-symbol classsubparts) [136 143])
+                    ("get_instance" function
+                       (:typemodifiers ("static")
+                        :type ("SDLContainer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [146 322])
+                    ("renderer" variable
+                       (:pointer 1
+                        :type ("SDL_Renderer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [326 349])
+                    ("window" variable
+                       (:pointer 1
+                        :type ("SDL_Window" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [352 371])
+                    ("get_events" function
+                       (:prototype-flag t
+                        :type ("std::list" type
+                             (:template-specifier 
+                                ( ("SDL_Event" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [375 410])
+                    ("SDLContainer" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [414 430]))                  
+                :type "class")
+                nil [96 433]))          
+    :file "sdlcontainer.hpp"
+    :pointmax 434
+    :fsize 433
+    :lastmodtime '(21273 27615 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("HEIGHT" . ((semantic-list "(480)" 89 . 94)))
+          ("WIDTH" . ((semantic-list "(640, 480,)" 68 . 79)))
+          )
+
+    )
+   (semanticdb-table "sdlcontainer.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("sdlcontainer.hpp" include nil nil [1 28])
+            ("SDLContainer" function
+               (:constructor-flag t
+                :parent "SDLContainer"
+                :type ("SDLContainer" type (:type "class") nil nil))
+                nil [30 455])
+            ("get_events" function
+               (:parent "SDLContainer"
+                :type ("std::list" type
+                     (:template-specifier 
+                        ( ("SDL_Event" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [457 659]))          
+    :file "sdlcontainer.cpp"
+    :pointmax 660
+    :fsize 659
+    :lastmodtime '(21273 27576 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "SDLContainer.hpp"
+    :file "SDLContainer.hpp"
+    :fsize 433
+    :lastmodtime '(21273 27615 0 0)
+    )
+   (semanticdb-table "component.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("typeinfo" include (:system-flag t) nil [15 34])
+            ("component_t" type
+               (:typedef ("std::type_info" type (:type "class") nil nil)
+                :superclasses "std::type_info"
+                :type "typedef")
+                nil [36 71])
+            ("Component" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [91 98])
+                    ("Component" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [101 124]))                  
+                :type "class")
+                nil [73 127]))          
+    :file "component.hpp"
+    :pointmax 128
+    :fsize 127
+    :lastmodtime '(21273 15436 0 0)
+    :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2))
+    )
+   (semanticdb-table "entity.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("entity.hpp" include nil nil [1 22])
+            ("Entity" function
+               (:constructor-flag t
+                :parent "Entity"
+                :type ("Entity" type (:type "class") nil nil))
+                nil [24 43])
+            ("has_component" function
+               (:parent "Entity"
+                :arguments 
+                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [72 89]))                  
+                :type "bool")
+                nil [45 151])
+            ("get_component" function
+               (:pointer 1
+                :parent "Entity"
+                :arguments 
+                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [186 203]))                  
+                :type ("Component" type (:type "class") nil nil))
+                nil [153 290])
+            ("get_component" function
+               (:pointer 1
+                :parent "Entity"
+                :constant-flag t
+                :arguments 
+                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [331 348]))                  
+                :type ("Component" type (:type "class") nil nil))
+                nil [292 441])
+            ("set_component" function
+               (:parent "Entity"
+                :arguments 
+                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [470 487])
+                    ("component" variable
+                       (:pointer 1
+                        :type ("Component" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [488 509]))                  
+                :type "void")
+                nil [443 545]))          
+    :file "entity.cpp"
+    :pointmax 546
+    :fsize 545
+    :lastmodtime '(21273 28729 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!jim!classes!game-engines!gameloop!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

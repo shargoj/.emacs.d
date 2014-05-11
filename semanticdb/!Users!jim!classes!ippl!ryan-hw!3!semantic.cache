@@ -1,0 +1,18 @@
+;; Object 3/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "3/"
+  :tables (list 
+   (semanticdb-table "3.rkt"
+    :major-mode 'scheme-mode
+    :tags nil
+    :file "3.rkt"
+    :pointmax 10652
+    :fsize 10653
+    :lastmodtime '(21233 27653 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!jim!classes!ippl!ryan-hw!3!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

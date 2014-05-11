@@ -1,0 +1,18 @@
+;; Object units/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "units/"
+  :tables (list 
+   (semanticdb-table "unit-define-values-example.rkt"
+    :major-mode 'scheme-mode
+    :tags nil
+    :file "unit-define-values-example.rkt"
+    :pointmax 341
+    :fsize 340
+    :lastmodtime '(21351 56667 0 0)
+    :unmatched-syntax '((semantic-list 289 . 340) (semantic-list 237 . 288) (semantic-list 184 . 233) (semantic-list 135 . 182) (semantic-list 84 . 133) (semantic-list 15 . 82) (symbol 7 . 13) (symbol 2 . 6) (punctuation 1 . 2))
+    )
+   )
+  :file "!Users!jim!src!typed-units!examples!units!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

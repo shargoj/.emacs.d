@@ -1,0 +1,296 @@
+;; Object devices/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "devices/"
+  :tables (list 
+   (semanticdb-table "timer.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("devices/timer.h" include nil nil [1 27])
+            ("debug.h" include (:system-flag t) nil [28 46])
+            ("inttypes.h" include (:system-flag t) nil [47 68])
+            ("round.h" include (:system-flag t) nil [69 87])
+            ("stdio.h" include (:system-flag t) nil [88 106])
+            ("devices/pit.h" include nil nil [107 131])
+            ("threads/interrupt.h" include nil nil [132 162])
+            ("threads/synch.h" include nil nil [163 189])
+            ("threads/thread.h" include nil nil [190 217])
+            ("ticks" variable
+               (:typemodifiers ("static")
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [468 489])
+            ("loops_per_tick" variable
+               (:typemodifiers ("static")
+                :type "unsigned int")
+                nil [566 597])
+            ("timer_interrupt" variable
+               (:typemodifiers ("static")
+                :type ("intr_handler_func" type (:type "class") nil nil))
+                nil [599 640])
+            ("too_many_loops" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("loops" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [669 684]))                  
+                :type "bool")
+                nil [641 685])
+            ("busy_wait" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("loops" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [709 723]))                  
+                :type "void")
+                nil [686 724])
+            ("real_time_sleep" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("num" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [754 766])
+                    ("denom" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [767 781]))                  
+                :type "void")
+                nil [725 782])
+            ("real_time_delay" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("num" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [812 824])
+                    ("denom" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [825 839]))                  
+                :type "void")
+                nil [783 840])
+            ("timer_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [971 976]))                  
+                :type "void")
+                nil [954 1084])
+            ("timer_calibrate" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1173 1178]))                  
+                :type "void")
+                nil [1151 1863])
+            ("timer_ticks" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1947 1952]))                  
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [1926 2067])
+            ("timer_elapsed" function
+               (:arguments 
+                  ( ("then" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2211 2224]))                  
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [2188 2261])
+            ("timer_sleep" function
+               (:arguments 
+                  ( ("ticks" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2365 2379]))                  
+                :type "void")
+                nil [2347 2527])
+            ("timer_msleep" function
+               (:arguments 
+                  ( ("ms" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2630 2641]))                  
+                :type "void")
+                nil [2611 2676])
+            ("timer_usleep" function
+               (:arguments 
+                  ( ("us" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2779 2790]))                  
+                :type "void")
+                nil [2760 2832])
+            ("timer_nsleep" function
+               (:arguments 
+                  ( ("ns" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2934 2945]))                  
+                :type "void")
+                nil [2915 2994])
+            ("timer_mdelay" function
+               (:arguments 
+                  ( ("ms" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3330 3341]))                  
+                :type "void")
+                nil [3311 3376])
+            ("timer_udelay" function
+               (:arguments 
+                  ( ("us" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3708 3719]))                  
+                :type "void")
+                nil [3689 3761])
+            ("timer_ndelay" function
+               (:arguments 
+                  ( ("ns" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4101 4112]))                  
+                :type "void")
+                nil [4082 4161])
+            ("timer_print_stats" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4218 4223]))                  
+                :type "void")
+                nil [4194 4283])
+            ("timer_interrupt" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type ("intr_frame" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4345 4375])
+                    ("" variable (:type ("UNUSED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4369 4376]))                  
+                :type "void")
+                nil [4316 4455])
+            ("too_many_loops" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("loops" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4580 4595]))                  
+                :type "bool")
+                nil [4552 4858])
+            ("busy_wait" function
+               (:arguments 
+                  ( ("loops" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5176 5190]))                  
+                :type ("NO_INLINE" type (:type "class") nil nil))
+                nil [5155 5233])
+            ("real_time_sleep" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("num" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5313 5325])
+                    ("denom" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5326 5340]))                  
+                :type "void")
+                nil [5284 6001])
+            ("real_time_delay" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("num" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6085 6097])
+                    ("denom" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6098 6112]))                  
+                :type "void")
+                nil [6056 6320]))          
+    :file "timer.c"
+    :pointmax 6321
+    :fsize 6320
+    :lastmodtime '(21191 37879 0 0)
+    :unmatched-syntax '((VOID 5150 . 5154) (STATIC 5143 . 5149) (number 345 . 347) (punctuation 343 . 344) (punctuation 342 . 343) (symbol 331 . 341) (symbol 322 . 330) (symbol 316 . 321) (number 311 . 315) (symbol 305 . 310) (punctuation 304 . 305) (semantic-list 2643 . 2676) (semantic-list 2629 . 2641) (semantic-list 2381 . 2527) (semantic-list 2364 . 2379))
+    )
+   (semanticdb-table "timer.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("DEVICES_TIMER_H" variable (:constant-flag t) nil [33 48])
+            ("round.h" include (:system-flag t) nil [50 68])
+            ("stdint.h" include (:system-flag t) nil [69 88])
+            ("TIMER_FREQ" variable (:constant-flag t) nil [143 153])
+            ("timer_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [176 181]))                  
+                :type "void")
+                nil [159 182])
+            ("timer_calibrate" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [205 210]))                  
+                :type "void")
+                nil [183 211])
+            ("timer_ticks" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [234 239]))                  
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [213 240])
+            ("timer_elapsed" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [264 272]))                  
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [241 273])
+            ("timer_sleep" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("ticks" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [341 355]))                  
+                :type "void")
+                nil [323 356])
+            ("timer_msleep" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("milliseconds" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [376 397]))                  
+                :type "void")
+                nil [357 398])
+            ("timer_usleep" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("microseconds" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [418 439]))                  
+                :type "void")
+                nil [399 440])
+            ("timer_nsleep" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("nanoseconds" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [460 480]))                  
+                :type "void")
+                nil [441 481])
+            ("timer_mdelay" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("milliseconds" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [520 541]))                  
+                :type "void")
+                nil [501 542])
+            ("timer_udelay" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("microseconds" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [562 583]))                  
+                :type "void")
+                nil [543 584])
+            ("timer_ndelay" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("nanoseconds" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [604 624]))                  
+                :type "void")
+                nil [585 625])
+            ("timer_print_stats" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [651 656]))                  
+                :type "void")
+                nil [627 657]))          
+    :file "timer.h"
+    :pointmax 688
+    :fsize 687
+    :lastmodtime '(19257 28357 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("TIMER_FREQ" . ((number "100" 154 . 157)))
+          ("DEVICES_TIMER_H")
+          )
+
+    )
+   (semanticdb-table "pit.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("devices/pit.h" include nil nil [1 25])
+            ("debug.h" include (:system-flag t) nil [26 44])
+            ("stdint.h" include (:system-flag t) nil [45 64])
+            ("threads/interrupt.h" include nil nil [65 95])
+            ("threads/io.h" include nil nil [96 119])
+            ("PIT_PORT_CONTROL" variable (:constant-flag t) nil [244 260])
+            ("PIT_PORT_COUNTER" variable (:constant-flag t) nil [318 334])
+            ("PIT_HZ" variable (:constant-flag t) nil [422 428])
+            ("pit_configure_channel" function
+               (:arguments 
+                  ( ("channel" variable (:type "int") (reparse-symbol arg-sub-list) [1565 1577])
+                    ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [1578 1587])
+                    ("frequency" variable (:type "int") (reparse-symbol arg-sub-list) [1588 1602]))                  
+                :type "void")
+                nil [1537 2894]))          
+    :file "pit.c"
+    :pointmax 2895
+    :fsize 2894
+    :lastmodtime '(19257 28357 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("PIT_HZ" . ((number "1193180" 429 . 436)))
+          ("PIT_PORT_COUNTER" (spp-arg-list ("CHANNEL") 334 . 343) . ((semantic-list "(0x40 + (CHANNEL))" 344 . 362)))
+          ("PIT_PORT_CONTROL" . ((number "0x43" 270 . 274)))
+          )
+
+    )
+   (semanticdb-table "pit.h"
+    :major-mode 'c-mode
+    :tags nil
+    :file "pit.h"
+    :pointmax 162
+    :fsize 161
+    :lastmodtime '(19257 28357 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!jim!src!pintos!src!devices!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

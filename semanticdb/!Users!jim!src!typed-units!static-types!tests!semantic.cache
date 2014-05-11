@@ -1,0 +1,50 @@
+;; Object tests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tests/"
+  :tables (list 
+   (semanticdb-table "test-syntax.rkt"
+    :major-mode 'scheme-mode
+    :tags 
+        '( ("test-results" code nil nil [1535 1549]))          
+    :file "test-syntax.rkt"
+    :pointmax 1550
+    :fsize 1552
+    :lastmodtime '(21354 36874 0 0)
+    :unmatched-syntax '((semantic-list 708 . 1504) (semantic-list 625 . 704) (semantic-list 584 . 623) (semantic-list 548 . 583) (semantic-list 524 . 547) (semantic-list 482 . 523) (semantic-list 385 . 481) (semantic-list 364 . 384) (semantic-list 343 . 363) (semantic-list 327 . 342) (semantic-list 311 . 326) (semantic-list 295 . 310) (semantic-list 79 . 240) (semantic-list 14 . 60) (symbol 7 . 13) (symbol 2 . 6) (punctuation 1 . 2))
+    )
+   (semanticdb-table "test-types.rkt"
+    :major-mode 'scheme-mode
+    :tags 
+        '( ("test-results" code nil nil [1392 1406]))          
+    :file "test-types.rkt"
+    :pointmax 1407
+    :fsize 1406
+    :lastmodtime '(21354 36874 0 0)
+    :unmatched-syntax '((semantic-list 1269 . 1390) (semantic-list 1174 . 1268) (semantic-list 1089 . 1173) (semantic-list 1022 . 1088) (semantic-list 940 . 1020) (semantic-list 868 . 939) (semantic-list 807 . 867) (semantic-list 776 . 805) (semantic-list 736 . 775) (semantic-list 712 . 735) (semantic-list 554 . 710) (semantic-list 400 . 552) (semantic-list 245 . 398) (semantic-list 92 . 243) (semantic-list 14 . 90) (symbol 7 . 13) (symbol 2 . 6) (punctuation 1 . 2))
+    )
+   (semanticdb-table "test-meta.rkt"
+    :major-mode 'scheme-mode
+    :tags 
+        '( ("Γ_1" variable (:default-value ((191 . 254))) nil [176 255])
+            ("Γ_2" variable (:default-value ((271 . 372))) nil [257 373])
+            ("Γ_12" variable (:default-value ((390 . 555))) nil [375 556])
+            ("Ω_1" variable (:default-value ((572 . 641))) nil [558 642])
+            ("Ω_2" variable (:default-value ((658 . 746))) nil [644 747])
+            ("Ω_12" variable (:default-value ((764 . 923))) nil [749 924])
+            ("Σ_1" variable (:default-value ((940 . 1061))) nil [926 1062])
+            ("Σ_2" variable (:default-value ((1078 . 1139))) nil [1064 1140])
+            ("Σ_12" variable (:default-value ((1157 . 1340))) nil [1142 1341])
+            ("defns" variable (:default-value ((1572 . 1768))) nil [1556 1769])
+            ("Γ-defns" variable (:default-value ((1789 . 1921))) nil [1771 1922])
+            ("test-results" code nil nil [1970 1984]))          
+    :file "test-meta.rkt"
+    :pointmax 1987
+    :fsize 2008
+    :lastmodtime '(21354 36874 0 0)
+    :unmatched-syntax '((semantic-list 1924 . 1968) (semantic-list 1476 . 1554) (semantic-list 1431 . 1474) (semantic-list 1387 . 1430) (semantic-list 1343 . 1386) (semantic-list 14 . 140) (symbol 7 . 13) (symbol 2 . 6) (punctuation 1 . 2))
+    )
+   )
+  :file "!Users!jim!src!typed-units!static-types!tests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

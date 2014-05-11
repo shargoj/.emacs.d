@@ -1,0 +1,21 @@
+;; Object scripts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "scripts/"
+  :tables (list 
+   (semanticdb-table "main.js"
+    :major-mode 'js-mode
+    :tags 
+        '( ("build_chart" function (:arguments 
+              ( ("json" variable nil (reparse-symbol FormalParameterList) [602 606])
+                ("where" variable nil (reparse-symbol FormalParameterList) [608 613]))              ) nil [580 2701]))          
+    :file "main.js"
+    :pointmax 2702
+    :fsize 2705
+    :lastmodtime '(21338 873 0 0)
+    :unmatched-syntax '((PAREN_BLOCK 34 . 490) (DOT 30 . 31) (VARIABLE 16 . 17) (PAREN_BLOCK 17 . 30) (PAREN_BLOCK 34 . 488) (DOT 30 . 31) (VARIABLE 16 . 17) (PAREN_BLOCK 17 . 30) (PAREN_BLOCK 34 . 518) (DOT 30 . 31) (VARIABLE 16 . 17) (PAREN_BLOCK 17 . 30) (PAREN_BLOCK 34 . 485) (DOT 30 . 31) (VARIABLE 16 . 17) (PAREN_BLOCK 17 . 30) (PAREN_BLOCK 34 . 488) (DOT 30 . 31) (VARIABLE 16 . 17) (PAREN_BLOCK 17 . 30) (PAREN_BLOCK 34 . 491) (DOT 30 . 31) (VARIABLE 16 . 17) (PAREN_BLOCK 17 . 30) (PAREN_BLOCK 34 . 490) (DOT 30 . 31) (VARIABLE 16 . 17) (PAREN_BLOCK 17 . 30) (PAREN_BLOCK 34 . 484) (DOT 30 . 31) (VARIABLE 16 . 17) (PAREN_BLOCK 17 . 30))
+    )
+   )
+  :file "!Users!jim!classes!game-engines!UE4-writeup!app!scripts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

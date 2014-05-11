@@ -1,0 +1,73 @@
+;; Object event/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "event/"
+  :tables (list 
+   (semanticdb-table "pythonTask.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("PYTHONTASK_H" variable (:constant-flag t) nil [517 529])
+            ("pandabase.h" include nil nil [531 553])
+            ("asyncTask.h" include nil nil [555 577]))          
+    :file "pythonTask.h"
+    :pointmax 2603
+    :fsize 2602
+    :lastmodtime '(21211 26829 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("PYTHONTASK_H")
+          )
+
+    )
+   (semanticdb-table "asyncTask.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ASYNCTASK_H" variable (:constant-flag t) nil [515 526])
+            ("pandabase.h" include nil nil [528 550])
+            ("asyncTaskBase.h" include nil nil [552 578])
+            ("pmutex.h" include nil nil [579 598])
+            ("conditionVar.h" include nil nil [599 624])
+            ("pStatCollector.h" include nil nil [625 652])
+            ("AsyncTaskManager" type
+               (:prototype t
+                :type "class")
+                nil [802 825])
+            ("AsyncTaskChain" type
+               (:prototype t
+                :type "class")
+                nil [826 847])
+            ("AsyncTaskBase" variable (:type "int") nil [1327 4805])
+            ("<<" function
+               (:operator-flag t
+                :arguments 
+                  ( ("out" variable
+                       (:reference 1
+                        :type ("ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4836 4849])
+                    ("task" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("AsyncTask" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4850 4872]))                  
+                :type ("ostream" type (:type "class") nil nil))
+                nil [4814 4910])
+            ("asyncTask.I" include nil nil [4913 4935]))          
+    :file "asyncTask.h"
+    :pointmax 4944
+    :fsize 4943
+    :lastmodtime '(21211 26829 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("ASYNCTASK_H")
+          )
+
+    )
+   (semanticdb-table "asyncTask.I"
+    :file "asyncTask.I"
+    :fsize 11177
+    :lastmodtime '(21211 26829 0 0)
+    )
+   )
+  :file "!Users!jim!src!panda3d!panda!src!event!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

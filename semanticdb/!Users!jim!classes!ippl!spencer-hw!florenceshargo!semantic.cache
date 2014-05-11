@@ -1,0 +1,23 @@
+;; Object florenceshargo/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "florenceshargo/"
+  :tables (list 
+   (semanticdb-table "6.rkt"
+    :major-mode 'scheme-mode
+    :tags 
+        '( ("loopy-config" variable (:default-value ((8290 . 9324))) nil [8267 9325])
+            ("config1" variable (:default-value ((19367 . 19405))) nil [19351 19406])
+            ("config2" variable (:default-value ((19423 . 19487))) nil [19407 19488])
+            ("config3" variable (:default-value ((19507 . 19654))) nil [19489 19655])
+            ("config-with-ordered-rooms" variable (:default-value ((19692 . 20081))) nil [19656 20082])
+            ("config-with-ordered-rooms2" variable (:default-value ((20120 . 20507))) nil [20083 20508])
+            ("config-with-ordered-rooms3" variable (:default-value ((20546 . 20933))) nil [20509 20934]))          
+    :file "6.rkt"
+    :pointmax 22401
+    :unmatched-syntax '((semantic-list 22371 . 22400) (semantic-list 22086 . 22369) (semantic-list 21763 . 22084) (semantic-list 21307 . 21619) (semantic-list 21057 . 21175) (semantic-list 18624 . 19216) (semantic-list 18360 . 18622) (semantic-list 18173 . 18358) (semantic-list 17872 . 18092) (semantic-list 17531 . 17775) (semantic-list 17120 . 17413) (semantic-list 15680 . 16944) (semantic-list 13069 . 15596) (semantic-list 12771 . 13067) (semantic-list 12049 . 12206) (semantic-list 11677 . 12047) (semantic-list 11307 . 11675) (semantic-list 11057 . 11230) (semantic-list 9781 . 10897) (semantic-list 9468 . 9779) (semantic-list 7879 . 8265) (semantic-list 7678 . 7795) (semantic-list 7189 . 7605) (semantic-list 6848 . 7187) (semantic-list 6540 . 6846) (semantic-list 6301 . 6538) (semantic-list 6051 . 6249) (semantic-list 5578 . 5870) (semantic-list 5314 . 5576) (semantic-list 4990 . 5206) (semantic-list 4619 . 4938) (semantic-list 4336 . 4617) (semantic-list 4062 . 4334) (semantic-list 3358 . 3984) (semantic-list 3154 . 3355) (semantic-list 2958 . 3152) (semantic-list 2454 . 2917) (semantic-list 2119 . 2452) (semantic-list 1793 . 2086) (semantic-list 1736 . 1791) (semantic-list 1248 . 1565) (semantic-list 928 . 1161) (semantic-list 651 . 926) (semantic-list 437 . 497) (semantic-list 341 . 408) (semantic-list 120 . 305) (semantic-list 86 . 104) (semantic-list 66 . 84) (semantic-list 30 . 65) (semantic-list 14 . 29) (symbol 7 . 13) (symbol 2 . 6) (punctuation 1 . 2))
+    )
+   )
+  :file "!Users!jim!classes!ippl!spencer-hw!florenceshargo!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

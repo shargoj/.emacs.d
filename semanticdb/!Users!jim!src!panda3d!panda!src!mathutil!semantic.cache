@@ -1,0 +1,43 @@
+;; Object mathutil/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mathutil/"
+  :tables (list 
+   (semanticdb-table "boundingBox.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("BOUNDINGBOX_H" variable (:constant-flag t) nil [519 532])
+            ("pandabase.h" include nil nil [534 556])
+            ("finiteBoundingVolume.h" include nil nil [558 591])
+            ("plane.h" include nil nil [592 610])
+            ("FiniteBoundingVolume" variable (:type "int") nil [1077 3802])
+            ("boundingBox.I" include nil nil [3804 3828]))          
+    :file "boundingBox.h"
+    :pointmax 3837
+    :fsize 3836
+    :lastmodtime '(21274 29681 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("BOUNDINGBOX_H")
+          )
+
+    )
+   (semanticdb-table "finiteBoundingVolume.h"
+    :file "finiteBoundingVolume.h"
+    :fsize 2034
+    :lastmodtime '(21211 26829 0 0)
+    )
+   (semanticdb-table "plane.h"
+    :file "plane.h"
+    :fsize 1097
+    :lastmodtime '(21211 26829 0 0)
+    )
+   (semanticdb-table "boundingBox.I"
+    :file "boundingBox.I"
+    :fsize 4150
+    :lastmodtime '(21211 26829 0 0)
+    )
+   )
+  :file "!Users!jim!src!panda3d!panda!src!mathutil!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

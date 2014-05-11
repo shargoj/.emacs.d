@@ -1,0 +1,27 @@
+;; Object frtime/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "frtime/"
+  :tables (list 
+   (semanticdb-table "animation.rkt"
+    :major-mode 'scheme-mode
+    :tags nil
+    :file "animation.rkt"
+    :pointmax 14085
+    :fsize 14084
+    :lastmodtime '(20997 28515 0 0)
+    :unmatched-syntax '((semantic-list 1 . 14084))
+    )
+   (semanticdb-table "lang-ext.rkt"
+    :major-mode 'scheme-mode
+    :tags nil
+    :file "lang-ext.rkt"
+    :pointmax 33768
+    :fsize 33767
+    :lastmodtime '(20997 28515 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Applications!Racket v5.3.6!collects!frtime!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

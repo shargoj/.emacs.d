@@ -1,0 +1,18 @@
+;; Object Downloads/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Downloads/"
+  :tables (list 
+   (semanticdb-table "limits-structnest.c"
+    :major-mode 'c-mode
+    :tags nil
+    :file "limits-structnest.c"
+    :pointmax 1207
+    :fsize 1206
+    :lastmodtime '(21190 15492 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!jim!Downloads!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

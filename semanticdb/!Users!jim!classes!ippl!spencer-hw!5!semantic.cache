@@ -1,0 +1,24 @@
+;; Object 5/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "5/"
+  :tables (list 
+   (semanticdb-table "5.rkt"
+    :major-mode 'scheme-mode
+    :tags 
+        '( ("config1" variable (:default-value ((8949 . 8987))) nil [8933 8988])
+            ("config2" variable (:default-value ((9005 . 9069))) nil [8989 9070])
+            ("config3" variable (:default-value ((9089 . 9208))) nil [9071 9209])
+            ("config-with-ordered-rooms" variable (:default-value ((9246 . 9523))) nil [9210 9524])
+            ("config-with-ordered-rooms2" variable (:default-value ((9562 . 9837))) nil [9525 9838])
+            ("config-with-ordered-rooms3" variable (:default-value ((9876 . 10151))) nil [9839 10152]))          
+    :file "5.rkt"
+    :pointmax 11585
+    :fsize 11584
+    :lastmodtime '(21251 58712 0 0)
+    :unmatched-syntax '((semantic-list 11555 . 11584) (semantic-list 11270 . 11553) (semantic-list 10982 . 11268) (semantic-list 10525 . 10838) (semantic-list 10275 . 10393) (semantic-list 8267 . 8798) (semantic-list 8003 . 8265) (semantic-list 7816 . 8001) (semantic-list 7515 . 7735) (semantic-list 7173 . 7418) (semantic-list 6762 . 7055) (semantic-list 5699 . 6586) (semantic-list 3892 . 5615) (semantic-list 3629 . 3890) (semantic-list 2907 . 3064) (semantic-list 2556 . 2905) (semantic-list 2213 . 2554) (semantic-list 1963 . 2136) (semantic-list 681 . 1803) (semantic-list 429 . 679) (semantic-list 287 . 368) (semantic-list 100 . 285) (semantic-list 66 . 84) (semantic-list 30 . 65) (semantic-list 14 . 29) (symbol 7 . 13) (symbol 2 . 6) (punctuation 1 . 2))
+    )
+   )
+  :file "!Users!jim!classes!ippl!spencer-hw!5!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

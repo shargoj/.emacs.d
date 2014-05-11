@@ -1,0 +1,24 @@
+;; Object 6/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "6/"
+  :tables (list 
+   (semanticdb-table "6.rkt"
+    :major-mode 'scheme-mode
+    :tags 
+        '( ("config1" variable (:default-value ((13518 . 13556))) nil [13629 13684])
+            ("config2" variable (:default-value ((13574 . 13638))) nil [13685 13766])
+            ("config3" variable (:default-value ((13658 . 13777))) nil [13767 13905])
+            ("config-with-ordered-rooms" variable (:default-value ((13815 . 14092))) nil [13906 14220])
+            ("config-with-ordered-rooms2" variable (:default-value ((14131 . 14406))) nil [14221 14534])
+            ("config-with-ordered-rooms3" variable (:default-value ((14445 . 14720))) nil [14535 14848]))          
+    :file "6.rkt"
+    :pointmax 16154
+    :fsize 16282
+    :lastmodtime '(21255 58009 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!jim!classes!ippl!spencer-hw!6!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

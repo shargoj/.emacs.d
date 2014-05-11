@@ -1,0 +1,18 @@
+;; Object test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test/"
+  :tables (list 
+   (semanticdb-table "bower.json"
+    :major-mode 'js-mode
+    :tags nil
+    :file "bower.json"
+    :pointmax 146
+    :fsize 145
+    :lastmodtime '(21316 61949 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!jim!classes!game-engines!panda-writeup!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

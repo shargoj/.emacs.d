@@ -1,0 +1,815 @@
+;; Object examples/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "examples/"
+  :tables (list 
+   (semanticdb-table "bubsort.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [239 257])
+            ("SORT_SIZE" variable (:constant-flag t) nil [296 305])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [321 326]))                  
+                :type "int")
+                nil [311 862]))          
+    :file "bubsort.c"
+    :pointmax 863
+    :fsize 862
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("SORT_SIZE" . ((number "128" 306 . 309)))
+          )
+
+    )
+   (semanticdb-table "cat.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [73 91])
+            ("syscall.h" include (:system-flag t) nil [92 112])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [124 133])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [134 147]))                  
+                :type "int")
+                nil [114 690]))          
+    :file "cat.c"
+    :pointmax 691
+    :fsize 690
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "cmp.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [38 56])
+            ("syscall.h" include (:system-flag t) nil [57 77])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [89 98])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [99 112]))                  
+                :type "int")
+                nil [79 1572]))          
+    :file "cmp.c"
+    :pointmax 1573
+    :fsize 1572
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "cp.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [43 61])
+            ("syscall.h" include (:system-flag t) nil [62 82])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [94 103])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [104 117]))                  
+                :type "int")
+                nil [84 1048]))          
+    :file "cp.c"
+    :pointmax 1049
+    :fsize 1048
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "echo.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("syscall.h" include (:system-flag t) nil [20 40])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [52 61])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [62 74]))                  
+                :type "int")
+                nil [42 187]))          
+    :file "echo.c"
+    :pointmax 188
+    :fsize 187
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "halt.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("syscall.h" include (:system-flag t) nil [137 157])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [169 174]))                  
+                :type "int")
+                nil [159 209]))          
+    :file "halt.c"
+    :pointmax 210
+    :fsize 209
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "hex-dump.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [85 103])
+            ("syscall.h" include (:system-flag t) nil [104 124])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [136 145])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [146 159]))                  
+                :type "int")
+                nil [126 732]))          
+    :file "hex-dump.c"
+    :pointmax 733
+    :fsize 732
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "insult.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("start" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [507 624])
+            ("startLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [625 662])
+            ("adj" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [663 705])
+            ("adjLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [706 740])
+            ("adj3" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [741 769])
+            ("adj3Loc" variable
+               (:dereference 1
+                :type "char")
+                nil [770 802])
+            ("adj1" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [803 1448])
+            ("adj1Loc" variable
+               (:dereference 1
+                :type "char")
+                nil [1449 1670])
+            ("adj2" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [1671 2137])
+            ("adj2Loc" variable
+               (:dereference 1
+                :type "char")
+                nil [2138 2318])
+            ("name" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [2319 2519])
+            ("nameLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [2520 2572])
+            ("stuff" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [2573 2760])
+            ("stuffLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [2761 2839])
+            ("noun_and_prep" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [2840 3174])
+            ("noun_and_prepLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [3175 3293])
+            ("organics" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [3294 3483])
+            ("organicsLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [3484 3576])
+            ("body_parts" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [3577 3669])
+            ("body_partsLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [3670 3720])
+            ("noun" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [3721 3892])
+            ("nounLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [3893 3965])
+            ("animal" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [3966 4077])
+            ("animalLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [4078 4138])
+            ("good_verb" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [4139 4262])
+            ("good_verbLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [4263 4327])
+            ("curse" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [4328 4498])
+            ("curseLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [4499 4540])
+            ("afflictors" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [4541 4677])
+            ("afflictorsLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [4678 4730])
+            ("quantity" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [4731 4971])
+            ("quantityLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [4972 5041])
+            ("numbers" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [5042 5218])
+            ("numbersLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [5219 5271])
+            ("adv" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [5272 5462])
+            ("advLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [5463 5516])
+            ("metaphor" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [5517 5756])
+            ("metaphorLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [5757 5807])
+            ("force" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [5808 5861])
+            ("forceLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [5862 5901])
+            ("bad_action" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [5902 6386])
+            ("bad_actionLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [6387 6515])
+            ("beasties" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [6516 6803])
+            ("beastiesLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [6804 6888])
+            ("condition" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [6889 7043])
+            ("conditionLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [7044 7107])
+            ("place" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [7108 7279])
+            ("placeLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [7280 7325])
+            ("relation" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [7326 7435])
+            ("relationLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [7436 7484])
+            ("in_something" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [7485 7611])
+            ("in_somethingLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [7612 7671])
+            ("bad_place" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [7672 7785])
+            ("bad_placeLoc" variable
+               (:dereference 1
+                :type "char")
+                nil [7786 7835])
+            ("daGrammar" variable
+               (:pointer 2
+                :dereference 1
+                :type "char")
+                nil [7836 7857])
+            ("daGLoc" variable
+               (:pointer 1
+                :dereference 1
+                :type "char")
+                nil [7858 7875])
+            ("init_grammar" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [7903 7908]))                  
+                :type "void")
+                nil [7877 9344])
+            ("ctype.h" include (:system-flag t) nil [9347 9365])
+            ("debug.h" include (:system-flag t) nil [9366 9384])
+            ("random.h" include (:system-flag t) nil [9385 9404])
+            ("stdio.h" include (:system-flag t) nil [9405 9423])
+            ("stdlib.h" include (:system-flag t) nil [9424 9443])
+            ("string.h" include (:system-flag t) nil [9444 9463])
+            ("syscall.h" include (:system-flag t) nil [9464 9484])
+            ("expand" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [9499 9507])
+                    ("grammar" variable
+                       (:pointer 2
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9508 9525])
+                    ("location" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9526 9543])
+                    ("handle" variable (:type "int") (reparse-symbol arg-sub-list) [9544 9555]))                  
+                :type "void")
+                nil [9486 9556])
+            ("PRINTF_FORMAT" function
+               (:prototype-flag t
+                :type "int")
+                nil [9617 9638])
+            ("usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ret_code" variable (:type "int") (reparse-symbol arg-sub-list) [9659 9672])
+                    ("message" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9673 9693])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [9694 9698]))                  
+                :type "void")
+                nil [9640 10220])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [10232 10241])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10242 10255]))                  
+                :type "int")
+                nil [10222 12016])
+            ("expand" function
+               (:arguments 
+                  ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [12031 12039])
+                    ("grammar" variable
+                       (:pointer 2
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12040 12057])
+                    ("location" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12058 12075])
+                    ("handle" variable (:type "int") (reparse-symbol arg-sub-list) [12076 12087]))                  
+                :type "void")
+                nil [12018 12544]))          
+    :file "insult.c"
+    :pointmax 12545
+    :fsize 12544
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax '((number 9635 . 9636) (number 9632 . 9633) (semantic-list 9576 . 9616) (symbol 9570 . 9575) (VOID 9565 . 9569) (STATIC 9558 . 9564))
+    )
+   (semanticdb-table "lineup.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ctype.h" include (:system-flag t) nil [274 292])
+            ("stdio.h" include (:system-flag t) nil [293 311])
+            ("syscall.h" include (:system-flag t) nil [312 332])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [344 353])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [354 367]))                  
+                :type "int")
+                nil [334 852]))          
+    :file "lineup.c"
+    :pointmax 853
+    :fsize 852
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ls.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("syscall.h" include (:system-flag t) nil [344 364])
+            ("stdio.h" include (:system-flag t) nil [365 383])
+            ("string.h" include (:system-flag t) nil [384 403])
+            ("list_dir" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dir" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [427 443])
+                    ("verbose" variable (:type "bool") (reparse-symbol arg-sub-list) [444 457]))                  
+                :type "bool")
+                nil [405 1628])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1640 1649])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1650 1663]))                  
+                :type "int")
+                nil [1630 2066]))          
+    :file "ls.c"
+    :pointmax 2067
+    :fsize 2066
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "matmult.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [245 263])
+            ("syscall.h" include (:system-flag t) nil [264 284])
+            ("DIM" variable (:constant-flag t) nil [643 646])
+            ("A" variable
+               (:dereference 2
+                :type "int")
+                nil [652 668])
+            ("B" variable
+               (:dereference 2
+                :type "int")
+                nil [669 685])
+            ("C" variable
+               (:dereference 2
+                :type "int")
+                nil [686 702])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [714 719]))                  
+                :type "int")
+                nil [704 1083]))          
+    :file "matmult.c"
+    :pointmax 1084
+    :fsize 1083
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("DIM" . ((number "128" 647 . 650)))
+          )
+
+    )
+   (semanticdb-table "mcat.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [89 107])
+            ("syscall.h" include (:system-flag t) nil [108 128])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [140 149])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [150 163]))                  
+                :type "int")
+                nil [130 855]))          
+    :file "mcat.c"
+    :pointmax 856
+    :fsize 855
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "mcp.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [58 76])
+            ("string.h" include (:system-flag t) nil [77 96])
+            ("syscall.h" include (:system-flag t) nil [97 117])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [129 138])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [139 152]))                  
+                :type "int")
+                nil [119 1329]))          
+    :file "mcp.c"
+    :pointmax 1330
+    :fsize 1329
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "mkdir.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [41 59])
+            ("syscall.h" include (:system-flag t) nil [60 80])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [92 101])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [102 115]))                  
+                :type "int")
+                nil [82 363]))          
+    :file "mkdir.c"
+    :pointmax 364
+    :fsize 363
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pwd.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("syscall.h" include (:system-flag t) nil [80 100])
+            ("stdbool.h" include (:system-flag t) nil [101 121])
+            ("stdio.h" include (:system-flag t) nil [122 140])
+            ("string.h" include (:system-flag t) nil [141 160])
+            ("getcwd" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("cwd" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [182 192])
+                    ("cwd_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [193 209]))                  
+                :type "bool")
+                nil [162 210])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [222 227]))                  
+                :type "int")
+                nil [212 423])
+            ("get_inumber" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [578 600])
+                    ("inum" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [601 611]))                  
+                :type "bool")
+                nil [553 763])
+            ("prepend" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("prefix" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1130 1149])
+                    ("dst" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1159 1169])
+                    ("dst_len" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1170 1186])
+                    ("dst_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1187 1203]))                  
+                :type "bool")
+                nil [1109 1443])
+            ("getcwd" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cwd" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1732 1742])
+                    ("cwd_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1743 1759]))                  
+                :type "bool")
+                nil [1712 3578]))          
+    :file "pwd.c"
+    :pointmax 3579
+    :fsize 3578
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "recursor.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("syscall.h" include (:system-flag t) nil [40 60])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [72 81])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [82 95]))                  
+                :type "int")
+                nil [62 743]))          
+    :file "recursor.c"
+    :pointmax 744
+    :fsize 743
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "rm.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [58 76])
+            ("syscall.h" include (:system-flag t) nil [77 97])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [109 118])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [119 132]))                  
+                :type "int")
+                nil [99 368]))          
+    :file "rm.c"
+    :pointmax 369
+    :fsize 368
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "shell.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdbool.h" include (:system-flag t) nil [1 21])
+            ("stdio.h" include (:system-flag t) nil [22 40])
+            ("string.h" include (:system-flag t) nil [41 60])
+            ("syscall.h" include (:system-flag t) nil [61 81])
+            ("read_line" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("line" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [106 118])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [119 126]))                  
+                :type "void")
+                nil [83 127])
+            ("backspace" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pos" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [151 162])
+                    ("line" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [163 175]))                  
+                :type "bool")
+                nil [128 176])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [188 193]))                  
+                :type "int")
+                nil [178 981])
+            ("read_line" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("line" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1255 1267])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1268 1280]))                  
+                :type "void")
+                nil [1232 1896])
+            ("backspace" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pos" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2061 2072])
+                    ("line" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2073 2085]))                  
+                :type "bool")
+                nil [2038 2278]))          
+    :file "shell.c"
+    :pointmax 2279
+    :fsize 2278
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!jim!classes!systems!pint-heads!src!examples!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

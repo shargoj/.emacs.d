@@ -1,0 +1,179 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-bsdmake-mode
+    :tags 
+        '( ("BUILD_SUBDIRS" variable (:default-value ("threads" "userprog" "vm" "filesys")) nil [1 45])
+            ("all" function nil nil [46 164])
+            ("CLEAN_SUBDIRS" variable (:default-value ("$(BUILD_SUBDIRS)" "examples" "utils")) nil [165 213])
+            ("clean" function nil nil [214 294])
+            ("distclean" function (:arguments ("clean")) nil [295 349])
+            ("TAGS_SUBDIRS" variable (:default-value ("$(BUILD_SUBDIRS)" "devices" "lib")) nil [350 394])
+            ("TAGS_SOURCES" variable (:default-value ("find" "$(TAGS_SUBDIRS)" "-name" "\\*.[chS]" "-print")) nil [394 452])
+            ("TAGS" function nil nil [453 495])
+            ("tags" function nil nil [496 541])
+            ("cscope.files" function nil nil [542 589])
+            ("cscope" function (:arguments ("cscope.files")) nil [590 629]))          
+    :file "Makefile"
+    :pointmax 629
+    :fsize 628
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax '((shell-command 613 . 628) (bol 612 . 612))
+    )
+   (semanticdb-table "Make.config"
+    :major-mode 'makefile-mode
+    :tags 
+        '( ("SHELL" variable (:default-value ("/bin/sh")) nil [21 37])
+            ("VPATH" variable (:default-value ("$(SRCDIR)")) nil [38 56])
+            ("CC" variable (:default-value ("/usr/local/i386elfgcc/bin/i386-elf-gcc")) nil [296 340])
+            ("LD" variable (:default-value ("/usr/local/i386elfgcc/bin/i386-elf-ld")) nil [340 383])
+            ("OBJCOPY" variable (:default-value ("/usr/local/i386elfgcc/bin/i386-elf-objcopy")) nil [383 436])
+            ("DEFINES" variable nil nil [693 704])
+            ("WARNINGS" variable (:default-value ("-Wall" "-W" "-Wstrict-prototypes" "-Wmissing-prototypes" "-Wsystem-headers")) nil [704 782])
+            ("CFLAGS" variable (:default-value ("-g" "-ggdb" "-msoft-float")) nil [782 818])
+            ("CPPFLAGS" variable (:default-value ("-nostdinc" "-I$(SRCDIR)" "-I$(SRCDIR)/lib")) nil [818 867])
+            ("ASFLAGS" variable (:default-value ("-Wa,--gstabs")) nil [867 890])
+            ("DEPS" variable nil nil [890 898])
+            ("LDFLAGS" variable (:default-value ("-MMD" "-MF" "$(@:.o=.Turn)")) nil [898 931])
+            ("CFLAGS" variable (:default-value ("-fno-stack-protector")) nil [1076 1107])
+            ("LDFLAGS" variable (:default-value ("-Wl,--build-id=none")) nil [1277 1308])
+            ("%.o" function (:arguments ("%.c")) nil [1315 1396])
+            ("%.o" function (:arguments ("%.S")) nil [1397 1467]))          
+    :file "Make.config"
+    :pointmax 1467
+    :fsize 1466
+    :lastmodtime '(21315 3231 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "Makefile.userprog"
+    :major-mode 'makefile-mode
+    :tags 
+        '( ("$(PROGS)" function (:arguments ("CPPFLAGS" "+=" "-I$(SRCDIR)/lib/user" "-I.")) nil [21 68])
+            ("$(PROGS)" function (:arguments ("LDFLAGS" "+=" "-nostdlib" "-static" "-Wl,-T,$(LDSCRIPT)")) nil [85 143])
+            ("$(PROGS)" function (:arguments ("LDSCRIPT" "=" "$(SRCDIR)/lib/user/user.lds")) nil [143 192])
+            ("lib_SRC" variable (:default-value ("lib/debug.c")) nil [249 288])
+            ("lib_SRC" variable (:default-value ("lib/random.c")) nil [288 339])
+            ("lib_SRC" variable (:default-value ("lib/stdio.c")) nil [339 379])
+            ("lib_SRC" variable (:default-value ("lib/stdlib.c")) nil [379 426])
+            ("lib_SRC" variable (:default-value ("lib/string.c")) nil [426 472])
+            ("lib_SRC" variable (:default-value ("lib/arithmetic.c")) nil [472 530])
+            ("lib_SRC" variable (:default-value ("lib/ustar.c")) nil [530 593])
+            ("lib/user_SRC" variable (:default-value ("lib/user/debug.c")) nil [626 676])
+            ("lib/user_SRC" variable (:default-value ("lib/user/syscall.c")) nil [676 727])
+            ("lib/user_SRC" variable (:default-value ("lib/user/console.c")) nil [727 778])
+            ("LIB_OBJ" variable (:default-value ("$(patsubst %.c,%.o,$(patsubst %.S,%.o,$(lib_SRC) $(lib/user_SRC)))")) nil [779 856])
+            ("LIB_DEP" variable (:default-value ("$(patsubst %.o,%.d,$(LIB_OBJ))")) nil [856 897])
+            ("LIB" variable (:default-value ("lib/user/entry.o" "libc.a")) nil [897 927])
+            ("PROGS_SRC" variable (:default-value ("$(foreach prog,$(PROGS),$($(prog)_SRC))")) nil [928 980])
+            ("PROGS_OBJ" variable (:default-value ("$(patsubst %.c,%.o,$(patsubst %.S,%.o,$(PROGS_SRC)))")) nil [980 1045])
+            ("PROGS_DEP" variable (:default-value ("$(patsubst %.o,%.d,$(PROGS_OBJ))")) nil [1045 1090])
+            ("all" function (:arguments ("$(PROGS)")) nil [1091 1105])
+            ("$(1)" function (:arguments ("$$($(1)_OBJ)" "$$(LIB)" "$$(LDSCRIPT)")) nil [1185 1273])
+            ("libc.a" function (:arguments ("$(LIB_OBJ)")) nil [1339 1426])
+            ("clean" function nil nil [1427 1534])
+            (".PHONY" function (:arguments ("all" "clean")) nil [1535 1553]))          
+    :file "Makefile.userprog"
+    :pointmax 1587
+    :fsize 1586
+    :lastmodtime '(21315 3231 0 0)
+    :unmatched-syntax '((semantic-list 1575 . 1586) (punctuation 1574 . 1575) (semantic-list 1564 . 1573) (punctuation 1563 . 1564) (symbol 1554 . 1562) (bol 1554 . 1554) (semantic-list 1281 . 1337) (punctuation 1280 . 1281) (bol 1280 . 1280) (symbol 1273 . 1278) (bol 1273 . 1273) (semantic-list 1134 . 1184) (punctuation 1133 . 1134) (punctuation 1131 . 1132) (symbol 1126 . 1130) (semantic-list 1123 . 1126) (punctuation 1122 . 1123) (bol 1122 . 1122) (symbol 1113 . 1121) (symbol 1106 . 1112) (bol 1106 . 1106))
+    )
+   (semanticdb-table "Makefile.kernel"
+    :major-mode 'makefile-mode
+    :tags 
+        '( ("all" function nil nil [21 26])
+            ("Make.vars" include nil nil [27 45])
+            ("DIRS" variable (:default-value ("$(sort $(addprefix build/,$(KERNEL_SUBDIRS) $(TEST_SUBDIRS) lib/user))")) nil [46 124])
+            ("all" function (:arguments ("$(DIRS)" "build/Makefile")) nil [125 189])
+            ("grade" function (:arguments ("$(DIRS)" "build/Makefile")) nil [125 189])
+            ("$(DIRS)" function nil nil [189 211])
+            ("build/Makefile" function (:arguments ("../Makefile.build")) nil [211 255])
+            ("build/%" function (:arguments ("$(DIRS)" "build/Makefile")) nil [256 312])
+            ("clean" function nil nil [313 334]))          
+    :file "Makefile.kernel"
+    :pointmax 334
+    :fsize 333
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax '((shell-command 321 . 333) (bol 320 . 320))
+    )
+   (semanticdb-table "Makefile.build"
+    :major-mode 'makefile-mode
+    :tags 
+        '( ("SRCDIR" variable (:default-value ("../..")) nil [21 36])
+            ("all" function (:arguments ("kernel.bin" "loader.bin")) nil [37 64])
+            ("../../Make.config" include nil nil [65 91])
+            ("../Make.vars" include nil nil [91 112])
+            ("../../tests/Make.tests" include nil nil [112 143])
+            ("kernel.bin" function (:arguments ("CPPFLAGS" "+=" "-I$(SRCDIR)/lib/kernel")) nil [178 225])
+            ("threads_SRC" variable (:default-value ("threads/start.S")) nil [241 289])
+            ("threads_SRC" variable (:default-value ("threads/init.c")) nil [289 336])
+            ("threads_SRC" variable (:default-value ("threads/thread.c")) nil [336 395])
+            ("threads_SRC" variable (:default-value ("threads/switch.S")) nil [395 453])
+            ("threads_SRC" variable (:default-value ("threads/interrupt.c")) nil [453 506])
+            ("threads_SRC" variable (:default-value ("threads/intr-stubs.S")) nil [506 561])
+            ("threads_SRC" variable (:default-value ("threads/synch.c")) nil [561 612])
+            ("threads_SRC" variable (:default-value ("threads/palloc.c")) nil [612 663])
+            ("threads_SRC" variable (:default-value ("threads/malloc.c")) nil [663 717])
+            ("devices_SRC" variable (:default-value ("devices/pit.c")) nil [740 807])
+            ("devices_SRC" variable (:default-value ("devices/timer.c")) nil [807 864])
+            ("devices_SRC" variable (:default-value ("devices/kbd.c")) nil [864 913])
+            ("devices_SRC" variable (:default-value ("devices/vga.c")) nil [913 959])
+            ("devices_SRC" variable (:default-value ("devices/serial.c")) nil [959 1014])
+            ("devices_SRC" variable (:default-value ("devices/block.c")) nil [1014 1080])
+            ("devices_SRC" variable (:default-value ("devices/partition.c")) nil [1080 1141])
+            ("devices_SRC" variable (:default-value ("devices/ide.c")) nil [1141 1196])
+            ("devices_SRC" variable (:default-value ("devices/input.c")) nil [1196 1257])
+            ("devices_SRC" variable (:default-value ("devices/intq.c")) nil [1257 1307])
+            ("devices_SRC" variable (:default-value ("devices/rtc.c")) nil [1307 1356])
+            ("devices_SRC" variable (:default-value ("devices/shutdown.c")) nil [1356 1414])
+            ("devices_SRC" variable (:default-value ("devices/speaker.c")) nil [1414 1461])
+            ("lib_SRC" variable (:default-value ("lib/debug.c")) nil [1518 1560])
+            ("lib_SRC" variable (:default-value ("lib/random.c")) nil [1560 1611])
+            ("lib_SRC" variable (:default-value ("lib/stdio.c")) nil [1611 1651])
+            ("lib_SRC" variable (:default-value ("lib/stdlib.c")) nil [1651 1698])
+            ("lib_SRC" variable (:default-value ("lib/string.c")) nil [1698 1744])
+            ("lib_SRC" variable (:default-value ("lib/arithmetic.c")) nil [1744 1802])
+            ("lib_SRC" variable (:default-value ("lib/ustar.c")) nil [1802 1865])
+            ("lib/kernel_SRC" variable (:default-value ("lib/kernel/debug.c")) nil [1898 1952])
+            ("lib/kernel_SRC" variable (:default-value ("lib/kernel/list.c")) nil [1952 2011])
+            ("lib/kernel_SRC" variable (:default-value ("lib/kernel/bitmap.c")) nil [2011 2060])
+            ("lib/kernel_SRC" variable (:default-value ("lib/kernel/hash.c")) nil [2060 2111])
+            ("lib/kernel_SRC" variable (:default-value ("lib/kernel/console.c")) nil [2111 2173])
+            ("userprog_SRC" variable (:default-value ("userprog/process.c")) nil [2195 2249])
+            ("userprog_SRC" variable (:default-value ("userprog/pagedir.c")) nil [2249 2304])
+            ("userprog_SRC" variable (:default-value ("userprog/exception.c")) nil [2304 2367])
+            ("userprog_SRC" variable (:default-value ("userprog/syscall.c")) nil [2367 2425])
+            ("userprog_SRC" variable (:default-value ("userprog/gdt.c")) nil [2425 2479])
+            ("userprog_SRC" variable (:default-value ("userprog/tss.c")) nil [2479 2529])
+            ("filesys_SRC" variable (:default-value ("filesys/filesys.c")) nil [2615 2667])
+            ("filesys_SRC" variable (:default-value ("filesys/free-map.c")) nil [2667 2723])
+            ("filesys_SRC" variable (:default-value ("filesys/file.c")) nil [2723 2763])
+            ("filesys_SRC" variable (:default-value ("filesys/directory.c")) nil [2763 2813])
+            ("filesys_SRC" variable (:default-value ("filesys/inode.c")) nil [2813 2861])
+            ("filesys_SRC" variable (:default-value ("filesys/fsutil.c")) nil [2861 2907])
+            ("filesys_SRC" variable (:default-value ("filesys/buffer_cache.c")) nil [2907 2961])
+            ("SOURCES" variable (:default-value ("$(foreach dir,$(KERNEL_SUBDIRS),$($(dir)_SRC))")) nil [2962 3019])
+            ("OBJECTS" variable (:default-value ("$(patsubst %.c,%.o,$(patsubst %.S,%.o,$(SOURCES)))")) nil [3019 3080])
+            ("DEPENDS" variable (:default-value ("$(patsubst %.o,%.d,$(OBJECTS))")) nil [3080 3121])
+            ("threads/kernel.lds.s" function (:arguments ("CPPFLAGS" "+=" "-P")) nil [3122 3159])
+            ("threads/kernel.lds.s" function (:arguments ("threads/kernel.lds.S" "threads/loader.h")) nil [3159 3219])
+            ("kernel.o" function (:arguments ("threads/kernel.lds.s" "$(OBJECTS)")) nil [3220 3293])
+            ("kernel.bin" function (:arguments ("kernel.o")) nil [3294 3357])
+            ("threads/loader.o" function (:arguments ("threads/loader.S")) nil [3358 3446])
+            ("loader.bin" function (:arguments ("threads/loader.o")) nil [3447 3531])
+            ("os.dsk" function (:arguments ("kernel.bin")) nil [3532 3564])
+            ("clean" function nil nil [3565 3798])
+            ("Makefile" function (:arguments ("$(SRCDIR)/Makefile.build")) nil [3799 3844]))          
+    :file "Makefile.build"
+    :pointmax 3847
+    :fsize 3864
+    :lastmodtime '(21330 3221 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!jim!classes!systems!pint-heads!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

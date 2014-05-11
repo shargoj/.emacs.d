@@ -1,0 +1,476 @@
+;; Object userprog/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "userprog/"
+  :tables (list 
+   (semanticdb-table "args.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("tests/lib.h" include nil nil [181 203])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [215 224])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [225 238]))                  
+                :type "int")
+                nil [205 489]))          
+    :file "args.c"
+    :pointmax 490
+    :fsize 489
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "child-close.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ctype.h" include (:system-flag t) nil [376 394])
+            ("stdio.h" include (:system-flag t) nil [395 413])
+            ("stdlib.h" include (:system-flag t) nil [414 433])
+            ("syscall.h" include (:system-flag t) nil [434 454])
+            ("tests/lib.h" include nil nil [455 477])
+            ("test_name" variable
+               (:pointer 1
+                :constant-flag t
+                :type "char")
+                nil [479 517])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [529 544])
+                    ("" variable (:type ("UNUSED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [538 545])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [546 559]))                  
+                :type "int")
+                nil [519 703]))          
+    :file "child-close.c"
+    :pointmax 704
+    :fsize 703
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "child-rox.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ctype.h" include (:system-flag t) nil [252 270])
+            ("stdio.h" include (:system-flag t) nil [271 289])
+            ("stdlib.h" include (:system-flag t) nil [290 309])
+            ("syscall.h" include (:system-flag t) nil [310 330])
+            ("tests/lib.h" include nil nil [331 353])
+            ("test_name" variable
+               (:pointer 1
+                :constant-flag t
+                :type "char")
+                nil [355 391])
+            ("try_write" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [416 421]))                  
+                :type "void")
+                nil [393 675])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [687 702])
+                    ("" variable (:type ("UNUSED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [696 703])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [704 717]))                  
+                :type "int")
+                nil [677 1187]))          
+    :file "child-rox.c"
+    :pointmax 1188
+    :fsize 1187
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "child-simple.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [140 158])
+            ("tests/lib.h" include nil nil [159 181])
+            ("test_name" variable
+               (:pointer 1
+                :constant-flag t
+                :type "char")
+                nil [183 222])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [234 239]))                  
+                :type "int")
+                nil [224 272]))          
+    :file "child-simple.c"
+    :pointmax 273
+    :fsize 272
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "multi-recurse.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("debug.h" include (:system-flag t) nil [98 116])
+            ("stdlib.h" include (:system-flag t) nil [117 136])
+            ("stdio.h" include (:system-flag t) nil [137 155])
+            ("syscall.h" include (:system-flag t) nil [156 176])
+            ("tests/lib.h" include nil nil [177 199])
+            ("test_name" variable
+               (:pointer 1
+                :constant-flag t
+                :type "char")
+                nil [201 241])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [253 268])
+                    ("" variable (:type ("UNUSED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [262 269])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [270 283]))                  
+                :type "int")
+                nil [243 749]))          
+    :file "multi-recurse.c"
+    :pointmax 750
+    :fsize 749
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "create-normal.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("tests/lib.h" include nil nil [40 62])
+            ("tests/main.h" include nil nil [63 86])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [104 109]))                  
+                :type "void")
+                nil [88 167]))          
+    :file "create-normal.c"
+    :pointmax 168
+    :fsize 167
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "read-normal.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("tests/userprog/sample.inc" include nil nil [51 87])
+            ("tests/lib.h" include nil nil [88 110])
+            ("tests/main.h" include nil nil [111 134])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [152 157]))                  
+                :type "void")
+                nil [136 218]))          
+    :file "read-normal.c"
+    :pointmax 219
+    :fsize 218
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "sample.inc"
+    :file "sample.inc"
+    :fsize 287
+    :lastmodtime '(21208 19921 0 0)
+    )
+   (semanticdb-table "Make.tests"
+    :major-mode 'makefile-mode
+    :tags 
+        '( ("tests/%.output" function (:arguments ("FILESYSSOURCE" "=" "--filesys-size=2")) nil [21 70])
+            ("tests/%.output" function (:arguments ("PUTFILES" "=" "$(filter-out kernel.bin loader.bin, $^)")) nil [70 137])
+            ("tests/userprog_TESTS" variable (:default-value ("$(addprefix tests/userprog/,args-none		\\
+args-single args-multiple args-many args-dbl-space  sc-bad-sp		\\
+sc-bad-arg sc-boundary sc-boundary-2 halt exit create-normal		\\
+create-empty create-null create-bad-ptr create-long create-exists	\\
+create-bound open-normal open-missing open-boundary open-empty		\\
+open-null open-bad-ptr open-twice close-normal close-twice close-stdin	\\
+close-stdout close-bad-fd read-normal read-bad-ptr read-boundary	\\
+read-zero read-stdout read-bad-fd write-normal write-bad-ptr		\\
+write-boundary write-zero write-stdin write-bad-fd exec-once exec-arg	\\
+exec-multiple exec-missing exec-bad-ptr wait-simple wait-twice		\\
+wait-killed wait-bad-pid multi-recurse multi-child-fd rox-simple	\\
+rox-child rox-multichild bad-read bad-write bad-read2 bad-write2        \\
+bad-jump bad-jump2)")) nil [138 968])
+            ("tests/userprog_PROGS" variable (:default-value ("$(tests/userprog_TESTS)" "$(addprefix \\
+tests/userprog/,child-simple child-args child-bad child-close child-rox)")) nil [1617 1751])
+            ("tests/userprog/args-none_SRC" variable (:default-value ("tests/userprog/args.c")) nil [1752 1805])
+            ("tests/userprog/args-single_SRC" variable (:default-value ("tests/userprog/args.c")) nil [1805 1860])
+            ("tests/userprog/args-multiple_SRC" variable (:default-value ("tests/userprog/args.c")) nil [1860 1917])
+            ("tests/userprog/args-many_SRC" variable (:default-value ("tests/userprog/args.c")) nil [1917 1970])
+            ("tests/userprog/args-dbl-space_SRC" variable (:default-value ("tests/userprog/args.c")) nil [1970 2028])
+            ("tests/userprog/sc-bad-sp_SRC" variable (:default-value ("tests/userprog/sc-bad-sp.c" "tests/main.c")) nil [2028 2099])
+            ("tests/userprog/sc-bad-arg_SRC" variable (:default-value ("tests/userprog/sc-bad-arg.c" "tests/main.c")) nil [2099 2172])
+            ("tests/userprog/bad-read_SRC" variable (:default-value ("tests/userprog/bad-read.c" "tests/main.c")) nil [2172 2241])
+            ("tests/userprog/bad-write_SRC" variable (:default-value ("tests/userprog/bad-write.c" "tests/main.c")) nil [2241 2312])
+            ("tests/userprog/bad-jump_SRC" variable (:default-value ("tests/userprog/bad-jump.c" "tests/main.c")) nil [2312 2381])
+            ("tests/userprog/bad-read2_SRC" variable (:default-value ("tests/userprog/bad-read2.c" "tests/main.c")) nil [2381 2452])
+            ("tests/userprog/bad-write2_SRC" variable (:default-value ("tests/userprog/bad-write2.c" "tests/main.c")) nil [2452 2525])
+            ("tests/userprog/bad-jump2_SRC" variable (:default-value ("tests/userprog/bad-jump2.c" "tests/main.c")) nil [2525 2596])
+            ("tests/userprog/sc-boundary_SRC" variable (:default-value ("tests/userprog/sc-boundary.c" "tests/userprog/boundary.c" "tests/main.c")) nil [2596 2699])
+            ("tests/userprog/sc-boundary-2_SRC" variable (:default-value ("tests/userprog/sc-boundary-2.c" "tests/userprog/boundary.c" "tests/main.c")) nil [2699 2806])
+            ("tests/userprog/halt_SRC" variable (:default-value ("tests/userprog/halt.c" "tests/main.c")) nil [2806 2867])
+            ("tests/userprog/exit_SRC" variable (:default-value ("tests/userprog/exit.c" "tests/main.c")) nil [2867 2928])
+            ("tests/userprog/create-normal_SRC" variable (:default-value ("tests/userprog/create-normal.c" "tests/main.c")) nil [2928 3007])
+            ("tests/userprog/create-empty_SRC" variable (:default-value ("tests/userprog/create-empty.c" "tests/main.c")) nil [3007 3084])
+            ("tests/userprog/create-null_SRC" variable (:default-value ("tests/userprog/create-null.c" "tests/main.c")) nil [3084 3159])
+            ("tests/userprog/create-bad-ptr_SRC" variable (:default-value ("tests/userprog/create-bad-ptr.c" "tests/main.c")) nil [3159 3242])
+            ("tests/userprog/create-long_SRC" variable (:default-value ("tests/userprog/create-long.c" "tests/main.c")) nil [3242 3317])
+            ("tests/userprog/create-exists_SRC" variable (:default-value ("tests/userprog/create-exists.c" "tests/main.c")) nil [3317 3396])
+            ("tests/userprog/create-bound_SRC" variable (:default-value ("tests/userprog/create-bound.c" "tests/userprog/boundary.c" "tests/main.c")) nil [3396 3501])
+            ("tests/userprog/open-normal_SRC" variable (:default-value ("tests/userprog/open-normal.c" "tests/main.c")) nil [3501 3576])
+            ("tests/userprog/open-missing_SRC" variable (:default-value ("tests/userprog/open-missing.c" "tests/main.c")) nil [3576 3653])
+            ("tests/userprog/open-boundary_SRC" variable (:default-value ("tests/userprog/open-boundary.c" "tests/userprog/boundary.c" "tests/main.c")) nil [3653 3760])
+            ("tests/userprog/open-empty_SRC" variable (:default-value ("tests/userprog/open-empty.c" "tests/main.c")) nil [3760 3833])
+            ("tests/userprog/open-null_SRC" variable (:default-value ("tests/userprog/open-null.c" "tests/main.c")) nil [3833 3904])
+            ("tests/userprog/open-bad-ptr_SRC" variable (:default-value ("tests/userprog/open-bad-ptr.c" "tests/main.c")) nil [3904 3981])
+            ("tests/userprog/open-twice_SRC" variable (:default-value ("tests/userprog/open-twice.c" "tests/main.c")) nil [3981 4054])
+            ("tests/userprog/close-normal_SRC" variable (:default-value ("tests/userprog/close-normal.c" "tests/main.c")) nil [4054 4131])
+            ("tests/userprog/close-twice_SRC" variable (:default-value ("tests/userprog/close-twice.c" "tests/main.c")) nil [4131 4206])
+            ("tests/userprog/close-stdin_SRC" variable (:default-value ("tests/userprog/close-stdin.c" "tests/main.c")) nil [4206 4281])
+            ("tests/userprog/close-stdout_SRC" variable (:default-value ("tests/userprog/close-stdout.c" "tests/main.c")) nil [4281 4358])
+            ("tests/userprog/close-bad-fd_SRC" variable (:default-value ("tests/userprog/close-bad-fd.c" "tests/main.c")) nil [4358 4435])
+            ("tests/userprog/read-normal_SRC" variable (:default-value ("tests/userprog/read-normal.c" "tests/main.c")) nil [4435 4510])
+            ("tests/userprog/read-bad-ptr_SRC" variable (:default-value ("tests/userprog/read-bad-ptr.c" "tests/main.c")) nil [4510 4587])
+            ("tests/userprog/read-boundary_SRC" variable (:default-value ("tests/userprog/read-boundary.c" "tests/userprog/boundary.c" "tests/main.c")) nil [4587 4694])
+            ("tests/userprog/read-zero_SRC" variable (:default-value ("tests/userprog/read-zero.c" "tests/main.c")) nil [4694 4765])
+            ("tests/userprog/read-stdout_SRC" variable (:default-value ("tests/userprog/read-stdout.c" "tests/main.c")) nil [4765 4840])
+            ("tests/userprog/read-bad-fd_SRC" variable (:default-value ("tests/userprog/read-bad-fd.c" "tests/main.c")) nil [4840 4915])
+            ("tests/userprog/write-normal_SRC" variable (:default-value ("tests/userprog/write-normal.c" "tests/main.c")) nil [4915 4992])
+            ("tests/userprog/write-bad-ptr_SRC" variable (:default-value ("tests/userprog/write-bad-ptr.c" "tests/main.c")) nil [4992 5071])
+            ("tests/userprog/write-boundary_SRC" variable (:default-value ("tests/userprog/write-boundary.c" "tests/userprog/boundary.c" "tests/main.c")) nil [5071 5180])
+            ("tests/userprog/write-zero_SRC" variable (:default-value ("tests/userprog/write-zero.c" "tests/main.c")) nil [5180 5253])
+            ("tests/userprog/write-stdin_SRC" variable (:default-value ("tests/userprog/write-stdin.c" "tests/main.c")) nil [5253 5328])
+            ("tests/userprog/write-bad-fd_SRC" variable (:default-value ("tests/userprog/write-bad-fd.c" "tests/main.c")) nil [5328 5405])
+            ("tests/userprog/exec-once_SRC" variable (:default-value ("tests/userprog/exec-once.c" "tests/main.c")) nil [5405 5476])
+            ("tests/userprog/exec-arg_SRC" variable (:default-value ("tests/userprog/exec-arg.c" "tests/main.c")) nil [5476 5545])
+            ("tests/userprog/exec-multiple_SRC" variable (:default-value ("tests/userprog/exec-multiple.c" "tests/main.c")) nil [5545 5624])
+            ("tests/userprog/exec-missing_SRC" variable (:default-value ("tests/userprog/exec-missing.c" "tests/main.c")) nil [5624 5701])
+            ("tests/userprog/exec-bad-ptr_SRC" variable (:default-value ("tests/userprog/exec-bad-ptr.c" "tests/main.c")) nil [5701 5778])
+            ("tests/userprog/wait-simple_SRC" variable (:default-value ("tests/userprog/wait-simple.c" "tests/main.c")) nil [5778 5853])
+            ("tests/userprog/wait-twice_SRC" variable (:default-value ("tests/userprog/wait-twice.c" "tests/main.c")) nil [5853 5926])
+            ("tests/userprog/wait-killed_SRC" variable (:default-value ("tests/userprog/wait-killed.c" "tests/main.c")) nil [5926 6001])
+            ("tests/userprog/wait-bad-pid_SRC" variable (:default-value ("tests/userprog/wait-bad-pid.c" "tests/main.c")) nil [6001 6078])
+            ("tests/userprog/multi-recurse_SRC" variable (:default-value ("tests/userprog/multi-recurse.c")) nil [6078 6144])
+            ("tests/userprog/multi-child-fd_SRC" variable (:default-value ("tests/userprog/multi-child-fd.c" "tests/main.c")) nil [6144 6227])
+            ("tests/userprog/rox-simple_SRC" variable (:default-value ("tests/userprog/rox-simple.c" "tests/main.c")) nil [6227 6300])
+            ("tests/userprog/rox-child_SRC" variable (:default-value ("tests/userprog/rox-child.c" "tests/main.c")) nil [6300 6371])
+            ("tests/userprog/rox-multichild_SRC" variable (:default-value ("tests/userprog/rox-multichild.c" "tests/main.c")) nil [6371 6454])
+            ("tests/userprog/child-simple_SRC" variable (:default-value ("tests/userprog/child-simple.c")) nil [6455 6519])
+            ("tests/userprog/child-args_SRC" variable (:default-value ("tests/userprog/args.c")) nil [6519 6573])
+            ("tests/userprog/child-bad_SRC" variable (:default-value ("tests/userprog/child-bad.c" "tests/main.c")) nil [6573 6644])
+            ("tests/userprog/child-close_SRC" variable (:default-value ("tests/userprog/child-close.c")) nil [6644 6706])
+            ("tests/userprog/child-rox_SRC" variable (:default-value ("tests/userprog/child-rox.c")) nil [6706 6764])
+            ("tests/userprog/args-single_ARGS" variable (:default-value ("onearg")) nil [6841 6882])
+            ("tests/userprog/args-multiple_ARGS" variable (:default-value ("some" "arguments" "for" "you!")) nil [6882 6942])
+            ("tests/userprog/args-many_ARGS" variable (:default-value ("a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s" "t" "u" "v")) nil [6942 7018])
+            ("tests/userprog/args-dbl-space_ARGS" variable (:default-value ("two" "spaces!")) nil [7018 7068])
+            ("tests/userprog/multi-recurse_ARGS" variable (:default-value ("15")) nil [7068 7107])
+            ("tests/userprog/open-normal_PUTFILES" variable (:default-value ("tests/userprog/sample.txt")) nil [7108 7173])
+            ("tests/userprog/open-boundary_PUTFILES" variable (:default-value ("tests/userprog/sample.txt")) nil [7173 7240])
+            ("tests/userprog/open-twice_PUTFILES" variable (:default-value ("tests/userprog/sample.txt")) nil [7240 7304])
+            ("tests/userprog/close-normal_PUTFILES" variable (:default-value ("tests/userprog/sample.txt")) nil [7304 7370])
+            ("tests/userprog/close-twice_PUTFILES" variable (:default-value ("tests/userprog/sample.txt")) nil [7370 7435])
+            ("tests/userprog/read-normal_PUTFILES" variable (:default-value ("tests/userprog/sample.txt")) nil [7435 7500])
+            ("tests/userprog/read-bad-ptr_PUTFILES" variable (:default-value ("tests/userprog/sample.txt")) nil [7500 7566])
+            ("tests/userprog/read-boundary_PUTFILES" variable (:default-value ("tests/userprog/sample.txt")) nil [7566 7633])
+            ("tests/userprog/read-zero_PUTFILES" variable (:default-value ("tests/userprog/sample.txt")) nil [7633 7696])
+            ("tests/userprog/write-normal_PUTFILES" variable (:default-value ("tests/userprog/sample.txt")) nil [7696 7762])
+            ("tests/userprog/write-bad-ptr_PUTFILES" variable (:default-value ("tests/userprog/sample.txt")) nil [7762 7829])
+            ("tests/userprog/write-boundary_PUTFILES" variable (:default-value ("tests/userprog/sample.txt")) nil [7829 7897])
+            ("tests/userprog/write-zero_PUTFILES" variable (:default-value ("tests/userprog/sample.txt")) nil [7897 7961])
+            ("tests/userprog/multi-child-fd_PUTFILES" variable (:default-value ("tests/userprog/sample.txt")) nil [7961 8029])
+            ("tests/userprog/exec-once_PUTFILES" variable (:default-value ("tests/userprog/child-simple")) nil [8030 8095])
+            ("tests/userprog/exec-multiple_PUTFILES" variable (:default-value ("tests/userprog/child-simple")) nil [8095 8164])
+            ("tests/userprog/wait-simple_PUTFILES" variable (:default-value ("tests/userprog/child-simple")) nil [8164 8231])
+            ("tests/userprog/wait-twice_PUTFILES" variable (:default-value ("tests/userprog/child-simple")) nil [8231 8297])
+            ("tests/userprog/exec-arg_PUTFILES" variable (:default-value ("tests/userprog/child-args")) nil [8298 8360])
+            ("tests/userprog/multi-child-fd_PUTFILES" variable (:default-value ("tests/userprog/child-close")) nil [8360 8429])
+            ("tests/userprog/wait-killed_PUTFILES" variable (:default-value ("tests/userprog/child-bad")) nil [8429 8493])
+            ("tests/userprog/rox-child_PUTFILES" variable (:default-value ("tests/userprog/child-rox")) nil [8493 8555])
+            ("tests/userprog/rox-multichild_PUTFILES" variable (:default-value ("tests/userprog/child-rox")) nil [8555 8622]))          
+    :file "Make.tests"
+    :pointmax 8622
+    :fsize 7972
+    :lastmodtime '(21288 37777 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "exec-multiple.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("syscall.h" include (:system-flag t) nil [57 77])
+            ("tests/lib.h" include nil nil [78 100])
+            ("tests/main.h" include nil nil [101 124])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [142 147]))                  
+                :type "void")
+                nil [126 280]))          
+    :file "exec-multiple.c"
+    :pointmax 281
+    :fsize 280
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "wait-killed.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("syscall.h" include (:system-flag t) nil [65 85])
+            ("tests/lib.h" include nil nil [86 108])
+            ("tests/main.h" include nil nil [109 132])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [150 155]))                  
+                :type "void")
+                nil [134 216]))          
+    :file "wait-killed.c"
+    :pointmax 217
+    :fsize 216
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "child-bad.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("tests/lib.h" include nil nil [194 216])
+            ("tests/main.h" include nil nil [217 240])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [258 263]))                  
+                :type "void")
+                nil [242 361]))          
+    :file "child-bad.c"
+    :pointmax 362
+    :fsize 361
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "exec-missing.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("syscall.h" include (:system-flag t) nil [88 108])
+            ("tests/lib.h" include nil nil [109 131])
+            ("tests/main.h" include nil nil [132 155])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [173 178]))                  
+                :type "void")
+                nil [157 244]))          
+    :file "exec-missing.c"
+    :pointmax 245
+    :fsize 244
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "sc-bad-arg.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("syscall-nr.h" include (:system-flag t) nil [306 329])
+            ("tests/lib.h" include nil nil [330 352])
+            ("tests/main.h" include nil nil [353 376])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [394 399]))                  
+                :type "void")
+                nil [378 552]))          
+    :file "sc-bad-arg.c"
+    :pointmax 553
+    :fsize 552
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "rox-simple.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("syscall.h" include (:system-flag t) nil [79 99])
+            ("tests/lib.h" include nil nil [100 122])
+            ("tests/main.h" include nil nil [123 146])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [164 169]))                  
+                :type "void")
+                nil [148 476]))          
+    :file "rox-simple.c"
+    :pointmax 477
+    :fsize 476
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "rox-child.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("CHILD_CNT" variable (:constant-flag t) nil [112 121])
+            ("tests/userprog/rox-child.inc" include nil nil [126 165]))          
+    :file "rox-child.c"
+    :pointmax 166
+    :fsize 165
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("CHILD_CNT" . ((string "\"1\"" 122 . 125)))
+          )
+
+    )
+   (semanticdb-table "rox-child.inc"
+    :major-mode 'c-mode
+    :tags 
+        '( ("syscall.h" include (:system-flag t) nil [18 38])
+            ("tests/lib.h" include nil nil [39 61])
+            ("tests/main.h" include nil nil [62 85])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [103 108]))                  
+                :type "void")
+                nil [87 919]))          
+    :file "rox-child.inc"
+    :pointmax 920
+    :fsize 919
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "rox-multichild.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("CHILD_CNT" variable (:constant-flag t) nil [130 139])
+            ("tests/userprog/rox-child.inc" include nil nil [144 183]))          
+    :file "rox-multichild.c"
+    :pointmax 184
+    :fsize 183
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("CHILD_CNT" . ((string "\"5\"" 140 . 143)))
+          )
+
+    )
+   (semanticdb-table "sc-boundary-2.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("syscall-nr.h" include (:system-flag t) nil [144 167])
+            ("tests/userprog/boundary.h" include nil nil [168 204])
+            ("tests/lib.h" include nil nil [205 227])
+            ("tests/main.h" include nil nil [228 251])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [269 274]))                  
+                :type "void")
+                nil [253 577]))          
+    :file "sc-boundary-2.c"
+    :pointmax 578
+    :fsize 577
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "boundary.h"
+    :file "boundary.h"
+    :fsize 191
+    :lastmodtime '(21208 19921 0 0)
+    )
+   )
+  :file "!Users!jim!classes!systems!pint-heads!src!tests!userprog!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,29 @@
+;; Object 8/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "8/"
+  :tables (list 
+   (semanticdb-table "8.rkt"
+    :major-mode 'scheme-mode
+    :tags 
+        '( ("bad1" variable (:default-value ((1437 . 1474))) nil [1422 1475])
+            ("bad2" variable (:default-value ((1492 . 1602))) nil [1477 1603])
+            ("bad3" variable (:default-value ((1620 . 1728))) nil [1605 1729])
+            ("bad4" variable (:default-value ((1880 . 1896))) nil [1865 1897])
+            ("bad5" variable (:default-value ((1914 . 1970))) nil [1899 1971])
+            ("bad-big" variable (:default-value ((1991 . 2260))) nil [1973 2261])
+            ("p0" variable (:default-value ((9334 . 9739))) nil [9321 9740])
+            ("p1" variable (:default-value ((9755 . 10183))) nil [9742 10184])
+            ("p2" variable (:default-value ((10199 . 10318))) nil [10186 10319])
+            ("bug1" variable (:default-value ((10336 . 10484))) nil [10321 10485])
+            ("e-=α" function (:arguments ("e1" "e2")) nil [10879 12168]))          
+    :file "8.rkt"
+    :pointmax 24166
+    :fsize 24213
+    :lastmodtime '(21354 32901 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!jim!classes!ippl!dan-hw!8!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

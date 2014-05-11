@@ -1,0 +1,529 @@
+;; Object vm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "vm/"
+  :tables (list 
+   (semanticdb-table "child-linear.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("string.h" include (:system-flag t) nil [125 144])
+            ("tests/arc4.h" include nil nil [145 168])
+            ("tests/lib.h" include nil nil [169 191])
+            ("tests/main.h" include nil nil [192 215])
+            ("test_name" variable
+               (:pointer 1
+                :constant-flag t
+                :type "char")
+                nil [217 256])
+            ("SIZE" variable (:constant-flag t) nil [266 270])
+            ("buf" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [285 307])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [319 328])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [329 342]))                  
+                :type "int")
+                nil [309 754]))          
+    :file "child-linear.c"
+    :pointmax 755
+    :fsize 754
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("SIZE" . ((semantic-list "(1024 * 1024)" 271 . 284)))
+          )
+
+    )
+   (semanticdb-table "child-qsort-mm.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("debug.h" include (:system-flag t) nil [118 136])
+            ("syscall.h" include (:system-flag t) nil [137 157])
+            ("tests/lib.h" include nil nil [158 180])
+            ("tests/main.h" include nil nil [181 204])
+            ("tests/vm/qsort.h" include nil nil [205 232])
+            ("test_name" variable
+               (:pointer 1
+                :constant-flag t
+                :type "char")
+                nil [234 275])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [287 302])
+                    ("" variable (:type ("UNUSED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [296 303])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [304 317]))                  
+                :type "int")
+                nil [277 583]))          
+    :file "child-qsort-mm.c"
+    :pointmax 584
+    :fsize 583
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "child-qsort.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("debug.h" include (:system-flag t) nil [202 220])
+            ("syscall.h" include (:system-flag t) nil [221 241])
+            ("tests/lib.h" include nil nil [242 264])
+            ("tests/main.h" include nil nil [265 288])
+            ("tests/vm/qsort.h" include nil nil [289 316])
+            ("test_name" variable
+               (:pointer 1
+                :constant-flag t
+                :type "char")
+                nil [318 356])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [368 383])
+                    ("" variable (:type ("UNUSED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [377 384])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [385 398]))                  
+                :type "int")
+                nil [358 706]))          
+    :file "child-qsort.c"
+    :pointmax 707
+    :fsize 706
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "child-sort.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("debug.h" include (:system-flag t) nil [186 204])
+            ("syscall.h" include (:system-flag t) nil [205 225])
+            ("tests/lib.h" include nil nil [226 248])
+            ("tests/main.h" include nil nil [249 272])
+            ("test_name" variable
+               (:pointer 1
+                :constant-flag t
+                :type "char")
+                nil [274 311])
+            ("buf" variable
+               (:dereference 1
+                :type "unsigned char")
+                nil [313 343])
+            ("histogram" variable
+               (:dereference 1
+                :type ("size_t" type (:type "class") nil nil))
+                nil [344 366])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [378 393])
+                    ("" variable (:type ("UNUSED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [387 394])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [395 408]))                  
+                :type "int")
+                nil [368 893]))          
+    :file "child-sort.c"
+    :pointmax 894
+    :fsize 893
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "qsort.h"
+    :file "qsort.h"
+    :fsize 157
+    :lastmodtime '(21208 19921 0 0)
+    )
+   (semanticdb-table "pt-grow-bad.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("string.h" include (:system-flag t) nil [119 138])
+            ("tests/arc4.h" include nil nil [139 162])
+            ("tests/cksum.h" include nil nil [163 187])
+            ("tests/lib.h" include nil nil [188 210])
+            ("tests/main.h" include nil nil [211 234])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [252 257]))                  
+                :type "void")
+                nil [236 304]))          
+    :file "pt-grow-bad.c"
+    :pointmax 305
+    :fsize 304
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pt-big-stk-obj.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("string.h" include (:system-flag t) nil [83 102])
+            ("tests/arc4.h" include nil nil [103 126])
+            ("tests/cksum.h" include nil nil [127 151])
+            ("tests/lib.h" include nil nil [152 174])
+            ("tests/main.h" include nil nil [175 198])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [216 221]))                  
+                :type "void")
+                nil [200 444]))          
+    :file "pt-big-stk-obj.c"
+    :pointmax 445
+    :fsize 444
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pt-write-code-2.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("tests/lib.h" include nil nil [115 137])
+            ("tests/main.h" include nil nil [138 161])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [179 184]))                  
+                :type "void")
+                nil [163 364]))          
+    :file "pt-write-code-2.c"
+    :pointmax 365
+    :fsize 364
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pt-grow-stk-sc.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("string.h" include (:system-flag t) nil [163 182])
+            ("syscall.h" include (:system-flag t) nil [183 203])
+            ("tests/vm/sample.inc" include nil nil [204 234])
+            ("tests/lib.h" include nil nil [235 257])
+            ("tests/main.h" include nil nil [258 281])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [299 304]))                  
+                :type "void")
+                nil [283 917]))          
+    :file "pt-grow-stk-sc.c"
+    :pointmax 918
+    :fsize 917
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "sample.inc"
+    :file "sample.inc"
+    :fsize 917
+    :lastmodtime '(21208 19921 0 0)
+    )
+   (semanticdb-table "page-merge-par.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("tests/main.h" include nil nil [1 24])
+            ("tests/vm/parallel-merge.h" include nil nil [25 61])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [79 84]))                  
+                :type "void")
+                nil [63 127]))          
+    :file "page-merge-par.c"
+    :pointmax 128
+    :fsize 127
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "parallel-merge.h"
+    :file "parallel-merge.h"
+    :fsize 170
+    :lastmodtime '(21208 19921 0 0)
+    )
+   (semanticdb-table "parallel-merge.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("tests/vm/parallel-merge.h" include nil nil [240 276])
+            ("stdio.h" include (:system-flag t) nil [277 295])
+            ("syscall.h" include (:system-flag t) nil [296 316])
+            ("tests/arc4.h" include nil nil [317 340])
+            ("tests/lib.h" include nil nil [341 363])
+            ("tests/main.h" include nil nil [364 387])
+            ("CHUNK_SIZE" variable (:constant-flag t) nil [397 407])
+            ("CHUNK_CNT" variable (:constant-flag t) nil [429 438])
+            ("DATA_SIZE" variable (:constant-flag t) nil [501 510])
+            ("buf2" variable
+               (:dereference 1
+                :type "unsigned char")
+                nil [561 608])
+            ("buf1" variable
+               (:dereference 1
+                :type "unsigned char")
+                nil [561 608])
+            ("histogram" variable
+               (:dereference 1
+                :type ("size_t" type (:type "class") nil nil))
+                nil [609 631])
+            ("init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [754 759]))                  
+                :type "void")
+                nil [736 951])
+            ("sort_chunks" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("subprocess" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1070 1093])
+                    ("exit_status" variable (:type "int") (reparse-symbol arg-sub-list) [1094 1110]))                  
+                :type "void")
+                nil [1045 2178])
+            ("merge" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2263 2268]))                  
+                :type "void")
+                nil [2244 2941])
+            ("verify" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2963 2968]))                  
+                :type "void")
+                nil [2943 3384])
+            ("parallel_merge" function
+               (:arguments 
+                  ( ("child_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3407 3430])
+                    ("exit_status" variable (:type "int") (reparse-symbol arg-sub-list) [3431 3447]))                  
+                :type "void")
+                nil [3386 3528]))          
+    :file "parallel-merge.c"
+    :pointmax 3529
+    :fsize 3528
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("CHUNK_CNT" . ((number "8" 439 . 440)))
+          ("CHUNK_SIZE" . ((semantic-list "(128 * 1024)" 408 . 420)))
+          ("DATA_SIZE" . ((semantic-list "(CHUNK_CNT * CHUNK_SIZE)" 511 . 535)))
+          )
+
+    )
+   (semanticdb-table "page-parallel.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("syscall.h" include (:system-flag t) nil [47 67])
+            ("tests/lib.h" include nil nil [68 90])
+            ("tests/main.h" include nil nil [91 114])
+            ("CHILD_CNT" variable (:constant-flag t) nil [124 133])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [153 158]))                  
+                :type "void")
+                nil [137 429]))          
+    :file "page-parallel.c"
+    :pointmax 430
+    :fsize 429
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("CHILD_CNT" . ((number "4" 134 . 135)))
+          )
+
+    )
+   (semanticdb-table "page-merge-seq.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("syscall.h" include (:system-flag t) nil [218 238])
+            ("tests/arc4.h" include nil nil [239 262])
+            ("tests/lib.h" include nil nil [263 285])
+            ("tests/main.h" include nil nil [286 309])
+            ("CHUNK_SIZE" variable (:constant-flag t) nil [494 504])
+            ("CHUNK_CNT" variable (:constant-flag t) nil [525 534])
+            ("DATA_SIZE" variable (:constant-flag t) nil [597 606])
+            ("buf2" variable
+               (:dereference 1
+                :type "unsigned char")
+                nil [657 704])
+            ("buf1" variable
+               (:dereference 1
+                :type "unsigned char")
+                nil [657 704])
+            ("histogram" variable
+               (:dereference 1
+                :type ("size_t" type (:type "class") nil nil))
+                nil [705 727])
+            ("init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [850 855]))                  
+                :type "void")
+                nil [832 1047])
+            ("sort_chunks" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1124 1129]))                  
+                :type "void")
+                nil [1099 1901])
+            ("merge" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1986 1991]))                  
+                :type "void")
+                nil [1967 2665])
+            ("verify" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2687 2692]))                  
+                :type "void")
+                nil [2667 3108])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3126 3131]))                  
+                :type "void")
+                nil [3110 3189]))          
+    :file "page-merge-seq.c"
+    :pointmax 3190
+    :fsize 3189
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("CHUNK_CNT" . ((number "16" 535 . 537)))
+          ("CHUNK_SIZE" . ((semantic-list "(126 * 512)" 505 . 516)))
+          ("DATA_SIZE" . ((semantic-list "(CHUNK_CNT * CHUNK_SIZE)" 607 . 631)))
+          )
+
+    )
+   (semanticdb-table "mmap-clean.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("string.h" include (:system-flag t) nil [117 136])
+            ("syscall.h" include (:system-flag t) nil [137 157])
+            ("tests/vm/sample.inc" include nil nil [158 188])
+            ("tests/lib.h" include nil nil [189 211])
+            ("tests/main.h" include nil nil [212 235])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [253 258]))                  
+                :type "void")
+                nil [237 1663]))          
+    :file "mmap-clean.c"
+    :pointmax 1664
+    :fsize 1663
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "mmap-close.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("string.h" include (:system-flag t) nil [64 83])
+            ("syscall.h" include (:system-flag t) nil [84 104])
+            ("tests/vm/sample.inc" include nil nil [105 135])
+            ("tests/arc4.h" include nil nil [136 159])
+            ("tests/lib.h" include nil nil [160 182])
+            ("tests/main.h" include nil nil [183 206])
+            ("ACTUAL" variable (:constant-flag t) nil [216 222])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [262 267]))                  
+                :type "void")
+                nil [246 585]))          
+    :file "mmap-close.c"
+    :pointmax 586
+    :fsize 585
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("ACTUAL" . ((semantic-list "((void *) 0x10000000)" 223 . 244)))
+          )
+
+    )
+   (semanticdb-table "mmap-over-stk.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdint.h" include (:system-flag t) nil [68 87])
+            ("round.h" include (:system-flag t) nil [88 106])
+            ("syscall.h" include (:system-flag t) nil [107 127])
+            ("tests/lib.h" include nil nil [128 150])
+            ("tests/main.h" include nil nil [151 174])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [192 197]))                  
+                :type "void")
+                nil [176 458]))          
+    :file "mmap-over-stk.c"
+    :pointmax 460
+    :fsize 459
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "mmap-overlap.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("syscall.h" include (:system-flag t) nil [66 86])
+            ("tests/vm/sample.inc" include nil nil [87 117])
+            ("tests/lib.h" include nil nil [118 140])
+            ("tests/main.h" include nil nil [141 164])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [182 187]))                  
+                :type "void")
+                nil [166 551]))          
+    :file "mmap-overlap.c"
+    :pointmax 552
+    :fsize 551
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "mmap-write.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("string.h" include (:system-flag t) nil [146 165])
+            ("syscall.h" include (:system-flag t) nil [166 186])
+            ("tests/vm/sample.inc" include nil nil [187 217])
+            ("tests/lib.h" include nil nil [218 240])
+            ("tests/main.h" include nil nil [241 264])
+            ("ACTUAL" variable (:constant-flag t) nil [274 280])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [320 325]))                  
+                :type "void")
+                nil [304 877]))          
+    :file "mmap-write.c"
+    :pointmax 878
+    :fsize 877
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("ACTUAL" . ((semantic-list "((void *) 0x10000000)" 281 . 302)))
+          )
+
+    )
+   (semanticdb-table "page-merge-mm.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("tests/main.h" include nil nil [1 24])
+            ("tests/vm/parallel-merge.h" include nil nil [25 61])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [79 84]))                  
+                :type "void")
+                nil [63 130]))          
+    :file "page-merge-mm.c"
+    :pointmax 131
+    :fsize 130
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!jim!classes!systems!pint-heads!src!tests!vm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

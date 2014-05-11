@@ -1,0 +1,319 @@
+;; Object extended/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "extended/"
+  :tables (list 
+   (semanticdb-table "child-syn-rw.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("random.h" include (:system-flag t) nil [452 471])
+            ("stdlib.h" include (:system-flag t) nil [472 491])
+            ("syscall.h" include (:system-flag t) nil [492 512])
+            ("tests/filesys/extended/syn-rw.h" include nil nil [513 555])
+            ("tests/lib.h" include nil nil [556 578])
+            ("test_name" variable
+               (:pointer 1
+                :constant-flag t
+                :type "char")
+                nil [580 619])
+            ("buf1" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [621 648])
+            ("buf2" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [649 676])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [688 697])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [698 717]))                  
+                :type "int")
+                nil [678 1497]))          
+    :file "child-syn-rw.c"
+    :pointmax 1498
+    :fsize 1497
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "tar.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ustar.h" include (:system-flag t) nil [41 59])
+            ("syscall.h" include (:system-flag t) nil [60 80])
+            ("stdio.h" include (:system-flag t) nil [81 99])
+            ("string.h" include (:system-flag t) nil [100 119])
+            ("usage" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [140 145]))                  
+                :type "void")
+                nil [121 146])
+            ("make_tar_archive" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("archive_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [177 202])
+                    ("files" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [233 247])
+                    ("file_cnt" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [248 264]))                  
+                :type "bool")
+                nil [147 265])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [277 286])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [287 300]))                  
+                :type "int")
+                nil [267 435])
+            ("usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [456 461]))                  
+                :type "void")
+                nil [437 833])
+            ("archive_file" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("file_name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [862 879])
+                    ("file_name_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [880 902])
+                    ("archive_fd" variable (:type "int") (reparse-symbol arg-sub-list) [929 944])
+                    ("write_error" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [945 963]))                  
+                :type "bool")
+                nil [836 964])
+            ("archive_ordinary_file" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("file_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1001 1023])
+                    ("file_fd" variable (:type "int") (reparse-symbol arg-sub-list) [1024 1036])
+                    ("archive_fd" variable (:type "int") (reparse-symbol arg-sub-list) [1072 1087])
+                    ("write_error" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [1088 1106]))                  
+                :type "bool")
+                nil [966 1107])
+            ("archive_directory" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("file_name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1139 1156])
+                    ("file_name_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1157 1179])
+                    ("file_fd" variable (:type "int") (reparse-symbol arg-sub-list) [1211 1223])
+                    ("archive_fd" variable (:type "int") (reparse-symbol arg-sub-list) [1224 1239])
+                    ("write_error" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [1240 1258]))                  
+                :type "bool")
+                nil [1108 1259])
+            ("write_header" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("file_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1286 1308])
+                    ("" variable (:type ("ustar_type" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [1309 1325])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [1326 1335])
+                    ("archive_fd" variable (:type "int") (reparse-symbol arg-sub-list) [1362 1377])
+                    ("write_error" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [1378 1396]))                  
+                :type "bool")
+                nil [1260 1397])
+            ("do_write" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [1421 1428])
+                    ("buffer" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1429 1448])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [1449 1458])
+                    ("write_error" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [1459 1477]))                  
+                :type "bool")
+                nil [1399 1478])
+            ("make_tar_archive" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("archive_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1510 1535])
+                    ("files" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1536 1550])
+                    ("file_cnt" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1551 1567]))                  
+                :type "bool")
+                nil [1480 2392])
+            ("archive_file" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file_name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2420 2437])
+                    ("file_name_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2438 2460])
+                    ("archive_fd" variable (:type "int") (reparse-symbol arg-sub-list) [2475 2490])
+                    ("write_error" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [2491 2509]))                  
+                :type "bool")
+                nil [2394 3271])
+            ("archive_ordinary_file" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3308 3330])
+                    ("file_fd" variable (:type "int") (reparse-symbol arg-sub-list) [3331 3343])
+                    ("archive_fd" variable (:type "int") (reparse-symbol arg-sub-list) [3367 3382])
+                    ("write_error" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [3383 3401]))                  
+                :type "bool")
+                nil [3273 4223])
+            ("archive_directory" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file_name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4256 4273])
+                    ("file_name_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4274 4296])
+                    ("file_fd" variable (:type "int") (reparse-symbol arg-sub-list) [4297 4309])
+                    ("archive_fd" variable (:type "int") (reparse-symbol arg-sub-list) [4329 4344])
+                    ("write_error" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [4345 4363]))                  
+                :type "bool")
+                nil [4225 4919])
+            ("write_header" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4947 4969])
+                    ("type" variable (:type ("ustar_type" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [4970 4991])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [4992 5001])
+                    ("archive_fd" variable (:type "int") (reparse-symbol arg-sub-list) [5016 5031])
+                    ("write_error" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [5032 5050]))                  
+                :type "bool")
+                nil [4921 5205])
+            ("do_write" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [5229 5236])
+                    ("buffer" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5237 5256])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [5257 5266])
+                    ("write_error" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [5267 5285]))                  
+                :type "bool")
+                nil [5207 5512]))          
+    :file "tar.c"
+    :pointmax 5513
+    :fsize 5512
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "syn-rw.h"
+    :file "syn-rw.h"
+    :fsize 255
+    :lastmodtime '(21208 19921 0 0)
+    )
+   (semanticdb-table "Make.tests"
+    :major-mode 'makefile-mode
+    :tags 
+        '( ("raw_tests" variable (:default-value ("dir-empty-name" "dir-mk-tree" "dir-mkdir" "dir-open" "dir-over-file" "dir-rm-cwd" "dir-rm-parent" "dir-rm-root" "dir-rm-tree" "dir-rmdir" "dir-under-file" "dir-vine" "grow-create" "grow-dir-lg" "grow-file-size" "grow-root-lg" "grow-root-sm" "grow-seq-lg" "grow-seq-sm" "grow-sparse" "grow-tell" "grow-two-files" "syn-rw")) nil [21 320])
+            ("tests/filesys/extended_EXTRA_GRADES" variable (:default-value ("$(patsubst %,tests/filesys/extended/%-persistence,$(raw_tests))")) nil [405 507])
+            ("tests/filesys/extended_PROGS" variable (:default-value ("$(tests/filesys/extended_TESTS)" "tests/filesys/extended/child-syn-rw" "tests/filesys/extended/tar")) nil [508 636])
+            ("tests/filesys/extended/dir-mk-tree_SRC" variable (:default-value ("tests/filesys/extended/mk-tree.c")) nil [1145 1220])
+            ("tests/filesys/extended/dir-rm-tree_SRC" variable (:default-value ("tests/filesys/extended/mk-tree.c")) nil [1220 1295])
+            ("tests/filesys/extended/syn-rw_PUTFILES" variable (:default-value ("tests/filesys/extended/child-syn-rw")) nil [1296 1374])
+            ("tests/filesys/extended/dir-vine.output" function (:arguments ("TIMEOUT" "=" "150")) nil [1375 1429])
+            ("GETTIMEOUT" variable (:default-value ("60")) nil [1430 1446])
+            ("GETCMD" variable (:default-value ("pintos" "-v" "-k" "-T" "$(GETTIMEOUT)")) nil [1447 1486])
+            ("GETCMD" variable (:default-value ("$(PINTOSOPTS)")) nil [1486 1510])
+            ("GETCMD" variable (:default-value ("$(SIMULATOR)")) nil [1510 1533])
+            ("GETCMD" variable (:default-value ("$(FILESYSSOURCE)")) nil [1533 1560])
+            ("GETCMD" variable (:default-value ("-g" "fs.tar" "-a" "$(TEST).tar")) nil [1560 1595])
+            ("GETCMD" variable (:default-value ("--swap-size=4")) nil [1638 1662])
+            ("GETCMD" variable (:default-value ("--" "-q")) nil [1668 1684])
+            ("GETCMD" variable (:default-value ("$(KERNELFLAGS)")) nil [1684 1709])
+            ("GETCMD" variable (:default-value ("run" "'tar fs.tar /'")) nil [1709 1738])
+            ("GETCMD" variable (:default-value ("<" "/dev/null")) nil [1738 1760])
+            ("GETCMD" variable (:default-value ("2>" "$(TEST)-persistence.errors" "$(if $(VERBOSE),|tee,>)" "$(TEST)-persistence.output")) nil [1760 1851])
+            ("tests/filesys/extended/%.output" function (:arguments ("kernel.bin")) nil [1852 1989])
+            ("TARS" variable (:default-value ("$(addsuffix .tar,$(tests/filesys/extended_TESTS))")) nil [2266 2323])
+            ("clean" function nil nil [2324 2391]))          
+    :file "Make.tests"
+    :pointmax 2390
+    :fsize 2390
+    :lastmodtime '(21257 19014 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!jim!classes!systems!pint-heads!src!tests!filesys!extended!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

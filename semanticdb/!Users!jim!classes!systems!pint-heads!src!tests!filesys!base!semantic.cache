@@ -1,0 +1,124 @@
+;; Object base/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "base/"
+  :tables (list 
+   (semanticdb-table "child-syn-read.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("random.h" include (:system-flag t) nil [232 251])
+            ("stdio.h" include (:system-flag t) nil [252 270])
+            ("stdlib.h" include (:system-flag t) nil [271 290])
+            ("syscall.h" include (:system-flag t) nil [291 311])
+            ("tests/lib.h" include nil nil [312 334])
+            ("tests/filesys/base/syn-read.h" include nil nil [335 375])
+            ("test_name" variable
+               (:pointer 1
+                :constant-flag t
+                :type "char")
+                nil [377 418])
+            ("buf" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [420 446])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [458 467])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [468 487]))                  
+                :type "int")
+                nil [448 970]))          
+    :file "child-syn-read.c"
+    :pointmax 972
+    :fsize 971
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "child-syn-wrt.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("random.h" include (:system-flag t) nil [148 167])
+            ("stdlib.h" include (:system-flag t) nil [168 187])
+            ("syscall.h" include (:system-flag t) nil [188 208])
+            ("tests/lib.h" include nil nil [209 231])
+            ("tests/filesys/base/syn-write.h" include nil nil [232 273])
+            ("buf" variable
+               (:dereference 1
+                :type "char")
+                nil [275 294])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [306 315])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [316 329]))                  
+                :type "int")
+                nil [296 799]))          
+    :file "child-syn-wrt.c"
+    :pointmax 800
+    :fsize 799
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "syn-read.h"
+    :file "syn-read.h"
+    :fsize 183
+    :lastmodtime '(21208 19921 0 0)
+    )
+   (semanticdb-table "syn-write.h"
+    :file "syn-write.h"
+    :fsize 251
+    :lastmodtime '(21208 19921 0 0)
+    )
+   (semanticdb-table "Make.tests"
+    :major-mode 'makefile-mode
+    :tags 
+        '( ("tests/filesys/base/syn-read_PUTFILES" variable (:default-value ("tests/filesys/base/child-syn-read")) nil [556 629])
+            ("tests/filesys/base/syn-write_PUTFILES" variable (:default-value ("tests/filesys/base/child-syn-wrt")) nil [629 702]))          
+    :file "Make.tests"
+    :pointmax 753
+    :fsize 751
+    :lastmodtime '(21288 37789 0 0)
+    :unmatched-syntax '((symbol 749 . 752) (punctuation 747 . 748) (symbol 739 . 746) (punctuation 737 . 738) (symbol 703 . 737) (bol 703 . 703) (close-paren 553 . 554) (semantic-list 519 . 553) (punctuation 518 . 519) (punctuation 511 . 512) (semantic-list 485 . 511) (punctuation 484 . 485) (punctuation 483 . 484) (symbol 479 . 483) (symbol 471 . 478) (open-paren 470 . 471) (punctuation 469 . 470) (bol 469 . 469) (close-paren 467 . 468) (semantic-list 399 . 467) (punctuation 398 . 399) (punctuation 390 . 391) (semantic-list 364 . 390) (punctuation 363 . 364) (punctuation 362 . 363) (symbol 358 . 362) (symbol 350 . 357) (open-paren 349 . 350) (punctuation 348 . 349) (bol 348 . 348) (close-paren 345 . 346) (symbol 332 . 345) (symbol 317 . 331) (punctuation 316 . 317) (symbol 297 . 316) (symbol 285 . 294) (open-paren 284 . 285) (punctuation 283 . 284) (close-paren 281 . 282) (symbol 257 . 281) (open-paren 256 . 257) (punctuation 255 . 256) (punctuation 253 . 254) (symbol 228 . 252) (bol 228 . 228) (close-paren 225 . 226) (symbol 216 . 225) (symbol 205 . 215) (symbol 196 . 204) (symbol 182 . 195) (symbol 169 . 181) (symbol 159 . 168) (symbol 148 . 155) (symbol 138 . 147) (symbol 124 . 137) (symbol 111 . 123) (symbol 101 . 110) (symbol 93 . 100) (bol 93 . 93) (close-paren 225 . 226) (symbol 216 . 225) (symbol 205 . 215) (symbol 196 . 204) (symbol 182 . 195) (symbol 169 . 181) (symbol 159 . 168) (symbol 148 . 155) (symbol 138 . 147) (symbol 124 . 137) (symbol 111 . 123) (symbol 101 . 110) (symbol 93 . 100) (bol 93 . 93))
+    )
+   (semanticdb-table "syn-read.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("random.h" include (:system-flag t) nil [135 154])
+            ("stdio.h" include (:system-flag t) nil [155 173])
+            ("syscall.h" include (:system-flag t) nil [174 194])
+            ("tests/lib.h" include nil nil [195 217])
+            ("tests/main.h" include nil nil [218 241])
+            ("tests/filesys/base/syn-read.h" include nil nil [242 282])
+            ("buf" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [284 310])
+            ("CHILD_CNT" variable (:constant-flag t) nil [320 329])
+            ("test_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [350 355]))                  
+                :type "void")
+                nil [334 785]))          
+    :file "syn-read.c"
+    :pointmax 786
+    :fsize 785
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("CHILD_CNT" . ((number "10" 330 . 332)))
+          )
+
+    )
+   )
+  :file "!Users!jim!classes!systems!pint-heads!src!tests!filesys!base!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

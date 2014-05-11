@@ -1,0 +1,18 @@
+;; Object racket/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "racket/"
+  :tables (list 
+   (semanticdb-table "main.rkt"
+    :major-mode 'scheme-mode
+    :tags nil
+    :file "main.rkt"
+    :pointmax 1924
+    :fsize 1923
+    :lastmodtime '(20997 28515 0 0)
+    :unmatched-syntax '((semantic-list 749 . 1923) (semantic-list 23 . 747) (symbol 7 . 21) (symbol 2 . 6) (punctuation 1 . 2))
+    )
+   )
+  :file "!Applications!Racket v5.3.6!collects!racket!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

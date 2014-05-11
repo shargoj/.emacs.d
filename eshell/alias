@@ -1,0 +1,4 @@
+alias ("deps")  $*
+alias nil /usr/local/bin/lein $*
+alias lein $*
+alias raco /Applications/Racket\ v5.3.6/bin/raco $*

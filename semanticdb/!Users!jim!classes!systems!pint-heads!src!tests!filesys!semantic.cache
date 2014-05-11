@@ -1,0 +1,72 @@
+;; Object filesys/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "filesys/"
+  :tables (list 
+   (semanticdb-table "seq-test.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("TESTS_FILESYS_SEQ_TEST_H" variable (:constant-flag t) nil [42 66])
+            ("stddef.h" include (:system-flag t) nil [68 87])
+            ("seq_test" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("file_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [104 126])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [142 152])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [153 165])
+                    ("initial_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [166 186])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [202 227])
+                    ("" variable (:type "void") (reparse-symbol arg-sub-list) [251 269]))                  
+                :type "void")
+                nil [89 290]))          
+    :file "seq-test.h"
+    :pointmax 330
+    :fsize 329
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax '((semantic-list 270 . 288) (semantic-list 256 . 269) (semantic-list 228 . 234) (semantic-list 209 . 227))
+    :lexical-table 
+        '(("TESTS_FILESYS_SEQ_TEST_H")
+          )
+
+    )
+   (semanticdb-table "seq-test.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("tests/filesys/seq-test.h" include nil nil [1 36])
+            ("random.h" include (:system-flag t) nil [37 56])
+            ("syscall.h" include (:system-flag t) nil [57 77])
+            ("tests/lib.h" include nil nil [78 100])
+            ("seq_test" function
+               (:arguments 
+                  ( ("file_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [118 140])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [141 151])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [152 164])
+                    ("initial_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [165 185])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [196 221])
+                    ("" variable (:type "void") (reparse-symbol arg-sub-list) [240 258]))                  
+                :type "void")
+                nil [102 1017]))          
+    :file "seq-test.c"
+    :pointmax 1018
+    :fsize 1017
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax '((semantic-list 259 . 277) (semantic-list 245 . 258) (semantic-list 222 . 228) (semantic-list 203 . 221))
+    )
+   )
+  :file "!Users!jim!classes!systems!pint-heads!src!tests!filesys!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

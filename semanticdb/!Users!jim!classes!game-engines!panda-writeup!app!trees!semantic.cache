@@ -1,0 +1,18 @@
+;; Object trees/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "trees/"
+  :tables (list 
+   (semanticdb-table "test.json"
+    :major-mode 'js-mode
+    :tags nil
+    :file "test.json"
+    :pointmax 161
+    :fsize 160
+    :lastmodtime '(21325 48291 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!jim!classes!game-engines!panda-writeup!app!trees!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

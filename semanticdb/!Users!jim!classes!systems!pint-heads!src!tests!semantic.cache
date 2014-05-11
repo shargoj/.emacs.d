@@ -1,0 +1,242 @@
+;; Object tests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tests/"
+  :tables (list 
+   (semanticdb-table "cksum.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdint.h" include (:system-flag t) nil [66 85])
+            ("tests/cksum.h" include nil nil [86 110])
+            ("crctab" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "unsigned long")
+                nil [112 3323])
+            ("cksum" function
+               (:arguments 
+                  ( ("b_" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3409 3424])
+                    ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3425 3434]))                  
+                :type "unsigned long")
+                nil [3388 3739]))          
+    :file "cksum.c"
+    :pointmax 3923
+    :fsize 3922
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "main.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("random.h" include (:system-flag t) nil [1 20])
+            ("tests/lib.h" include nil nil [21 43])
+            ("tests/main.h" include nil nil [44 67])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [79 94])
+                    ("" variable (:type ("UNUSED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [88 95])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [96 109]))                  
+                :type "int")
+                nil [69 217]))          
+    :file "main.c"
+    :pointmax 218
+    :fsize 217
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "cksum.h"
+    :file "cksum.h"
+    :fsize 137
+    :lastmodtime '(21208 19921 0 0)
+    )
+   (semanticdb-table "lib.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("TESTS_LIB_H" variable (:constant-flag t) nil [29 40])
+            ("debug.h" include (:system-flag t) nil [42 60])
+            ("stdbool.h" include (:system-flag t) nil [61 81])
+            ("stddef.h" include (:system-flag t) nil [82 101])
+            ("syscall.h" include (:system-flag t) nil [102 122])
+            ("test_name" variable
+               (:pointer 1
+                :typemodifiers ("extern")
+                :constant-flag t
+                :type "char")
+                nil [124 153])
+            ("quiet" variable
+               (:typemodifiers ("extern")
+                :type "bool")
+                nil [154 172])
+            ("PRINTF_FORMAT" function
+               (:prototype-flag t
+                :type "int")
+                nil [203 224])
+            ("NO_RETURN" variable (:type "int") nil [276 286])
+            ("CHECK" variable (:constant-flag t) nil [872 877])
+            ("shuffle" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1247 1254])
+                    ("cnt" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1255 1266])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1267 1279]))                  
+                :type "void")
+                nil [1233 1280])
+            ("exec_children" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("child_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1302 1325])
+                    ("pids" variable
+                       (:dereference 1
+                        :type ("pid_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1326 1339])
+                    ("child_cnt" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1340 1357]))                  
+                :type "void")
+                nil [1282 1358])
+            ("wait_children" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("pids" variable
+                       (:dereference 1
+                        :type ("pid_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1379 1392])
+                    ("child_cnt" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1393 1410]))                  
+                :type "void")
+                nil [1359 1411])
+            ("check_file_handle" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [1437 1444])
+                    ("file_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1445 1467])
+                    ("buf_" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1492 1509])
+                    ("filesize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1510 1526]))                  
+                :type "void")
+                nil [1413 1527])
+            ("check_file" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("file_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1545 1567])
+                    ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1568 1584])
+                    ("filesize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1585 1601]))                  
+                :type "void")
+                nil [1528 1602])
+            ("compare_bytes" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("read_data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1624 1646])
+                    ("expected_data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1647 1673])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1694 1706])
+                    ("ofs" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1707 1718])
+                    ("file_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1719 1741]))                  
+                :type "void")
+                nil [1604 1742]))          
+    :file "lib.h"
+    :pointmax 1768
+    :fsize 1767
+    :lastmodtime '(21208 19921 0 0)
+    :unmatched-syntax '((semantic-list 269 . 275) (symbol 255 . 268) (number 273 . 274) (number 270 . 271) (semantic-list 235 . 254) (symbol 230 . 234) (VOID 225 . 229) (number 221 . 222) (number 218 . 219) (semantic-list 183 . 202) (symbol 179 . 182) (VOID 174 . 178))
+    :lexical-table 
+        '(("TESTS_LIB_H")
+          ("CHECK" (spp-arg-list ("SUCCESS" "...") 877 . 891) . 
+              ((DO "do" 922 . 924) (semantic-list "{                                     \\
+            msg (__VA_ARGS__);                  \\
+            if (!(SUCCESS))                     \\
+              fail (__VA_ARGS__);               \\
+          }" 974 . 1175) (WHILE "while" 1222 . 1227) (semantic-list "(0)" 1228 . 1231)))
+          )
+
+    )
+   (semanticdb-table "main.h"
+    :file "main.h"
+    :fsize 93
+    :lastmodtime '(21208 19921 0 0)
+    )
+   (semanticdb-table "arc4.h"
+    :file "arc4.h"
+    :fsize 320
+    :lastmodtime '(21208 19921 0 0)
+    )
+   (semanticdb-table "Make.tests"
+    :major-mode 'makefile-mode
+    :tags 
+        '( ("$(patsubst %,$(SRCDIR)/%/Make.tests,$(TEST_SUBDIRS))" include nil nil [21 82])
+            ("PROGS" variable (:default-value ("$(foreach subdir,$(TEST_SUBDIRS),$($(subdir)_PROGS))")) nil [83 144])
+            ("TESTS" variable (:default-value ("$(foreach subdir,$(TEST_SUBDIRS),$($(subdir)_TESTS))")) nil [144 205])
+            ("EXTRA_GRADES" variable (:default-value ("$(foreach subdir,$(TEST_SUBDIRS),$($(subdir)_EXTRA_GRADES))")) nil [205 280])
+            ("OUTPUTS" variable (:default-value ("$(addsuffix .output,$(TESTS) $(EXTRA_GRADES))")) nil [281 337])
+            ("ERRORS" variable (:default-value ("$(addsuffix .errors,$(TESTS) $(EXTRA_GRADES))")) nil [337 392])
+            ("RESULTS" variable (:default-value ("$(addsuffix .result,$(TESTS) $(EXTRA_GRADES))")) nil [392 448])
+            ("../../Makefile.userprog" include nil nil [461 493])
+            ("TIMEOUT" variable (:default-value ("10")) nil [500 513])
+            ("clean" function nil nil [514 562])
+            ("grade" function (:arguments ("results")) nil [563 645])
+            ("check" function (:arguments ("results")) nil [646 971])
+            ("results" function (:arguments ("$(RESULTS)")) nil [972 1167])
+            ("outputs" function (:arguments ("$(OUTPUTS)")) nil [1168 1189])
+            ("VERBOSE" variable nil nil [1443 1453])
+            ("TESTCMD" variable (:default-value ("pintos" "-v" "-k" "-T" "$(TIMEOUT)")) nil [1454 1491])
+            ("TESTCMD" variable (:default-value ("$(SIMULATOR)")) nil [1491 1515])
+            ("TESTCMD" variable (:default-value ("$(PINTOSOPTS)")) nil [1515 1540])
+            ("TESTCMD" variable (:default-value ("$(FILESYSSOURCE)")) nil [1595 1623])
+            ("TESTCMD" variable (:default-value ("$(foreach file,$(PUTFILES),-p $(file) -a $(notdir $(file)))")) nil [1623 1694])
+            ("TESTCMD" variable (:default-value ("--swap-size=4")) nil [1743 1768])
+            ("TESTCMD" variable (:default-value ("--" "-q")) nil [1774 1791])
+            ("TESTCMD" variable (:default-value ("$(KERNELFLAGS)")) nil [1791 1817])
+            ("TESTCMD" variable (:default-value ("-f")) nil [1872 1886])
+            ("TESTCMD" variable (:default-value ("$(if $($(TEST)_ARGS),run '$(*F) $($(TEST)_ARGS)',run $(*F))")) nil [1892 1963])
+            ("TESTCMD" variable (:default-value ("<" "/dev/null")) nil [1963 1986])
+            ("TESTCMD" variable (:default-value ("2>" "$(TEST).errors" "$(if $(VERBOSE),|tee,>)" "$(TEST).output")) nil [1986 2054])
+            ("%.output" function (:arguments ("kernel.bin" "loader.bin")) nil [2054 2098])
+            ("%.result" function (:arguments ("%.ck" "%.output")) nil [2099 2150]))          
+    :file "Make.tests"
+    :pointmax 2150
+    :fsize 2149
+    :lastmodtime '(21257 13719 0 0)
+    :unmatched-syntax '((shell-command 2124 . 2149) (bol 2123 . 2123) (semantic-list 1317 . 1379) (punctuation 1316 . 1317) (bol 1316 . 1316) (semantic-list 1248 . 1315) (punctuation 1247 . 1248) (bol 1247 . 1247) (semantic-list 1191 . 1246) (punctuation 1190 . 1191) (bol 1190 . 1190))
+    )
+   )
+  :file "!Users!jim!classes!systems!pint-heads!src!tests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )
