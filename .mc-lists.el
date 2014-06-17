@@ -6,6 +6,7 @@
         LaTeX-babel-insert-hyphen
         TeX-insert-backslash
         TeX-insert-sub-or-superscript
+        TeX-next-error
         backward-sexp
         c-electric-brace
         c-electric-colon
@@ -55,6 +56,7 @@
         paredit-splice-sexp-killing-backward
         paredit-split-sexp
         sgml-slash
+        shm/space
         toggle-input-method
         transpose-sexps
         transpose-words

@@ -1,0 +1,33 @@
+;; Object private/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "private/"
+  :tables (list 
+   (semanticdb-table "btree.rkt"
+    :major-mode 'scheme-mode
+    :tags 
+        '( ("import" code nil nil [321 329])
+            ("find-following-node" function (:arguments ("btree" "pos")) nil [5394 5996])
+            ("create-btree" function nil nil [5998 6034])
+            ("btree-get" function (:arguments ("btree" "pos")) nil [6036 6183])
+            ("btree-put!" function (:arguments ("btree" "pos" "data")) nil [6185 6414])
+            ("btree-shift!" function (:arguments ("btree" "start" "delta")) nil [6416 6743]))          
+    :file "btree.rkt"
+    :pointmax 7483
+    :fsize 7482
+    :lastmodtime '(21369 12771 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "sig.rkt"
+    :major-mode 'scheme-mode
+    :tags nil
+    :file "sig.rkt"
+    :pointmax 962
+    :fsize 961
+    :lastmodtime '(21365 4690 0 0)
+    :unmatched-syntax '((semantic-list 826 . 961) (semantic-list 363 . 824) (semantic-list 312 . 361) (semantic-list 225 . 310) (semantic-list 141 . 223) (semantic-list 37 . 139) (semantic-list 14 . 35) (symbol 7 . 13) (symbol 2 . 6) (punctuation 1 . 2) (semantic-list 826 . 961) (semantic-list 363 . 824) (semantic-list 312 . 361) (semantic-list 225 . 310) (semantic-list 141 . 223) (semantic-list 37 . 139) (semantic-list 14 . 35) (symbol 7 . 13) (symbol 2 . 6) (punctuation 1 . 2))
+    )
+   )
+  :file "!Users!jim!src!racket!pkgs!drracket-pkgs!drracket!browser!private!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

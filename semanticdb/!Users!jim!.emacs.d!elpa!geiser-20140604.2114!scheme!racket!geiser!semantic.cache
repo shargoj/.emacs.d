@@ -1,0 +1,32 @@
+;; Object geiser/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "geiser/"
+  :tables (list 
+   (semanticdb-table "enter.rkt"
+    :major-mode 'scheme-mode
+    :tags 
+        '( ("make-mod" function (:arguments ("name" "path" "ts" "code")) nil [625 829])
+            ("loaded" variable (:default-value ((846 . 857))) nil [831 858])
+            ("mod->path" function (:arguments ("mod")) nil [860 1041])
+            ("visit-module" function (:arguments ("mod")) nil [1043 1118])
+            ("module-loader" function (:arguments ("orig")) nil [1120 1173])
+            ("inhibit-eval" variable (:default-value ((1196 . 1215))) nil [1175 1216])
+            ("get-namespace" function (:arguments ("mod")) nil [1218 1610])
+            ("find-module!" function (:arguments ("path" "path-str")) nil [1612 2194])
+            ("resolve-paths" function (:arguments ("path")) nil [2276 2832])
+            ("notify" function (:arguments ("re?" "path")) nil [2834 2930])
+            ("module-name?" function (:arguments ("name")) nil [2932 3015])
+            ("module-code" function (:arguments ("re?" "name" "path")) nil [3017 3390])
+            ("get-timestamp" function (:arguments ("path")) nil [4412 5012])
+            ("check-latest" function (:arguments ("mod")) nil [5014 6020]))          
+    :file "enter.rkt"
+    :pointmax 6021
+    :fsize 6020
+    :lastmodtime '(21402 10788 0 0)
+    :unmatched-syntax '((semantic-list 2196 . 2274) (semantic-list 562 . 623) (semantic-list 510 . 560) (semantic-list 429 . 508) (symbol 416 . 427) (symbol 411 . 415) (punctuation 410 . 411))
+    )
+   )
+  :file "!Users!jim!.emacs.d!elpa!geiser-20140604.2114!scheme!racket!geiser!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

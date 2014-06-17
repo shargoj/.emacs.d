@@ -17,8 +17,6 @@ raco test frtime-redex.rkt
 raco test frtime-redex.rkt
 raco test frtime-redex.rkt
 raco test frtime-redex.rkt
-raco test frtime-redex.rkt
-raco test frtime-redex.rkt
 figlet HELPERS
 figlet HELPERS
 raco test frtime-redex.rkt 
@@ -126,3 +124,5 @@ curl -k -v https://sandbox-api.bancboxcrowd.com/crowd/v0/cfp/createInvestor -d a
 curl -k -v https://sandbox-api.bancboxcrowd.com/crowd/v0/cfp/createInvestor -d api_key=3b045a4a-f0ed-4872-b434-2bc9ee089f77 -d secret=7613c899b4 -d first_name=Mike  -d last_name=Yaldwicks --data-urlencode email=megh+test4@bancbox.com -d phone=6505555555 -d address_1="444 Rose Street" -d city=Miami -d state=FL -d zip=30318 -d ssn=102-22-3333 -d dob=1954-02-01 -d created_by=Admin -d internal=1 -d reference_id="Investor-HAHAWOAH"
 figlet Update Fns
 figlet Systems
+cabal install
+cabal install

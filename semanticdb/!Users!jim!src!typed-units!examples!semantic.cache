@@ -1,0 +1,19 @@
+;; Object examples/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "examples/"
+  :tables (list 
+   (semanticdb-table "structs-in-units.rkt"
+    :major-mode 'scheme-mode
+    :tags 
+        '( ("w/struct-eq" variable (:default-value ((172 . 265))) nil [150 266]))          
+    :file "structs-in-units.rkt"
+    :pointmax 420
+    :fsize 419
+    :lastmodtime '(21370 20957 0 0)
+    :unmatched-syntax '((semantic-list 403 . 419) (semantic-list 268 . 401) (semantic-list 52 . 148) (semantic-list 15 . 50) (symbol 7 . 13) (symbol 2 . 6) (punctuation 1 . 2))
+    )
+   )
+  :file "!Users!jim!src!typed-units!examples!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,112 @@
+;; Object c-examples/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "c-examples/"
+  :tables (list 
+   (semanticdb-table "loop1.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("main" function (:type "int") nil [1 104]))          
+    :file "loop1.c"
+    :pointmax 105
+    :fsize 104
+    :lastmodtime '(21400 51740 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "loop1do.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("main" function (:type "int") nil [1 108]))          
+    :file "loop1do.c"
+    :pointmax 109
+    :fsize 108
+    :lastmodtime '(21400 53192 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "loop2.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("main" function (:type "int") nil [1 78]))          
+    :file "loop2.c"
+    :pointmax 79
+    :fsize 78
+    :lastmodtime '(21400 53234 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "multidecl.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("main" function (:type "int") nil [1 83]))          
+    :file "multidecl.c"
+    :pointmax 84
+    :fsize 83
+    :lastmodtime '(21400 53305 0 0)
+    :unmatched-syntax '((close-paren 72 . 73) (punctuation 70 . 71) (number 69 . 70) (RETURN 62 . 68) (punctuation 60 . 61) (number 57 . 60) (punctuation 55 . 56) (symbol 53 . 54) (punctuation 51 . 52) (punctuation 50 . 51) (symbol 48 . 49) (semantic-list 10 . 12) (symbol 5 . 9) (INT 1 . 4))
+    )
+   (semanticdb-table "complicatedDecl.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("main" function (:type "int") nil [1 93]))          
+    :file "complicatedDecl.c"
+    :pointmax 94
+    :fsize 93
+    :lastmodtime '(21400 53376 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ifreturn1.c"
+    :major-mode 'c-mode
+    :tags nil
+    :file "ifreturn1.c"
+    :pointmax 1
+    :fsize 64
+    :lastmodtime '(21400 53439 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ifreturn2.c"
+    :major-mode 'c-mode
+    :tags nil
+    :file "ifreturn2.c"
+    :pointmax 1
+    :fsize 66
+    :lastmodtime '(21400 53488 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ifreturn3.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("main" function (:type "int") nil [1 73]))          
+    :file "ifreturn3.c"
+    :pointmax 74
+    :fsize 73
+    :lastmodtime '(21400 53518 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ifreturn4.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("main" function (:type "int") nil [1 88]))          
+    :file "ifreturn4.c"
+    :pointmax 89
+    :fsize 88
+    :lastmodtime '(21400 53565 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "example1.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("example1" function
+               (:arguments 
+                  ( ("x" variable (:type "float") (reparse-symbol arg-sub-list) [16 24]))                  
+                :type "float")
+                nil [1 97])
+            ("main" function (:type "int") nil [99 165]))          
+    :file "example1.c"
+    :pointmax 166
+    :fsize 165
+    :lastmodtime '(21400 59243 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!jim!src!c-to-smp!c-examples!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,4 +1,9 @@
-;; (load-file "/Users/jim/src/cedet/cedet-devel-load.el")
+;;; package --- Jim Shargo's emacs init.el
+
+;;; Commentary: 
+;; Things are roughly ordered by usage/language.
+
+;;; Code:
 
 (menu-bar-mode 1)
 (tool-bar-mode 0)
@@ -102,7 +107,7 @@
 (require 'yasnippet)
 (yas-global-mode t)
 (setq yas/root-directory "~/.emacs.d/snippets")
-(yas/load-directory yas/root-directory)
+(yas-load-directory yas/root-directory)
 
 ;;;; Enable Undo-Tree for better undo handling
 (require 'undo-tree)
@@ -138,6 +143,7 @@
 (add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
 (add-hook 'cider-repl-mode-hook 'set-auto-complete-as-completion-at-point-function)
 (add-hook 'clojure-mode-hook 'set-auto-complete-as-completion-at-point-function)
+(add-hook 'clojure-mode-hook 'cider-turn-on-eldoc-mode)
 (add-hook 'cider-interaction-mode-hook 'set-auto-complete-as-completion-at-point-function)
 
 (add-hook 'clojure-mode-hook 'enable-paredit-mode)
@@ -148,9 +154,8 @@
             (local-set-key (kbd "C-c C-e") 'cider-pprint-eval-last-sexp)))
 ;;; Racket
 (setq exec-path
-      (append
-       exec-path
-       '("/usr/texbin" "/usr/bin""/bin" "/usr/sbin" "/sbin" "/usr/local/bin"
+      (append exec-path
+       '("/Users/jim/.cabal/bin" "/usr/texbin" "/usr/bin""/bin" "/usr/sbin" "/sbin" "/usr/local/bin"
          "/Applications/Emacs.app/Contents/MacOS/libexec"
          "/usr/local/i386elfgcc/bin/" "/Users/jim/.cask/bin"
          "/Applications/Emacs.app/Contents/MacOS/bin"
@@ -159,6 +164,9 @@
 
 (require 'ac-geiser)
 (add-hook 'geiser-mode-hook 'ac-geiser-setup)
+(add-hook 'geiser-mode-hook (lambda ()
+                              (set-buffer-file-coding-system 'utf-8)
+                              (set-buffer-process-coding-system 'utf-8 'utf-8)))))
 (add-hook 'geiser-mode-hook 'enable-paredit-mode)
 (add-hook 'geiser-repl-mode-hook 'ac-geiser-setup)
 (add-hook 'geiser-repl-mode-hook 'enable-paredit-mode)
@@ -169,9 +177,8 @@
 (setenv "PATH" (concat (s-join ":" exec-path) (getenv "PATH") ":/sw/bin" ":~/.cabal/bin"))
 
 ;;; Haskell
-;(require 'ghc-core)
-;(autoload 'ghc-init "ghc" nil t)
-;(add-hook 'haskell-mode-hook (lambda () (ghc-init) (flymake-mode)))
+(setq haskell-stylish-on-save t)
+(add-hook 'haskell-mode-hook 'haskell-indentation-mode)
 
 ;;; C/C++
 (require 'auto-complete-clang)
@@ -223,7 +230,7 @@
  '(ac-auto-start 2)
  '(ac-trigger-key "TAB")
  '(column-number-mode t)
- '(custom-safe-themes (quote ("60f04e478dedc16397353fb9f33f0d895ea3dab4f581307fbf0aa2f07e658a40" "a3d519ee30c0aa4b45a277ae41c4fa1ae80e52f04098a2654979b1ab859ab0bf" "73fe242ddbaf2b985689e6ec12e29fab2ecd59f765453ad0e93bc502e6e478d6" "9c26d896b2668f212f39f5b0206c5e3f0ac301611ced8a6f74afe4ee9c7e6311" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "9370aeac615012366188359cb05011aea721c73e1cb194798bc18576025cabeb" "0c311fb22e6197daba9123f43da98f273d2bfaeeaeb653007ad1ee77f0003037" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "31d3463ee893541ad572c590eb46dcf87103117504099d362eeed1f3347ab18f" "f3ceb7a30f6501c1093bc8ffdf755fe5ddff3a85437deebf3ee8d7bed8991711" "fa189fcf5074d4964f0a53f58d17c7e360bb8f879bd968ec4a56dc36b0013d29" "fc6e906a0e6ead5747ab2e7c5838166f7350b958d82e410257aeeb2820e8a07a" default)))
+ '(custom-safe-themes (quote ("8b231ba3e5f61c2bb1bc3a2d84cbd16ea17ca13395653566d4dfbb11feaf8567" "f3b6091bc26ab76c4ba9814685e001f37d0801ee46fd8912026192ffbe832842" "ea97033435e26d4742c0d88de2238ac8d1cb9e6df5eb9a73324382fcefa7118a" "93e458ab36b4d904c2e485944d0e1b4d4ad879d83bb6ca5c19a9dac7f6549ee5" "60f04e478dedc16397353fb9f33f0d895ea3dab4f581307fbf0aa2f07e658a40" "a3d519ee30c0aa4b45a277ae41c4fa1ae80e52f04098a2654979b1ab859ab0bf" "73fe242ddbaf2b985689e6ec12e29fab2ecd59f765453ad0e93bc502e6e478d6" "9c26d896b2668f212f39f5b0206c5e3f0ac301611ced8a6f74afe4ee9c7e6311" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "9370aeac615012366188359cb05011aea721c73e1cb194798bc18576025cabeb" "0c311fb22e6197daba9123f43da98f273d2bfaeeaeb653007ad1ee77f0003037" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "31d3463ee893541ad572c590eb46dcf87103117504099d362eeed1f3347ab18f" "f3ceb7a30f6501c1093bc8ffdf755fe5ddff3a85437deebf3ee8d7bed8991711" "fa189fcf5074d4964f0a53f58d17c7e360bb8f879bd968ec4a56dc36b0013d29" "fc6e906a0e6ead5747ab2e7c5838166f7350b958d82e410257aeeb2820e8a07a" default)))
  '(electric-layout-mode t)
  '(electric-pair-mode t)
  '(flycheck-clang-language-standard "c++11")
@@ -231,7 +238,6 @@
  '(global-auto-complete-mode t)
  '(global-flycheck-mode t nil (flycheck))
  '(global-rainbow-delimiters-mode t)
- '(haskell-mode-hook (quote (turn-on-haskell-indentation)))
  '(helm-always-two-windows nil)
  '(helm-buffer-max-length 60)
  '(helm-grep-preferred-ext "*")
@@ -250,11 +256,14 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "#272822" :foreground "#F8F8F2" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "apple" :family "Monaco")))))
 
-(load-theme 'monokai)
+(load-theme 'cyberpunk)
 
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 
 (desktop-save-mode 1)
 
-(maximize-frame)
+;; (maximize-frame)
+
+(provide 'init)
+;;; init.el ends here
