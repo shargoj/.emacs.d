@@ -155,7 +155,7 @@
 ;;; Racket
 (setq exec-path
       (append exec-path
-       '("/Users/jim/.cabal/bin" "/usr/texbin" "/usr/bin""/bin" "/usr/sbin" "/sbin" "/usr/local/bin"
+       '("/Users/jim/.cabal/bin" "/usr/texbin" "/usr/bin""/bin" "/usr/sbin" "q/sbin" "/usr/local/bin"
          "/Applications/Emacs.app/Contents/MacOS/libexec"
          "/usr/local/i386elfgcc/bin/" "/Users/jim/.cask/bin"
          "/Applications/Emacs.app/Contents/MacOS/bin"
@@ -166,7 +166,7 @@
 (add-hook 'geiser-mode-hook 'ac-geiser-setup)
 (add-hook 'geiser-mode-hook (lambda ()
                               (set-buffer-file-coding-system 'utf-8)
-                              (set-buffer-process-coding-system 'utf-8 'utf-8)))))
+                              (set-buffer-process-coding-system 'utf-8 'utf-8)))
 (add-hook 'geiser-mode-hook 'enable-paredit-mode)
 (add-hook 'geiser-repl-mode-hook 'ac-geiser-setup)
 (add-hook 'geiser-repl-mode-hook 'enable-paredit-mode)
