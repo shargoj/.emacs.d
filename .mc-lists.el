@@ -17,23 +17,30 @@
         c-electric-semi&comma
         c-electric-slash
         c-electric-star
+        cider-load-current-buffer
         comment-dwim
         count-lines-page
         dabbrev-expand
         delete-horizontal-space
         downcase-region
+        electric-newline-and-maybe-indent
+        electric-pair-delete-pair
         eshell-bol
         eval-last-sexp
         forward-sexp
         haskell-indentation-delete-backward-char
         haskell-indentation-delete-char
+        haskell-mode-contextual-space
         indent-for-tab-command
         keyboard-quit
         kill-region
+        org-beginning-of-line
         org-delete-char
         org-end-of-line
         org-force-self-insert
+        org-kill-line
         org-self-insert-command
+        org-yank
         paredit-backslash
         paredit-backward
         paredit-backward-kill-word
@@ -55,6 +62,7 @@
         paredit-semicolon
         paredit-splice-sexp-killing-backward
         paredit-split-sexp
+        python-indent-electric-colon
         sgml-slash
         shm/space
         toggle-input-method

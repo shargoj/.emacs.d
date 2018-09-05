@@ -29,26 +29,30 @@
 
 ;;; Import packages and add additional package repositories
 (require 'package)
-(add-to-list 'package-archives
-  '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives 
-  '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
 (package-initialize)
 
-(defvar jim/packages '(zenburn-theme rainbow-delimiters python
-  projectile popup pkg-info paredit omnisharp noctilux-theme
-  multiple-cursors monokai-theme magit helm-themes helm goto-chg
-  git-rebase-mode git-commit-mode ghci-completion ghc geiser
-  flycheck flex-autopair figlet expand-region evil epl dash
-  closure-lint-mode clojure-test-mode clojure-snippets
-  clojure-mode cider auto-complete-clang-async
-  auto-complete-clang auto-complete ace-jump-mode ac-nrepl
-  ac-geiser ack-and-a-half frame-fns frame-cmds ))
+;; (package-refresh-contents)
 
-(mapc (lambda (package)
-        (when (not (package-installed-p package))
-          (package-install package)))
-      jim/packages)
+(when (not (package-installed-p 'use-package))
+  (package-install 'use-package))
+
+(setq
+ exec-path
+ (append
+  exec-path
+  '("/usr/local/bin" "/Users/jim/.cargo/bin"
+    "~/.cabal/bin" "/usr/texbin" "/usr/bin" "/bin"
+    "/usr/sbin" "q/sbin"
+    "/Applications/Emacs.app/Contents/MacOS/libexec"
+    "/Users/jim/.cask/bin"
+    "/Applications/Emacs.app/Contents/MacOS/bin"
+    "/Applications/Racket\\ v6.1/bin")))
+
+(require 's)
+(setenv "PATH" (concat (s-join ":" exec-path) (getenv "PATH") ":/sw/bin" ":~/.cabal/bin"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;; Make emacs fun to work with ;;;
@@ -59,162 +63,318 @@
 
 (ido-mode 1)
 
-(require 'helm)
-(require 'helm-config)
+(use-package helm
+  :ensure t
+  :init (helm-mode 1))
+(use-package helm-config)
+(use-package helm-semantic)
 (helm-mode 1)
 (global-set-key [(meta x)] 'helm-M-x)
 (global-set-key [(ctrl x) (ctrl f)] 'helm-find-files)
 (global-set-key [(ctrl x) (b)] 'helm-buffers-list)
 
-(global-set-key [(shift meta x)] (lambda ()
-                                   (interactive)
-                                   (or (boundp 'smex-cache)
-                                       (smex-initialize))
-                                   (global-set-key [(shift meta x)] 'smex-major-mode-commands)
-                                   (smex-major-mode-commands)))
+(global-set-key [(shift meta x)]
+                (lambda ()
+                  (interactive)
+                  (or (boundp 'smex-cache)
+                      (smex-initialize))
+                  (global-set-key [(shift meta x)] 'smex-major-mode-commands)
+                  (smex-major-mode-commands)))
 
 (require 'ace-jump-mode)
 (global-set-key (kbd "C-0") 'ace-jump-mode)
 
 (setq ring-bell-function 'ignore)
 
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;; Sane Emacs Defaults ;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(require 'multiple-cursors)
-(multiple-cursors-mode 1)
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
-
-
-(require 'auto-complete)
-(global-auto-complete-mode t)
-(define-key ac-complete-mode-map "\C-n" 'ac-next)
-(define-key ac-complete-mode-map "\C-p" 'ac-previous)
-
-(require 'flymake)
-
-;;;; Make undo's better
-(global-set-key (kbd "C-?") 'undo-tree-mode)
+;;;; Enable line highlighting
+(global-hl-line-mode)
 
 ;;;; Always make column-numbers visible
 (column-number-mode 1)
 
+(use-package multiple-cursors
+  :ensure t
+  :init (multiple-cursors-mode 1)
+  :bind (("C-S-c C-S-c" . 'mc/edit-lines)
+         ("C->" . 'mc/mark-next-like-this)
+         ("C-<" . 'mc/mark-previous-like-this)
+         ("C-c C-<" . 'mc/mark-all-like-this)))
+
+(use-package flymake :ensure t)
+
 ;;;; Set up YASnippet
-(require 'yasnippet)
-(yas-global-mode t)
-(setq yas/root-directory "~/.emacs.d/snippets")
-(yas-load-directory yas/root-directory)
+(use-package yasnippet
+  :ensure t
+  :init (yas-global-mode t))
 
 ;;;; Enable Undo-Tree for better undo handling
-(require 'undo-tree)
-(global-undo-tree-mode 1)
+(use-package undo-tree
+  :ensure t
+  :init (global-undo-tree-mode 1))
 
 ;;;; Enable Wrap Region Mode
-(require 'wrap-region)
-(wrap-region-global-mode 1)
+(use-package wrap-region
+  :ensure t
+  :init (wrap-region-global-mode 1))
 ;(wrap-region-add-wrapper "<" ">" nil '(java-mode))
 
 ;;;; Enable Expand Region
-(require 'expand-region)
-(global-set-key (kbd "C-=") 'er/expand-region)
+(use-package expand-region
+  :ensure t
+  :bind ("C-=" . er/expand-region))
 
 ;;;; Enable keychords
-(require 'key-chord)
-(key-chord-mode t)
+(use-package key-chord
+  :ensure t
+  :init (key-chord-mode t))
+
+(use-package exec-path-from-shell
+  :ensure t
+  :config
+  (if (eq system-type 'darwin)
+      (exec-path-from-shell-initialize)))
+
+(use-package flycheck                   ; On-the-fly syntax checking
+  :ensure t
+  :bind (("C-c t f" . flycheck-mode))
+  :init (global-flycheck-mode)
+  :config
+  (setq ;; flycheck-standard-error-navigation nil
+   flycheck-display-errors-function
+   #'flycheck-display-error-messages-unless-error-list)
+  :diminish (flycheck-mode . " Ⓢ"))
+
+(use-package flycheck-inline
+  :ensure t
+  :after (flycheck)
+  :init (flycheck-inline-mode))
+
+(use-package company                    ; Graphical (auto-)completion
+  :ensure t
+  :diminish company-mode
+  :init (global-company-mode)
+  :config
+  (setq company-tooltip-align-annotations t
+        company-tooltip-flip-when-above t
+        ;; Easy navigation to candidates with M-<n>
+        company-show-numbers t)
+  :diminish company-mode)
+
+(use-package company-quickhelp          ; Show help in tooltip
+  :disabled t                           ; M-h clashes with mark-paragraph
+  :ensure t
+  :after company
+  :config (company-quickhelp-mode))
+
+(use-package company-statistics         ; Sort company candidates by statistics
+  :ensure t
+  :after company
+  :config (company-statistics-mode))
+
+(use-package company-math               ; Completion for Math symbols
+  :ensure t
+  :after company
+  :config
+  ;; Add backends for math characters
+  (add-to-list 'company-backends 'company-math-symbols-unicode)
+  (add-to-list 'company-backends 'company-math-symbols-latex))
+
+(use-package helm-company               ; Helm frontend for company
+  :ensure t
+  :defer t
+  :bind (:map company-mode-map
+              ([remap complete-symbol] . helm-company)
+              ([remap completion-at-point] . helm-company)
+              :map company-active-map
+              ("C-:" . helm-company)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;; Language-specifics  ;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;; Lispy languages in general
+(use-package paredit
+  :ensure t
+  :init
+  (add-to-list 'lisp-mode-hook 'enable-paredit-mode))
+
+;;; Rust
+(use-package rust-mode
+  :ensure t
+  :mode "\\.rs\\'")
+(use-package cargo
+  :ensure t
+  :init (add-hook 'rust-mode-hook #'cargo-minor-mode)
+  :diminish (racer-mode . "ⓡ"))
+(use-package racer
+  :ensure t
+  :init (add-hook 'rust-mode-hook #'racer-mode)
+  :diminish)
+(use-package flycheck-rust
+  :ensure t
+  :after (rust-mode flycheck cargo)
+  :config (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
+
 ;;; Clojure
-(require 'cider)
-(require 'ac-nrepl)
+;; (require 'cider)
+;; (require 'cider-test)
+;; (require 'ac-cider)
 
-(add-hook 'cider-repl-mode-hook 'ac-nrepl-setup)
-(add-hook 'cider-interaction-mode-hook 'ac-nrepl-setup)
-(eval-after-load "auto-complete"
-  '(add-to-list 'ac-modes 'cider-repl-mode))
-(defun set-auto-complete-as-completion-at-point-function ()
-  (setq completion-at-point-functions '(auto-complete)))
-(add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
-(add-hook 'cider-repl-mode-hook 'set-auto-complete-as-completion-at-point-function)
-(add-hook 'clojure-mode-hook 'set-auto-complete-as-completion-at-point-function)
-(add-hook 'clojure-mode-hook 'cider-turn-on-eldoc-mode)
-(add-hook 'cider-interaction-mode-hook 'set-auto-complete-as-completion-at-point-function)
+;; (add-hook 'cider-repl-mode-hook 'ac-cider-setup)
+;; (add-hook 'cider-interaction-mode-hook 'ac-cider-setup)
+;; (add-hook 'clojure-mode-hook 'ac-cider-setup)
 
-(add-hook 'clojure-mode-hook 'enable-paredit-mode)
-(add-hook 'clojure-mode-hook 'ac-nrepl-setup)
+;; (add-hook 'clojure-mode-hook 'enable-paredit-mode)
+;; (add-hook 'cider-interaction-mode-hook 'enable-paredit-mode)
 
-(add-hook 'clojure-mode-hook 
-          (lambda ()
-            (local-set-key (kbd "C-c C-e") 'cider-pprint-eval-last-sexp)))
+;; (eval-after-load "auto-complete"
+;;   '(add-to-list 'ac-modes 'cider-repl-mode))
+;; (defun set-auto-complete-as-completion-at-point-function ()
+;;   (setq completion-at-point-functions '(auto-complete)))
+;; (add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
+;; (add-hook 'cider-repl-mode-hook 'set-auto-complete-as-completion-at-point-function)
+;; (add-hook 'clojure-mode-hook 'set-auto-complete-as-completion-at-point-function)
+;; (add-hook 'clojure-mode-hook 'cider-turn-on-eldoc-mode)
+;; (add-hook 'cider-interaction-mode-hook 'set-auto-complete-as-completion-at-point-function)
+
+;; (defun jim/cider-test-is-test-ns (ns)
+;;   (let ((suffix "-test")) 
+;;     (string-match (rx-to-string `(: ,suffix eos) t) ns)))
+
+;; (defun jim/cider-test-impl-ns-fn (ns)
+;;   (when ns
+;;     (let ((suffix "-test"))
+;;       (if (string-match (rx-to-string `(: ,suffix eos) t) ns)
+;;           (s-replace suffix "" ns)
+;;         ns))))
+
+;; (defun jim/cider-test-jump-around ()
+;;   (interactive)
+;;   (let ((ns (cider-current-ns)))
+;;     (switch-to-buffer
+;;      (cider-find-buffer
+;;       (if (jim/cider-test-is-test-ns ns)
+;;           (jim/cider-test-impl-ns-fn ns)
+;;         (cider-test-default-test-ns-fn ns))))))
+
+;; (defun jim/clojure-keybinds ()
+;;   (interactive)
+;;   (define-key cider-mode-map (kbd "C-c C-e") 'cider-pprint-eval-last-sexp)
+;;   (define-key cider-mode-map (kbd "C-c C-t") 'jim/cider-test-jump-around)
+;;   (define-key cider-mode-map (kbd "C-c M-,") 'cider-test-run-tests))
+
+;; (add-hook 'clojure-mode-hook 'jim/clojure-keybinds)
+
 ;;; Racket
-(setq exec-path
-      (append exec-path
-       '("/Users/jim/.cabal/bin" "/usr/texbin" "/usr/bin""/bin" "/usr/sbin" "q/sbin" "/usr/local/bin"
-         "/Applications/Emacs.app/Contents/MacOS/libexec"
-         "/usr/local/i386elfgcc/bin/" "/Users/jim/.cask/bin"
-         "/Applications/Emacs.app/Contents/MacOS/bin"
-         "/Users/bin/classes/systems/pint-heads/src/utils"
-         "/Applications/Racket\\ v6.0/bin")))
-
-(require 'ac-geiser)
-(add-hook 'geiser-mode-hook 'ac-geiser-setup)
-(add-hook 'geiser-mode-hook (lambda ()
-                              (set-buffer-file-coding-system 'utf-8)
-                              (set-buffer-process-coding-system 'utf-8 'utf-8)))
-(add-hook 'geiser-mode-hook 'enable-paredit-mode)
-(add-hook 'geiser-repl-mode-hook 'ac-geiser-setup)
-(add-hook 'geiser-repl-mode-hook 'enable-paredit-mode)
-(add-to-list 'ac-modes 'geiser-repl-mode)
-(add-to-list 'lisp-mode-hook 'enable-paredit-mode)
-
-(require 's)
-(setenv "PATH" (concat (s-join ":" exec-path) (getenv "PATH") ":/sw/bin" ":~/.cabal/bin"))
+(use-package racket-mode :ensure t)
 
 ;;; Haskell
 (setq haskell-stylish-on-save t)
 (add-hook 'haskell-mode-hook 'haskell-indentation-mode)
+(setq inferior-haskell-find-project-root nil)
+
+(autoload 'ghc-init "ghc" nil t)
+(autoload 'ghc-debug "ghc" nil t)
+(add-hook 'haskell-mode-hook (lambda () (ghc-init)))
+
+(eval-after-load 'haskell-mode '(progn
+  (define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
+  (define-key haskell-mode-map (kbd "C-`") 'haskell-interactive-bring)
+  (define-key haskell-mode-map (kbd "C-c C-n C-t") 'haskell-process-do-type)
+  (define-key haskell-mode-map (kbd "C-c C-n C-i") 'haskell-process-do-info)
+  (define-key haskell-mode-map (kbd "C-c C-n C-c") 'haskell-process-cabal-build)
+  (define-key haskell-mode-map (kbd "C-c C-n c") 'haskell-process-cabal)
+  (define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)))
+(eval-after-load 'haskell-cabal '(progn
+  (define-key haskell-cabal-mode-map (kbd "C-`") 'haskell-interactive-bring)
+  (define-key haskell-cabal-mode-map (kbd "C-c C-k") 'haskell-interactive-ode-clear)
+  (define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-process-cabal-build)
+  (define-key haskell-cabal-mode-map (kbd "C-c c") 'haskell-process-cabal)))
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ac-auto-start 1)
+ '(ac-trigger-key "TAB")
+ '(column-number-mode t)
+ '(custom-safe-themes
+   (quote
+    ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
+ '(deft-directory "/Users/jim/notes/")
+ '(deft-extension "org")
+ '(deft-text-mode (quote org-mode))
+ '(deft-use-filename-as-title t)
+ '(electric-layout-mode nil)
+ '(electric-pair-mode t)
+ '(fci-rule-color "#383838")
+ '(flycheck-clang-language-standard "c++11")
+ '(geiser-racket-binary "/Applications/Racket v6.1/bin/racket")
+ '(global-auto-complete-mode t)
+ '(global-flycheck-mode t nil (flycheck))
+ '(global-rainbow-delimiters-mode t)
+ '(haskell-process-auto-import-loaded-modules t)
+ '(haskell-process-log t)
+ '(haskell-process-suggest-remove-import-lines t)
+ '(haskell-process-type (quote stack-ghci))
+ '(helm-always-two-windows nil)
+ '(helm-buffer-max-length 60)
+ '(helm-grep-preferred-ext "*")
+ '(helm-split-window-inside-p t)
+ '(help-at-pt-display-when-idle (quote (flymake-overlay)) nil (help-at-pt))
+ '(help-at-pt-timer-delay 1.5)
+ '(inhibit-startup-screen t)
+ '(js-indent-level 2)
+ '(js2-basic-offset 2)
+ '(org-agenda-files (quote ("~/spark/notes/work-log.org")))
+ '(package-selected-packages
+   (quote
+    (flycheck-inline flymake-inline rainbow-delimiters exec-path-from-shell helm-company auto-yasnippet yasnippet-classic-snippets yasnippet-snippets cargo flycheck-rust flymake-rust racer rust-mode rust-playground rustic paredit omnisharp noctilux-theme monokai-theme magit key-chord js2-refactor helm-themes helm-projectile helm-proc helm-hoogle google-this git-commit-mode ghc frame-cmds flycheck-haskell flex-autopair expand-region evil esup ebal diminish cyberpunk-theme company-quickhelp cmake-project cmake-mode cmake-ide closure-lint-mode clojure-snippets ack-and-a-half ace-jump-mode)))
+ '(projectile-global-mode t)
+ '(python-indent-offset 2)
+ '(racket-mode-pretty-lambda t)
+ '(racket-program "/Applications/Racket v6.1/bin/racket")
+ '(raco-program "/Applications/Racket v6.1/bin/raco")
+ '(scss-compile-at-save nil)
+ '(semantic-mode t)
+ '(semantic-symref-auto-expand-results t)
+ '(tab-width 2))
 
 ;;; C/C++
-(require 'auto-complete-clang)
-(add-hook 'c-mode-common-hook
-  (lambda() 
-    (local-set-key (kbd "C-c o") 'ff-find-other-file)
-    (local-set-key (kbd "C-`") 'ac-complete-clang)
-    ;; (key-chord-define c++-mode-map "cs" 'cscope-find-this-symbol)
-    (semantic-mode 1)))
-(defun my-ac-cc-mode-setup ()
-  (setq ac-sources (append '(ac-source-clang) ac-sources)))
-(add-hook 'c-mode-common-hook 'my-ac-cc-mode-setup)
-(require 'semantic)
-(require 'semantic/ia)
-(require 'semantic/symref)
-;; (global-semantic-idle-completions-mode t)
-;; (global-semantic-decoration-mode t)
-;; (global-semantic-highlight-func-mode t)
-;; (global-semantic-show-unmatched-syntax-mode t)
-(require 'cedet)
-(global-ede-mode 1)
-(require 'xcscope)
-(cscope-setup)
-(require 'cedet-cscope)
-;; (semanticdb-enable-cscope-databases)
+
+(use-package semantic :ensure t
+  :init
+  (global-semantic-idle-completions-mode t)
+  (global-semantic-decoration-mode t)
+  (global-semantic-highlight-func-mode t)
+  (global-semantic-show-unmatched-syntax-mode t))
+(use-package cedet
+  :ensure t
+  :init (global-ede-mode 1))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;; Personal e-lisp ;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun jim/go-to-init ()
+  (interactive)
+  (find-file user-init-file))
+
 (defun jim/highlight-todos ()
   (interactive)
   (highlight-regexp "// TODO(jshargo):.*$" 'hi-yellow))
 (add-hook 'java-mode-hook #'jim/highlight-todos)
 
-(require 'frame-fns)
-(require 'frame-cmds)
+(use-package frame-fns)
+(use-package frame-cmds)
 (defun jim/set-font-height ()
   "sets the font height to the given number"
   (interactive)
@@ -222,41 +382,19 @@
     (set-face-attribute 'default nil :height font-height)
     (maximize-frame)))
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ac-auto-start 2)
- '(ac-trigger-key "TAB")
- '(column-number-mode t)
- '(custom-safe-themes (quote ("8b231ba3e5f61c2bb1bc3a2d84cbd16ea17ca13395653566d4dfbb11feaf8567" "f3b6091bc26ab76c4ba9814685e001f37d0801ee46fd8912026192ffbe832842" "ea97033435e26d4742c0d88de2238ac8d1cb9e6df5eb9a73324382fcefa7118a" "93e458ab36b4d904c2e485944d0e1b4d4ad879d83bb6ca5c19a9dac7f6549ee5" "60f04e478dedc16397353fb9f33f0d895ea3dab4f581307fbf0aa2f07e658a40" "a3d519ee30c0aa4b45a277ae41c4fa1ae80e52f04098a2654979b1ab859ab0bf" "73fe242ddbaf2b985689e6ec12e29fab2ecd59f765453ad0e93bc502e6e478d6" "9c26d896b2668f212f39f5b0206c5e3f0ac301611ced8a6f74afe4ee9c7e6311" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "9370aeac615012366188359cb05011aea721c73e1cb194798bc18576025cabeb" "0c311fb22e6197daba9123f43da98f273d2bfaeeaeb653007ad1ee77f0003037" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "31d3463ee893541ad572c590eb46dcf87103117504099d362eeed1f3347ab18f" "f3ceb7a30f6501c1093bc8ffdf755fe5ddff3a85437deebf3ee8d7bed8991711" "fa189fcf5074d4964f0a53f58d17c7e360bb8f879bd968ec4a56dc36b0013d29" "fc6e906a0e6ead5747ab2e7c5838166f7350b958d82e410257aeeb2820e8a07a" default)))
- '(electric-layout-mode t)
- '(electric-pair-mode t)
- '(flycheck-clang-language-standard "c++11")
- '(geiser-racket-binary "/Applications/Racket v6.0/bin/racket")
- '(global-auto-complete-mode t)
- '(global-flycheck-mode t nil (flycheck))
- '(global-rainbow-delimiters-mode t)
- '(helm-always-two-windows nil)
- '(helm-buffer-max-length 60)
- '(helm-grep-preferred-ext "*")
- '(helm-split-window-in-side-p t)
- '(help-at-pt-display-when-idle (quote (flymake-overlay)) nil (help-at-pt))
- '(help-at-pt-timer-delay 1.5)
- '(inhibit-startup-screen t)
- '(projectile-global-mode t)
- '(scss-compile-at-save nil)
- '(semantic-mode t)
- '(semantic-symref-auto-expand-results t))
+(defun jim/eshell/clear ()
+  "clear the eshell buffer."
+  (interactive)
+  (let ((inhibit-read-only t))
+    (erase-buffer)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#272822" :foreground "#F8F8F2" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "apple" :family "Monaco")))))
+ )
 
-(load-theme 'cyberpunk)
+(load-theme 'monokai)
 
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
@@ -264,6 +402,11 @@
 (desktop-save-mode 1)
 
 ;; (maximize-frame)
+
+(put 'erase-buffer 'disabled nil)
+
+(set-face-attribute 'default t :font "Source Code Pro for Powerline")
+(set-frame-font "Source Code Pro for Powerline" nil t)
 
 (provide 'init)
 ;;; init.el ends here

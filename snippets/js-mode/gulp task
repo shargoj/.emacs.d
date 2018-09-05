@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: gulp task
+# key: gt
+# binding: direct-keybinding
+# --
+gulp.task('$1', function() {
+  $0
+});

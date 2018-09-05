@@ -2,10 +2,10 @@
 # name: schema
 # key: schema
 # --
- {:db/id #db/id [:db.part/db]
-  :db/ident :$1/$2
-  :db/valueType :db.type/$3
-  :db/cardinality :db.cardinality/${4:one}
-  :db/doc "$5"
-  :db.install/_attribute :db.part/db}
+{:db/id #db/id [:db.part/db]
+ :db/ident :$1/$2
+ :db/valueType :db.type/$3
+ :db/cardinality :db.cardinality/${4:one}
+ :db/doc "$5"
+ :db.install/_attribute :db.part/db}
 $0

@@ -1,8 +1,0 @@
-;; Object gh/gh-gist-api/shargoj
-;; EIEIO PERSISTENT OBJECT
-(gh-cache "gh/gh-gist-api/shargoj"
-  :file "shargoj"
-  :version "gh-0.2"
-  :entries #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8 data ())
-  :timestamp 1402960223.931044
-  )
