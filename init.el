@@ -218,7 +218,9 @@
 (use-package flycheck-rust
   :ensure t
   :after (rust-mode flycheck cargo)
-  :config (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
+  :init
+  (with-eval-after-load 'rust-mode
+    (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)))
 
 ;;; Clojure
 ;; (require 'cider)
