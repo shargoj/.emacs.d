@@ -1,1 +1,1 @@
-("~/.emacs.d/")
+("~/src/aoc18_rust/" "~/src/aoc18/" "~/.emacs.d/" "~/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src/liballoc/" "~/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src/libstd/" "~/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src/libcore/")

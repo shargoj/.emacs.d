@@ -1,5 +1,10 @@
+**/*~
 .emacs.desktop
 .emacs.desktop.lock
 ac-comphist.dat
 company-statistics-cache.el
 ede-projects.el
+elpa/
+eshell/
+projectile-bookmarks.eld
+semanticdb/
