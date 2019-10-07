@@ -60,6 +60,7 @@
 
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq confirm-nonexistent-file-or-buffer nil)
+(setq ring-bell-function 'ignore)
 
 (ido-mode 1)
 
@@ -69,25 +70,15 @@
 
 (use-package helm-config)
 (use-package helm-semantic)
-(helm-mode 1)
+
 (global-set-key [(meta x)] 'helm-M-x)
 (global-set-key [(ctrl x) (ctrl f)] 'helm-find-files)
 (global-set-key [(ctrl x) (b)] 'helm-buffers-list)
 (define-key helm-map (kbd "C-z") 'helm-execute-persistent-action)
 
-(global-set-key [(shift meta x)]
-                (lambda ()
-                  (interactive)
-                  (or (boundp 'smex-cache)
-                      (smex-initialize))
-                  (global-set-key [(shift meta x)] 'smex-major-mode-commands)
-                  (smex-major-mode-commands)))
-
-(require 'ace-jump-mode)
-(global-set-key (kbd "C-0") 'ace-jump-mode)
-
-(setq ring-bell-function 'ignore)
-
+(use-package ace-jump-mode
+  :bind (("C-0" . 'ace-jump-mode)
+         ("C-." . 'ace-jump-mode)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;; Sane Emacs Defaults ;;;;;;;;;;;
