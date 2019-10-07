@@ -1,6 +1,6 @@
 ;;; package --- Jim Shargo's emacs init.el
 
-;;; Commentary: 
+;;; Commentary:
 ;; Things are roughly ordered by usage/language.
 
 ;;; Code:
@@ -29,7 +29,7 @@
 
 ;;; Import packages and add additional package repositories
 (require 'package)
-(add-to-list 'package-archives 
+(add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 (package-initialize)
@@ -66,12 +66,14 @@
 (use-package helm
   :ensure t
   :init (helm-mode 1))
+
 (use-package helm-config)
 (use-package helm-semantic)
 (helm-mode 1)
 (global-set-key [(meta x)] 'helm-M-x)
 (global-set-key [(ctrl x) (ctrl f)] 'helm-find-files)
 (global-set-key [(ctrl x) (b)] 'helm-buffers-list)
+(define-key helm-map (kbd "C-z") 'helm-execute-persistent-action)
 
 (global-set-key [(shift meta x)]
                 (lambda ()
@@ -121,7 +123,7 @@
 (use-package wrap-region
   :ensure t
   :init (wrap-region-global-mode 1))
-;(wrap-region-add-wrapper "<" ">" nil '(java-mode))
+;; (wrap-region-add-wrapper "<" ">" nil '(java-mode))
 
 ;;;; Enable Expand Region
 (use-package expand-region
@@ -133,13 +135,16 @@
   :ensure t
   :init (key-chord-mode t))
 
+(use-package string-inflection
+  :ensure t)
+
 (use-package exec-path-from-shell
   :ensure t
   :config
   (if (eq system-type 'darwin)
       (exec-path-from-shell-initialize)))
 
-(use-package flycheck                   ; On-the-fly syntax checking
+(use-package flycheck; On-the-fly syntax checking
   :ensure t
   :bind (("C-c t f" . flycheck-mode))
   :init (global-flycheck-mode)
@@ -152,7 +157,7 @@
 (use-package flycheck-inline
   :ensure t
   :after (flycheck)
-  :init (flycheck-inline-mode))
+  :config (flycheck-inline-mode))
 
 (use-package company                    ; Graphical (auto-)completion
   :ensure t
@@ -196,6 +201,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;; Language-specifics  ;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Web / JS / PHP
+(use-package web-mode :ensure t)
 
 ;;; Lispy languages in general
 (use-package paredit
@@ -245,7 +253,7 @@
 ;; (add-hook 'cider-interaction-mode-hook 'set-auto-complete-as-completion-at-point-function)
 
 ;; (defun jim/cider-test-is-test-ns (ns)
-;;   (let ((suffix "-test")) 
+;;   (let ((suffix "-test"))
 ;;     (string-match (rx-to-string `(: ,suffix eos) t) ns)))
 
 ;; (defun jim/cider-test-impl-ns-fn (ns)
@@ -285,19 +293,23 @@
 (add-hook 'haskell-mode-hook (lambda () (ghc-init)))
 
 (eval-after-load 'haskell-mode '(progn
-  (define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
-  (define-key haskell-mode-map (kbd "C-`") 'haskell-interactive-bring)
-  (define-key haskell-mode-map (kbd "C-c C-n C-t") 'haskell-process-do-type)
-  (define-key haskell-mode-map (kbd "C-c C-n C-i") 'haskell-process-do-info)
-  (define-key haskell-mode-map (kbd "C-c C-n C-c") 'haskell-process-cabal-build)
-  (define-key haskell-mode-map (kbd "C-c C-n c") 'haskell-process-cabal)
-  (define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)))
+                                  (define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
+                                  (define-key haskell-mode-map (kbd "C-`") 'haskell-interactive-bring)
+                                  (define-key haskell-mode-map (kbd "C-c C-n C-t") 'haskell-process-do-type)
+                                  (define-key haskell-mode-map (kbd "C-c C-n C-i") 'haskell-process-do-info)
+                                  (define-key haskell-mode-map (kbd "C-c C-n C-c") 'haskell-process-cabal-build)
+                                  (define-key haskell-mode-map (kbd "C-c C-n c") 'haskell-process-cabal)
+                                  (define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)))
 (eval-after-load 'haskell-cabal '(progn
-  (define-key haskell-cabal-mode-map (kbd "C-`") 'haskell-interactive-bring)
-  (define-key haskell-cabal-mode-map (kbd "C-c C-k") 'haskell-interactive-ode-clear)
-  (define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-process-cabal-build)
-  (define-key haskell-cabal-mode-map (kbd "C-c c") 'haskell-process-cabal)))
+                                   (define-key haskell-cabal-mode-map (kbd "C-`") 'haskell-interactive-bring)
+                                   (define-key haskell-cabal-mode-map (kbd "C-c C-k") 'haskell-interactive-ode-clear)
+                                   (define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-process-cabal-build)
+                                   (define-key haskell-cabal-mode-map (kbd "C-c c") 'haskell-process-cabal)))
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;; Custom Set Variables  ;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -306,10 +318,11 @@
  ;; If there is more than one, they won't work right.
  '(ac-auto-start 1)
  '(ac-trigger-key "TAB")
+ '(cider-stacktrace-default-filters (quote (tooling dup nrepl)))
  '(column-number-mode t)
  '(custom-safe-themes
    (quote
-    ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
+    ("a2cde79e4cc8dc9a03e7d9a42fabf8928720d420034b66aecc5b665bbf05d4e9" "bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
  '(deft-directory "/Users/jim/notes/")
  '(deft-extension "org")
  '(deft-text-mode (quote org-mode))
@@ -319,7 +332,6 @@
  '(fci-rule-color "#383838")
  '(flycheck-clang-language-standard "c++11")
  '(geiser-racket-binary "/Applications/Racket v6.1/bin/racket")
- '(global-auto-complete-mode t)
  '(global-flycheck-mode t nil (flycheck))
  '(global-rainbow-delimiters-mode t)
  '(haskell-process-auto-import-loaded-modules t)
@@ -335,10 +347,9 @@
  '(inhibit-startup-screen t)
  '(js-indent-level 2)
  '(js2-basic-offset 2)
- '(org-agenda-files (quote ("~/spark/notes/work-log.org")))
  '(package-selected-packages
    (quote
-    (flycheck-inline flymake-inline rainbow-delimiters exec-path-from-shell helm-company auto-yasnippet yasnippet-classic-snippets yasnippet-snippets cargo flycheck-rust flymake-rust racer rust-mode rust-playground rustic paredit omnisharp noctilux-theme monokai-theme magit key-chord js2-refactor helm-themes helm-projectile helm-proc helm-hoogle google-this git-commit-mode ghc frame-cmds flycheck-haskell flex-autopair expand-region evil esup ebal diminish cyberpunk-theme company-quickhelp cmake-project cmake-mode cmake-ide closure-lint-mode clojure-snippets ack-and-a-half ace-jump-mode)))
+    (docker-compose-mode web-mode clj-refactor cljr-helm company-php flymake-php php-auto-yasnippets php-eldoc php-mode php-refactor-mode php-runtime php-scratch sesman cider cider-eval-sexp-fu helm-cider helm-cider-history tide tss typescript-mode json-mode json-reformat company-tern tern string-inflection flycheck-inline flymake-inline rainbow-delimiters exec-path-from-shell helm-company auto-yasnippet yasnippet-classic-snippets yasnippet-snippets cargo flycheck-rust flymake-rust racer rust-mode rust-playground rustic paredit omnisharp noctilux-theme monokai-theme magit key-chord js2-refactor helm-themes helm-projectile helm-proc helm-hoogle google-this git-commit-mode ghc frame-cmds flycheck-haskell flex-autopair expand-region evil esup ebal diminish cyberpunk-theme company-quickhelp cmake-project cmake-mode cmake-ide closure-lint-mode clojure-snippets ack-and-a-half ace-jump-mode)))
  '(projectile-global-mode t)
  '(python-indent-offset 2)
  '(racket-mode-pretty-lambda t)
@@ -396,6 +407,11 @@
  ;; If there is more than one, they won't work right.
  )
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;; Final Setup  ;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
 (load-theme 'monokai)
 
 (put 'upcase-region 'disabled nil)
@@ -411,4 +427,5 @@
 (set-frame-font "Source Code Pro for Powerline" nil t)
 
 (provide 'init)
+
 ;;; init.el ends here
