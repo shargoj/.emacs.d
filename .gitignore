@@ -2,7 +2,9 @@
 .emacs.desktop
 .emacs.desktop.lock
 ac-comphist.dat
+auto-save-list/
 company-statistics-cache.el
+ede-projects.el
 ede-projects.el
 elpa/
 eshell/
