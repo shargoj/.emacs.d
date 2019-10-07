@@ -63,8 +63,10 @@
         paredit-splice-sexp-killing-backward
         paredit-split-sexp
         python-indent-electric-colon
+        racket--paredit-open-square
         sgml-slash
         shm/space
+        string-inflection-underscore
         toggle-input-method
         transpose-sexps
         transpose-words
