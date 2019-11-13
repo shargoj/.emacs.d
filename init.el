@@ -77,8 +77,11 @@
 (define-key helm-map (kbd "C-z") 'helm-execute-persistent-action)
 
 (use-package ace-jump-mode
+  :ensure t
   :bind (("C-0" . 'ace-jump-mode)
          ("C-." . 'ace-jump-mode)))
+
+(use-package highlight-indentation :ensure t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;; Sane Emacs Defaults ;;;;;;;;;;;
@@ -340,7 +343,7 @@
  '(js2-basic-offset 2)
  '(package-selected-packages
    (quote
-    (docker-compose-mode web-mode clj-refactor cljr-helm company-php flymake-php php-auto-yasnippets php-eldoc php-mode php-refactor-mode php-runtime php-scratch sesman cider cider-eval-sexp-fu helm-cider helm-cider-history tide tss typescript-mode json-mode json-reformat company-tern tern string-inflection flycheck-inline flymake-inline rainbow-delimiters exec-path-from-shell helm-company auto-yasnippet yasnippet-classic-snippets yasnippet-snippets cargo flycheck-rust flymake-rust racer rust-mode rust-playground rustic paredit omnisharp noctilux-theme monokai-theme magit key-chord js2-refactor helm-themes helm-projectile helm-proc helm-hoogle google-this git-commit-mode ghc frame-cmds flycheck-haskell flex-autopair expand-region evil esup ebal diminish cyberpunk-theme company-quickhelp cmake-project cmake-mode cmake-ide closure-lint-mode clojure-snippets ack-and-a-half ace-jump-mode)))
+    (highlight-indentation docker-compose-mode web-mode clj-refactor cljr-helm company-php flymake-php php-auto-yasnippets php-eldoc php-mode php-refactor-mode php-runtime php-scratch sesman cider cider-eval-sexp-fu helm-cider helm-cider-history tide tss typescript-mode json-mode json-reformat company-tern tern string-inflection flycheck-inline flymake-inline rainbow-delimiters exec-path-from-shell helm-company auto-yasnippet yasnippet-classic-snippets yasnippet-snippets cargo flycheck-rust flymake-rust racer rust-mode rust-playground rustic paredit omnisharp noctilux-theme monokai-theme magit key-chord js2-refactor helm-themes helm-projectile helm-proc helm-hoogle google-this git-commit-mode ghc frame-cmds flycheck-haskell flex-autopair expand-region evil esup ebal diminish cyberpunk-theme company-quickhelp cmake-project cmake-mode cmake-ide closure-lint-mode clojure-snippets ack-and-a-half ace-jump-mode)))
  '(projectile-global-mode t)
  '(python-indent-offset 2)
  '(racket-mode-pretty-lambda t)
@@ -357,8 +360,8 @@
   :init
   (global-semantic-idle-completions-mode t)
   (global-semantic-decoration-mode t)
-  (global-semantic-highlight-func-mode t)
-  (global-semantic-show-unmatched-syntax-mode t))
+  (global-semantic-highlight-func-mode t))
+
 (use-package cedet
   :ensure t
   :init (global-ede-mode 1))
