@@ -30,13 +30,13 @@
 ;;; Import packages and add additional package repositories
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa" . "http://melpa.org/packages/") t)
 
 (package-initialize)
 
-;; (package-refresh-contents)
-
 (when (not (package-installed-p 'use-package))
+  ;; This is likely the first time we're running emacs in a new environment.
+  (package-refresh-contents)
   (package-install 'use-package))
 
 (setq
@@ -113,12 +113,6 @@
   :ensure t
   :init (global-undo-tree-mode 1))
 
-;;;; Enable Wrap Region Mode
-(use-package wrap-region
-  :ensure t
-  :init (wrap-region-global-mode 1))
-;; (wrap-region-add-wrapper "<" ">" nil '(java-mode))
-
 ;;;; Enable Expand Region
 (use-package expand-region
   :ensure t
@@ -169,11 +163,6 @@
   :ensure t
   :after company
   :config (company-quickhelp-mode))
-
-(use-package company-statistics         ; Sort company candidates by statistics
-  :ensure t
-  :after company
-  :config (company-statistics-mode))
 
 (use-package company-math               ; Completion for Math symbols
   :ensure t
@@ -405,20 +394,19 @@
 ;;;;;;;;;;;; Final Setup  ;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-
-(load-theme 'monokai)
+(use-package monokai-theme
+  :ensure t
+  :init (load-theme 'monokai))
 
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 
 (desktop-save-mode 1)
 
-;; (maximize-frame)
-
 (put 'erase-buffer 'disabled nil)
 
-(set-face-attribute 'default t :font "Source Code Pro for Powerline")
-(set-frame-font "Source Code Pro for Powerline" nil t)
+;; (set-face-attribute 'default t :font "Source Code Pro for Powerline")
+;; (set-frame-font "Source Code Pro for Powerline" nil t)
 
 (provide 'init)
 
