@@ -1,12 +1,16 @@
 **/*~
+.cache/
 .emacs.desktop
 .emacs.desktop.lock
+.lsp-session* 
 ac-comphist.dat
 auto-save-list/
 company-statistics-cache.el
 ede-projects.el
 ede-projects.el
-elpa/
+elpa/**/*
 eshell/
+lsp-cache/
 projectile-bookmarks.eld
 semanticdb/
+transient/

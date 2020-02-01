@@ -181,12 +181,26 @@
               :map company-active-map
               ("C-:" . helm-company)))
 
+;;; Autocomplete/language server/LSP
+(require 'cl)
+
+(use-package lsp-mode
+  :ensure t
+  :commands lsp)
+
+;; (require "lsp-clients.el")
+
+(use-package lsp-ui :ensure t :commands lsp-ui-mode)
+(use-package company-lsp :ensure t :commands company-lsp)
+(use-package helm-lsp :ensure t :commands helm-lsp-workspace-symbol)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;; Language-specifics  ;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; Web / JS / PHP
 (use-package web-mode :ensure t)
+
 
 ;;; Lispy languages in general
 (use-package paredit
@@ -332,7 +346,7 @@
  '(js2-basic-offset 2)
  '(package-selected-packages
    (quote
-    (highlight-indentation docker-compose-mode web-mode clj-refactor cljr-helm company-php flymake-php php-auto-yasnippets php-eldoc php-mode php-refactor-mode php-runtime php-scratch sesman cider cider-eval-sexp-fu helm-cider helm-cider-history tide tss typescript-mode json-mode json-reformat company-tern tern string-inflection flycheck-inline flymake-inline rainbow-delimiters exec-path-from-shell helm-company auto-yasnippet yasnippet-classic-snippets yasnippet-snippets cargo flycheck-rust flymake-rust racer rust-mode rust-playground rustic paredit omnisharp noctilux-theme monokai-theme magit key-chord js2-refactor helm-themes helm-projectile helm-proc helm-hoogle google-this git-commit-mode ghc frame-cmds flycheck-haskell flex-autopair expand-region evil esup ebal diminish cyberpunk-theme company-quickhelp cmake-project cmake-mode cmake-ide closure-lint-mode clojure-snippets ack-and-a-half ace-jump-mode)))
+    (lsp-treemacs treemacs treemacs-magit company-lsp helm-lsp lsp-mode lsp-ui company-ycmd flycheck-ycmd ycmd neotree sr-speedbar highlight-indentation docker-compose-mode web-mode clj-refactor cljr-helm company-php flymake-php php-auto-yasnippets php-eldoc php-mode php-refactor-mode php-runtime php-scratch sesman cider cider-eval-sexp-fu helm-cider helm-cider-history tide tss typescript-mode json-mode json-reformat company-tern tern string-inflection flycheck-inline flymake-inline rainbow-delimiters exec-path-from-shell helm-company auto-yasnippet yasnippet-classic-snippets yasnippet-snippets cargo flycheck-rust flymake-rust racer rust-mode rust-playground rustic paredit omnisharp noctilux-theme monokai-theme magit key-chord js2-refactor helm-themes helm-projectile helm-proc helm-hoogle google-this git-commit-mode ghc frame-cmds flycheck-haskell flex-autopair expand-region evil esup ebal diminish cyberpunk-theme company-quickhelp cmake-project cmake-mode cmake-ide closure-lint-mode clojure-snippets ack-and-a-half ace-jump-mode)))
  '(projectile-global-mode t)
  '(python-indent-offset 2)
  '(racket-mode-pretty-lambda t)
