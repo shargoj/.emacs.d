@@ -13,6 +13,10 @@
 (setq-default indent-tabs-mode nil)
 (setq tab-width 80)
 
+;; This fixes issues with making HTTPS calls.
+;; See: https://www.reddit.com/r/emacs/comments/cdf48c/failed_to_download_gnu_archive/
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;; Important Keybindings ;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -30,13 +34,19 @@
 ;;; Import packages and add additional package repositories
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/") t)
+             '("melpa" . "https://melpa.org/packages/") t)
+
+(setq package--init-file-ensured t
+      package-user-dir (expand-file-name "gnupg" "~/.local/emacs/packages"))
+(when (boundp 'package-gnupghome-dir)
+  (setq package-gnupghome-dir
+	(expand-file-name "gnupg" "~/.local/emacs/gnupg")))
 
 (package-initialize)
 
+(unless package-archive-contents (package-refresh-contents))
 (when (not (package-installed-p 'use-package))
   ;; This is likely the first time we're running emacs in a new environment.
-  (package-refresh-contents)
   (package-install 'use-package))
 
 (setq
@@ -51,7 +61,7 @@
     "/Applications/Emacs.app/Contents/MacOS/bin"
     "/Applications/Racket\\ v6.1/bin")))
 
-(require 's)
+(use-package s :ensure t)
 (setenv "PATH" (concat (s-join ":" exec-path) (getenv "PATH") ":/sw/bin" ":~/.cabal/bin"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
